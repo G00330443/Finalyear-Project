@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Shopping</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<script src="http://libs.baidu.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all">
+	<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+	
+	
+	<div class="header">
+		<div align="center">
+		<img src="images/title1.png" style="height:80px;"/>
+		<p>	<img src="images/Title.png" style="height:20px;"/></p>
+		</div>
+		<div class="head-nav">
+						<% if(userpicture==undefined){ %>
+							<input onclick="window.location.href='login'"
+							type="image" src="images/picture.png"
+							style="float: left;" />
+						<%}else{%>
+							<img  style="float: left;" onclick="window.location.href='login'" height="80" src="<%= userpicture%>" alt="Press to Login"/>
+						<%}%>
+			<div class="container">
+					<ul class="cl-effect-7">
+						<font >
+						<li class="active"><a href="/">Home</a></li>
+						<li><a href="/userManagePage">Account</a></li>
+						<li><a href="">ShoppingCart</a></li>
+						<li><a href="">Favorite</a></li>
+						<li><a href="">Services</a></li>
+						<li><a href="">Category</a></li>
+						<li><a href="">Messages</a></li>
+						<li><a href="">About</a></li>
+						<li><a href="">Contact</a></li>
+						</font>
+							<div class="clearfix"> </div>
+					</ul>
+			</div>
+		
+	</div>
+	</div>
+<body>

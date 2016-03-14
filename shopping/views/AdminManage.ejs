@@ -1,0 +1,65 @@
+<%include ../include/header.ejs%>
+<% include ../include/AdminManage.js%>
+<%include ../include/header_usermanage.ejs%>
+
+<td>
+<div style="float:right;width:900px; height:400px; margin:50px auto;">
+<body leftmargin="0" rightmargin="0" topmargin="0">
+	<div id="popLayer" style="position: absolute; z-index: 1000;"
+		class="cPopText"></div>
+
+	<table style="table-layout: fixed;" align="center" border="0"
+		width="97%">
+		<tbody>
+			<tr>
+				<h1 class="nav" align="left" nowrap="nowrap" width="90%">Shopping
+					&#187; Update</h1>
+				<td align="right" width="10%">&nbsp;<a href="#bottom"><img
+						src="" align="absmiddle" border="0"></a></td>
+			</tr>
+		</tbody>
+	</table>
+
+	<form method="post" name="register">
+		<input type="hidden" name="action" value="modify" />
+        
+        <font style="font-weight:bold;font-style:italic;" size=3>
+		<table align="center" cellpadding="4" cellspacing="100" width="97%" font>
+			<tbody>
+				<tr>
+					<td colspan="2" class="header">Modify - Necessary Content</td>
+				</tr>
+
+				<tr>
+					<td  width="21%">Username :</td>
+					<td ><input id="username" name="username" size="25"
+						maxlength="25" type="text" readonly value="<%= title%>">
+					</td>
+				</tr>
+				<tr>
+					<td>Picture</td>
+					<td><input name="picture" id="picture" type="file" /></td><span id="pictureshow"></span>
+				</tr>
+				<tr>
+					<td >Phone Number:</td>
+					<td ><input name="phone" type="text" id="phone"
+						size="25" value=""></td>
+				</tr>
+				
+				<tr>
+					<td  valign="top">Delivery Address:</td>
+					<td ><textarea name="addr" cols="60" rows="5"
+							id="addr"></textarea></td>
+				</tr>
+			</tbody>
+		</table>
+		<br>
+        </font>
+		<center>
+            <input id="regsubmit" method ="POST" type="button" value="Submit" class="btn btn-info"/> 
+		</center>
+	</form>
+</div>
+</td>
+</table>
+<%include ../include/footer.ejs%>

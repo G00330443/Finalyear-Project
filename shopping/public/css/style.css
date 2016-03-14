@@ -1,0 +1,167 @@
+h4, h5, h6,
+h1, h2, h3 {margin-top: 0;}
+ul, ol {margin: 0;}
+p {margin: 0;}
+html,body{
+}
+
+body a{
+    transition:0.5s all;
+	-webkit-transition:0.5s all;
+	-moz-transition:0.5s all;
+	-o-transition:0.5s all;
+	-ms-transition:0.5s all;
+}
+
+.head-nav ul li a {
+  display: inline-block;
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.2em;
+  font-weight: 700;
+  font-family: Overlock-Regular;
+  padding: 1.2em 1.5em;
+}
+.head-nav {
+  background: #C1FFC1;
+  padding: 0em 0;
+  margin: 2em 0 0;
+}
+.head-nav ul{
+	padding:0;
+	margin: 0;
+}
+.head-nav ul li {
+	display: inline-block;
+	
+}
+.head-nav ul li a:hover, .head-nav ul li.active a {
+  color: #fff;
+  background:#63b8bd;
+}
+
+@media (max-width:768px){
+.head-nav ul li{
+	display:block;
+	float:none;
+}
+.head-nav ul li a{
+	border-right:none;
+	color:#fff;
+	font-size:1.1em;
+	display: block;
+	  padding: 0.5em 0em;
+}
+.head-nav ul{
+	position: absolute;
+	margin: 0  auto;
+	padding: 2% 0;
+	z-index: 999;
+	width: 100%;
+	display: none;
+	text-align: center;
+	background:#F54785;
+	top:9em;
+	left:0;
+	z-index: 9999;
+}
+.head-nav span.menu {
+  display: block;
+  text-align: center;
+  padding: 0.5em;
+}
+.head-nav {
+  margin: 1em 0 0;
+}
+.head-nav ul {
+  top: 7.95em;
+}
+
+.footer {
+  background-color: #63b8bd;
+  padding: 3em 0;
+}
+.footer h3 {
+  font-size: 1.7em;
+  color: #fff;
+  margin: 0 0 1em;
+  font-weight: 700;
+  font-family: Overlock-Regular;
+    letter-spacing: 1px;
+}
+.footer li a{
+	color:#92F9FF;
+	font-size:1em;
+	line-height:1.8em;
+	text-decoration:none;
+}
+.footer li a:hover{
+	color: #2f3337;
+}
+.footer-left li {
+  display: block;
+  font-size: 1em;
+  color: #92F9FF;
+  line-height: 1.8em;
+}
+.soci ul {
+  padding: 0;
+}
+.footer p {
+  color: #fff;
+  font-size: 1em;
+  line-height: 1.8em;
+  margin: 1em 0 0;
+}
+.footer p a{
+  color: #fff;
+  text-decoration:none;
+}
+.footer p a:hover{
+  color: #F54785;
+}
+.footer-left {
+  float: left;
+  width: 24%;
+  padding: 0 5px;
+}
+.footer {
+  padding: 2em 0;
+}
+.footer h3 {
+  font-size: 1.5em;
+}
+
+.footer-left li {
+  font-size: 0.9em;
+}
+.footer p {
+  font-size: 0.9em;
+  text-align: center;
+}
+.footer-left li {
+  font-size: 0.9em;
+}
+.footer p {
+  font-size: 0.9em;
+  text-align: center;
+}
+.footer-left {
+  float: left;
+  width: 50%;
+  padding: 0 5px;
+    margin: 1em 0 0;
+}
+.footer-left {
+  float: none;
+  width: 100%;
+  padding: 0 5px;
+  margin: 1em 0 0;
+}
+
+.footer h3 {
+  margin:0 0 0.5em;
+}
+.footer p {
+  font-size: 0.875em;
+}

@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Shopping</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<script src="http://libs.baidu.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<link href="../../css/bootstrap.css" rel="stylesheet" type="text/css" media="all">
+	<link href="../../css/style.css" rel="stylesheet" type="text/css" media="all" />
+	
+	
+	<div class="header">
+		<div align="center">
+		<img src="../../images/title1.png" style="height:80px;"/>
+		<p>	<img src="../../images/Title.png" style="height:20px;"/></p>
+		</div>
+		<div class="head-nav">
+						<% if(userpicture==undefined){ %>
+							<input onclick="window.location.href='../../login'"
+							type="image" src="../../images/picture.png"
+							style="float: left;" />
+						<%}else{%>
+							<img  style="float: left;" onclick="window.location.href='../../login'" height="80" src="<%= userpicture%>" alt="Press to Login"/>
+						<%}%>
+			<div class="container">
+					<ul class="cl-effect-7">
+						<font >
+						<li class="active"><a href="/">Home</a></li>
+						<li><a href="/userManagePage">Account</a></li>
+						<li><a href="">ShoppingCart</a></li>
+						<li><a href="">Favorite</a></li>
+						<li><a href="">Services</a></li>
+						<li><a href="">Category</a></li>
+						<li><a href="">Messages</a></li>
+						<li><a href="">About</a></li>
+						<li><a href="">Contact</a></li>
+						</font>
+							<div class="clearfix"> </div>
+					</ul>
+			</div>
+		
+	</div>
+	</div>
+<body>
+ <div class="head-bread" >
+         <font size=4>
+            <div class="container" >
+                <ol class="breadcrumb">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Category</a></li>
+                    <li class="active">Shop</li>
+                      <div style="float:right;" >
+                        <ol class="breadcrumb">
+                         <li><a>$ : 100</a></li>
+                         <li><a>Cart Status</a></li>
+                         <li><a type="button" class="btn btn-primary">Check Out </a></li>
+                         </ol>
+                      </div>
+                </ol>
+            </div>
+          </font>
+        </div>
+    <div style="width:1500px; height:400px; margin:50px auto;">
+         
+        <div class="mainframe">
+            <div class="container">
+                <div class="col-md-8 frame">
+                    <div class="flexslider">
+                          <ul class="slides">
+                            <li >
+                                <div class="image"> <img width="500"   
+							height="400" src="<%= product[0].picture%>" > </div>
+                            </li>
+                          </ul>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+                <div class="col-md-4 showcase">
+                    <div class="showcase-rt-top">
+                        <div class="pull-left shoe-name">
+                            <h3>Category</h3>
+                            <p>Name</p>
+                            <h4>&#36;190</h4>
+                        </div>
+                        
+                        <div class="clearfix"></div>
+                    </div>
+                    <hr >
+                    <div >
+                        <div class="qty-chart">
+                        <ul>
+                            <li class="qty">
+                                <h3>Size Chart</h3>
+                                <select class="form-control siz-option">
+                                  <option>6 US</option>
+                                  <option>7 US</option>
+                                  <option>8 US</option>
+                                  <option>9 US</option>
+                                  <option>10 US</option>
+                                  <option>11 US</option>
+                                </select>
+                            </li>
+                            <li class="qty">
+                                <h4>QTY</h4>
+                                <select class="form-control qty-option">
+                                  <option>1</option>
+                                  <option>2</option>
+                                  <option>3</option>
+                                  <option>4</option>
+                                  <option>5</option>
+                                  <option>6</option>
+                                  <option>7</option>
+                                </select>
+                            </li>
+                        </ul>
+                        <div class="clearfix"></div>
+                        </div>
+                        <ul>
+                            <li class="buttons_buy">
+                                <a class="btn btn-primary" href="#" type="button">Add To Cart</a>
+                                <a class="btn btn-primary" href="#" type="button">Buy Now</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="description">
+                        <h3>product details</h3>
+                        <a>----------</a>
+                    </div>
+                </div>
+        <div class="clearfix"></div>
+            </div>
+        </div>
+</div>
+  <style>
+.footer-left li{
+    display:block;
+}
+.soci li{
+    display:block;
+}
+i.facebk {
+  width: 32px;
+  height: 32px;
+  background: url(../../images/social.png)no-repeat -5px -43px;
+  float: left;
+  vertical-align: middle;
+}
+i.facebk:hover {
+  background: url(../../images/social.png)no-repeat -6px -4px;
+}
+i.twter {
+  width: 32px;
+  height: 32px;
+  background: url(../../images/social.png)no-repeat -43px -44px;
+  float: left;
+  vertical-align: middle;
+}
+i.twter:hover {
+  background: url(../../images/social.png)no-repeat -43px -4px;
+}
+i.goopl {
+  width: 32px;
+  height: 32px;
+  background: url(../../images/social.png)no-repeat -83px -44px;
+  float: left;
+  vertical-align: middle;
+}
+i.goopl:hover {
+  background: url(../../images/social.png)no-repeat -83px -4px;
+}
+i.insta {
+  width: 32px;
+  height: 32px;
+  background: url(../../images/social.png)no-repeat -123px -44px;
+  float: left;
+  vertical-align: middle;
+}
+i.insta:hover {
+  background: url(../../images/social.png)no-repeat -123px -4px;
+}
+</style>
+</body>
+<footer>
+<div class="footer" style="background:#C1FFC1 ; font-weight: 700;font-family: Overlock-Regular;">
+	<table>
+		
+		<div class="container">
+			<tr>
+			<div class="col-md-3 footer-left">
+				<h3>Navigation</h3>
+				<li><a href="">About</a></li>
+				<li><a href="">Services</a></li>
+				<li><a href="">Blog</a></li>
+				<li><a href="">Contact</a></li>
+			</div></tr>
+			
+		<tr>	<div class="col-md-3 footer-left">
+				<h3>For Members</h3>
+				<li><a href="#">Forums</a></li>
+				<li><a href="#">Promotions</a></li>
+				<li><a href="login.ejs">Sign In</a></li>
+				<li><a href="#">News</a></li>
+			</div></tr>
+		
+		<tr>	<div class="col-md-3 soci" >
+				<h3>Follow Us</h3>
+                <div style="float:left;">
+				<ul>
+						<li><a href="#"><i class="facebk"> </i></a></li>
+						<li><a href="#"><i class="twter"> </i></a></li>
+						<li><a href="#"><i class="goopl"> </i></a></li>
+						<li><a href="#"><i class="insta"> </i></a></li>
+							<div class="clearfix"></div>	
+					</ul>
+                </div>
+            </div><tr>
+			
+		<tr>	<div class="col-md-3 footer-left">
+				<h3>Our Location</h3>
+				<li><i class="add"> </i>Harry</li>
+				<li><i class="phone"> </i>1234567890</li>
+				<li><a href="mailto:info@example.com"><i class="mail"> </i>info@sitename.com </a></li>
+			</div></tr>
+		<tr>		<div class="clearfix"> </div>
+		<p>Copyright &copy; 2015.Company name All rights reserved.More Templates <a href="" target="_blank" title="Take">Take What U Want</a> - Collect from 
+		</div></tr>
+		<a href="#" id="toTop" style="display: block;"><span id="toTopHover" style="opacity: 0;"></span> <span id="toTopHover" style="opacity: 0;"> </span></a>
+	</div>
+</table>
+</footer>
+<html>

@@ -1,0 +1,32 @@
+<% include ../include/header.ejs%>
+<% include ../include/login.js%>
+                <div id="LOG" style="width:468px; height:400px; margin:100px auto;">
+                    <div id="wrapper">
+                        <div id="login" >
+                            <form  action="" > 
+                                <h1>Log in</h1> 
+                                <p> 
+                                    <label> Your email or username </label>
+                                    <input id="username" name="username" required="required" type="text" placeholder="myusername or mymail@mail.com"/>
+                                </p>
+                                <p> 
+                                    <label> Your password </label>
+                                    <input id="password" name="password" required="required" type="password" placeholder="eg. X8df!90EO" /> 
+                                </p>
+                                <p class="keeplogin"> 
+									<input type="checkbox" name="loginkeeping" id="loginkeeping" value="loginkeeping" /> 
+									<label>Keep me logged in</label>
+								</p>
+                                <p > 
+                                    <input id="loginButtons" method ="POST" type="button" value="Login" class="btn btn-info"/> 
+								</p>
+                                <p class="change_link">
+									Not a member yet ?
+									<button href="#toregister" class="btn btn-info" onclick="window.location.href='register'">register</button>
+								</p>
+                            </form>
+                        </div>
+                    </div>
+                </div>  
+    </body>
+<%include ../include/footer.ejs%>

@@ -1,0 +1,340 @@
+<%include ../include/header.ejs%>
+<%include ../include/search.js%>
+
+	<br>
+	<div align="center">
+		<center>
+		<table class="center" style="">			
+				<tr>	<input autocomplete="off" type= "text" style="width: 30% ; height : 44px" id="search" maxlength="255" value="" name="search" />
+						<input  value= "search " type="submit" style=" width: 100px; height: 44px;" class='btn btn-primary' href='javascript:;'>
+				</tr>
+				<tr>	<div id="infoBox" class="searchInfo"></div></tr>
+		</table>
+		
+	</center>
+		<table
+			style="background-color: #f2f2f2; width: 80%; border-collapse: collapse; border: 0px solid black;">
+			<tr>
+				<th>Please Choose City :</th>
+				<th>Please Choose area :</th>
+				<th>Please Choose Item type :</th>
+			</tr>
+			<tr>
+				<td style="width: 30%"><select
+					style="width: 100%; height: 50px;">
+						<option value="Dublin">Dublin</option>
+						<option value="Galway">Galway</option>
+						<option value="Cork">Cork</option>
+						<option value="Waterford">Waterford</option>
+						<option value="Belfast">Belfast</option>
+						<option value="Derry">Derry</option>
+						<option value="Drogheda">Drogheda</option>
+						<option value="Sligo">Sligo</option>
+						<option value="Dundalk">Dundalk</option>
+						<option value="Wexford">Wexford</option>
+						<option value="Bray">Bray</option>
+						<option value="Ennis">Ennis</option>
+				</select></td>
+
+				<td style="width: 30%"><select
+					style="width: 100%; height: 50px;">
+						<option value="Dublin">Dublin</option>
+						<option value="Galway">Galway</option>
+						<option value="Cork">Cork</option>
+						<option value="Waterford">Waterford</option>
+						<option value="Belfast">Belfast</option>
+						<option value="Derry">Derry</option>
+						<option value="Drogheda">Drogheda</option>
+						<option value="Sligo">Sligo</option>
+						<option value="Dundalk">Dundalk</option>
+						<option value="Wexford">Wexford</option>
+						<option value="Bray">Bray</option>
+						<option value="Ennis">Ennis</option>
+				</select></td>
+
+				<td style="width: 30%"><select
+					style="width: 100%; height: 50px;">
+						<option value="Video">Video</option>
+						<option value="Books ">Books</option>
+						<option value="Home, Garden & Tools">Home, Garden & Tools</option>
+						<option value="Beauty, Health & Grocery">Beauty, Health &
+							Grocery</option>
+						<option value="Sports & Outdoors">Sports & Outdoors</option>
+						<option value="Automotive & Industrial">Automotive &
+							Industrial</option>
+						<!-- <option value="Drogheda">Drogheda</option>
+						<option value="Sligo">Sligo</option>
+						<option value="Dundalk">Dundalk</option>
+						<option value="Wexford">Wexford</option>
+						<option value="Bray">Bray</option>
+						<option value="Ennis">Ennis</option> -->
+				</select></td>
+				
+				<td>
+					<input value= "searchItem " type="submit" style=" width: 100px; height: 44px;" class='btn btn-primary' href='javascript:;'></a>
+				</td>
+			</tr>
+		</table>
+	</div>
+	<br>
+	<div align="center">
+	 <marquee  scrollamount="1" scrolldelay="10" direction= "right" width="80%" height="300">
+       <img src="images/11.jpg" width="600px"  auto/>
+
+       <img src="images/11.jpg" width="600px"  auto/>
+
+      <img src="images/11.jpg" width="600px" auto/>
+
+      <img src="images/11.jpg" width="600px" auto/>
+
+    </marquee></div>
+	
+	
+	<!-- 
+图片的风格 -->
+	<style>
+div.img {
+	margin: 5px;
+	border: 1px solid #ccc;
+	float: left;
+	width: 180px;
+}
+
+div.img img {
+	width: 100%;
+	height: auto;
+}
+
+div.desc {
+	padding: 15px;
+	text-align: center;
+}
+</style>
+
+	<br>
+	<div  name="item_sport" align="center" Style="width: 100% ;">
+	<tr><th><h1>Sport</h1></tr></tr>
+		<div align="center" style="width: 80% ; left :15%;"></div>
+		<table style="width:80%;">
+			<tr >
+			<% for(var i=0;i<3;i++){ %>
+				<td>
+					<div class="img">
+						 <img
+							src="<%=items[i].picture%>" alt="" width="500"
+							height="400" onclick="window.location.href='111/productname/<%=items[i].name%>'">
+						
+						<div class="desc">Add a description of the image here</div>
+					</div>
+				</td>
+		<%	}%>
+				
+				
+			</tr>
+		</table>
+	</div>
+<hr style="height:1px;border:none;border-top:1px solid #555555;width:80%" />
+  
+		
+	<br>
+	<br>
+		<div  name="item_Book" align="center" Style="width: 100% ;">
+	<tr><th><h1>Book</h1></tr></tr>
+		<div align="center" style="width: 80% ; left :15%;"></div>
+		<table style="width:80%;">
+			<tr >
+				<td>
+					<div class="img">
+						 <img
+							src="images/11.jpg" alt="" width="300"
+							height="200">
+						
+						<div class="desc">Add a description of the image here</div>
+					</div>
+				</td>
+				
+				<td>
+					<div class="img">
+						 <img
+							src="images/11.jpg" alt="" width="300"
+							height="200">
+						
+						<div class="desc">Add a description of the image here</div>
+					</div>
+				</td>
+				
+				<td>
+					<div class="img">
+						 <img
+							src="images/11.jpg" alt="" width="300"
+							height="200">
+						
+						<div class="desc">Add a description of the image here</div>
+					</div>
+				</td>
+				
+				<td>
+					<div class="img">
+						 <img
+							src="images/11.jpg" alt="" width="300"
+							height="200">
+						
+						<div class="desc">Add a description of the image here</div>
+					</div>
+				</td>
+				
+				<td>
+					<div class="img">
+						 <img
+							src="images/11.jpg" alt="" width="300"
+							height="200">
+						
+						<div class="desc">Add a description of the image here</div>
+					</div>
+				</td>
+				
+			</tr>
+		</table>
+	</div>
+<hr style="height:1px;border:none;border-top:1px solid #555555;width:80%" />
+  
+		
+	<br>
+	<br>
+		<div  name="item_furniture" align="center" Style="width: 100% ;">
+	<tr><th><h1>Fruniture</h1></tr></tr>
+		<div align="center" style="width: 80% ; left :15%;"></div>
+		<table style="width:80%;">
+			<tr >
+				<td>
+					<div class="img">
+						 <img
+							src="images/11.jpg" alt="" width="300"
+							height="200">
+						
+						<div class="desc">Add a description of the image here</div>
+					</div>
+				</td>
+				
+				<td>
+					<div class="img">
+						 <img
+							src="images/11.jpg" alt="" width="300"
+							height="200">
+						
+						<div class="desc">Add a description of the image here</div>
+					</div>
+				</td>
+				
+				<td>
+					<div class="img">
+						 <img
+							src="images/11.jpg" alt="" width="300"
+							height="200">
+						
+						<div class="desc">Add a description of the image here</div>
+					</div>
+				</td>
+				
+				<td>
+					<div class="img">
+						 <img
+							src="images/11.jpg" alt="" width="300"
+							height="200">
+						
+						<div class="desc">Add a description of the image here</div>
+					</div>
+				</td>
+				
+				<td>
+					<div class="img">
+						 <img
+							src="images/11.jpg" alt="" width="300"
+							height="200">
+						
+						<div class="desc">Add a description of the image here</div>
+					</div>
+				</td>
+				
+			</tr>
+		</table>
+	</div>
+<hr style="height:1px;border:none;border-top:1px solid #555555;width:80%" />
+
+
+		
+	<br>
+	<br>
+		<div  name="item_cloth" align="center" Style="width: 100% ;">
+	<tr><th><h1>Cloth</h1></tr></tr>
+		<div align="center" style="width: 80% ; left :15%;"></div>
+		<table style="width:80%;">
+			<tr >
+				<td>
+					<div class="img">
+						 <img
+							src="images/11.jpg" alt="" width="300"
+							height="200">
+						
+						<div class="desc">Add a description of the image here</div>
+					</div>
+				</td>
+				
+				<td>
+					<div class="img">
+						 <img
+							src="images/11.jpg" alt="" width="300"
+							height="200">
+						
+						<div class="desc">Add a description of the image here</div>
+					</div>
+				</td>
+				
+				<td>
+					<div class="img">
+						 <img
+							src="images/11.jpg" alt="" width="300"
+							height="200">
+						
+						<div class="desc">Add a description of the image here</div>
+					</div>
+				</td>
+				
+				<td>
+					<div class="img">
+						 <img
+							src="images/11.jpg" alt="" width="300"
+							height="200">
+						
+						<div class="desc">Add a description of the image here</div>
+					</div>
+				</td>
+				
+				<td>
+					<div class="img">
+						 <img
+							src="images/11.jpg" alt="" width="300"
+							height="200">
+						
+						<div class="desc">Add a description of the image here</div>
+					</div>
+				</td>
+			
+			</tr>
+		</table>
+	</div>
+
+	
+<!-- 	
+	 <marquee scrollamount="1" scrolldelay="100" direction= "right" width="200" height="200">
+       <img src="../graph/11.jpg" width="100" height="100" />
+
+       <img src="../graph/11.jpg" width="100" height="100" />
+
+      <img src="../graph/11.jpg" width="100" height="100" />
+
+      <img src="../graph/11.jpg" width="100" height="100" />
+
+    </marquee> -->
+</body>
+<%include ../include/footer.ejs%>

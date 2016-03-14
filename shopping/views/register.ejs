@@ -1,0 +1,40 @@
+<% include ../include/header.ejs%>
+<% include ../include/register.js%>
+
+<div id="register" class="" style="width:468px; height:400px; margin:100px auto;">
+                            <form > 
+                                <h1> Sign up </h1> 
+                                <p> 
+                                    <label >Your username</label>
+                                    <input id="username" name="username"  type="text" placeholder="mysuperusername690" onblur="checkUserName()" ><span id="usernamespan"></span>
+                                </p>
+								<tr>
+							<label>性别</label>
+							<td>
+								<input type=radio name="sex" value="male">男
+								<input type=radio name="sex" value="female">女
+							</td>
+							
+                                <p> 
+                                    <label > Your email</label>
+                                    <input id="email" name="email" type="email" placeholder="mysupermail@mail.com" value="2312@sda.com"/> 
+                                </p>
+                                <p> 
+                                    <label >Your password </label>
+                                    <input id="password" name="password"  type="password" placeholder="eg. X8df!90EO"/>
+                                </p>
+                                <p> 
+                                    <label >Please confirm your password </label>
+                                    <input id="password_confirm" name="password_confirm"  type="password" placeholder="eg. X8df!90EO"/>
+                                </p>
+                                <p > 
+									<input id="DataSubmit" method="post" type="button" value="Sign up" class="btn btn-info" /> 
+								</p>
+                                <p >  
+									Already a member ?
+									<a href="#tologin" class="to_register"> Go and log in </a>
+								</p>
+                            </form>
+                        </div>
+    </body>
+<%include ../include/footer.ejs%>

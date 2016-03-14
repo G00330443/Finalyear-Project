@@ -1,0 +1,62 @@
+<% include ../include/header.ejs %>
+<%include ../include/header_usermanage.ejs%>
+<style>
+.usersList-table{position:relative;}
+.usersList-table table{color:#777;border-right:1px solid #dbdbdb;border-bottom:1px solid #dbdbdb;background:url(images/TI.jpg) top left no-repeat;margin-bottom:15px;}
+.usersList .list{height:44px;line-height:44px;color:#fff;font-size:16px;font-weight:bold;font-family:'微软雅黑','幼圆';width:740px;}
+
+
+</style>
+<td>
+<div class="usersList" style="float:right;width:1000px; height:400px; margin:50px auto;">
+	<div class="usersList-table">
+		<div class="confi">
+			
+			<div class="confi-border" style="top:0;left:123px;">
+				<div class="confi-bg-out" style="width:123px;">
+					<div class="confi-bg-in"></div>
+				</div>
+				<div class="confi-border-b" style="width:121px;"></div>
+			</div><!--confi-border end-->
+			
+			<table width="738" id="usersList-table" CellSpacing=30>
+				<tr class="list">
+					<td width="123">Name</td>
+					<td width="123">Phonenumber</td>
+					<td width="123">Email</td>
+					<td width="123">Address</td>
+                    <td width="123">Membership</td>
+					<td width="123">other</td>
+                    <td width="123">operation  </td>
+				</tr>
+
+<style>
+.usersList td{
+    text-align:center;
+    height:30px;
+    vertical-align:middle;
+    border-left:1px solid #dbdbdb;
+    border-top:1px solid #dbdbdb;}
+}
+
+</style>              
+<% posts.forEach(function(post){ %>
+				<tr style="background:#f4f4f4;">
+					<td style="font-weight:bold;"><%= post.name%></td>
+					<td><%= post.phoneNumber%></td>
+					<td><%= post.email%></td>
+					<td><%= post.Address%></td>
+					<td><%= post.flag%></td>
+                    <td>null</td>
+                    <td id="delect" method ="POST" type="button" value="Delect" width="90%" class="btn btn-danger">Delect</td>
+				</tr>   
+<% });%>
+			</table>	
+		</div>
+	</div>
+</div>
+
+</td>
+</table>
+
+<%- include ../include/footer.ejs %>
