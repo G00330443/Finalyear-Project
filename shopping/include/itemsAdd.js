@@ -1,10 +1,12 @@
 <script type="text/javascript">
 
 $(document).ready(function(){
-$("#additem").click(function(event){
+$("#submititem").click(function(event){
+       
         var file = document.getElementById('picture').files[0];
         var reader = new FileReader();
         reader.readAsDataURL(file);
+       
         reader.onload = function () {
 		$.ajax({
 			url: '/itemsupdate',
@@ -19,10 +21,10 @@ $("#additem").click(function(event){
 			,success: function(data) {
                if (data!='') {
                     alert("success update");
-                    window.location="/";
+                    window.location="/item_Category_add";
                }else{
                     alert("update wrong");
-                    window.location="/itemsupdate";
+                    window.location="/item_Category_add";
                }
 			}
 		});

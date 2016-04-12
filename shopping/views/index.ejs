@@ -1,12 +1,143 @@
 <%include ../include/header.ejs%>
 <%include ../include/search.js%>
+<%include ../include/addToCart.js%>
+
+<style>
+.item.square.p.item_detail .bottom-2-top:hover .img {
+    -webkit-transform: translateY(-200px);
+    -moz-transform: translateY(-500px);
+    -ms-transform: translateY(-500px);
+    -o-transform: translateY(-50px);
+    transform: translateY(-50px);
+}
+
+
+.item.square.p.item_detail .bottom-2-top:hover .info {
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+    transform: translateY(0);
+}
+.quick-view a {
+     font-family: 'SimHei';
+    background-color: #A5E126;
+    padding: 5px;
+    font-weight: 400;
+    text-decoration: none;
+    font-size: 16px;
+    color: #1F1818;
+    text-transform: uppercase;
+    display:none;
+}
+.quick-view {
+    position: absolute;
+    top: 44%;
+    right: 44%;
+}
+
+.item.square.p.item_detail .bottom-2-top:hover .quick-view a{
+    display: block;
+}
+
+.item.square.p a:hover .info {
+    visibility: visible;
+    opacity: 999;
+}
+
+.item.square.p.item_detail .info {
+    top: auto;
+    -webkit-transform: translateY(100%);
+    -moz-transform: translateY(100%);
+    -ms-transform: translateY(100%);
+    -o-transform: translateY(100%);
+    transform: translateY(100%);
+    z-index: 999 !important;
+    background-color:rgba(250, 84, 0, 0) !important;
+    opacity: 1;
+}
+
+.info {
+    background: #1a4a72;
+}
+
+.info {
+    padding: 6px 12px;
+    background: #fa5400;
+    opacity: 0;
+    -webkit-transition: all 0.35s ease-in-out;
+    -moz-transition: all 0.35s ease-in-out;
+    transition: all 0.35s ease-in-out;
+    z-index: 999;   
+}
+
+.item.square.p.item_detail .bottom-2-top:hover .info {
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+    transform: translateY(0);
+}
+.item.square.p {
+    overflow: hidden;
+}
+
+.item.square.p.colored .info {
+    background: #1a4a72;
+}
+.item.square.p .img {
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+    transform: translateY(0);
+    -webkit-transition: all 0.35s ease-in-out;
+    -moz-transition: all 0.35s ease-in-out;
+    transition: all 0.35s ease-in-out;
+}
+.item.square.p .info {
+    padding: 6px 12px;
+    background: #fa5400;
+    opacity: 0;
+    -webkit-transition: all 0.35s ease-in-out;
+    -moz-transition: all 0.35s ease-in-out;
+    transition: all 0.35s ease-in-out;
+    z-index: 999;   
+}
+
+.name_style h3 {
+    font-family: 'Pathway Gothic One';
+    text-transform: uppercase;
+    color: #272323;
+    text-align: left;
+    font-size: 22px;
+    padding: 0;
+    margin: 2px 0px 0px;
+    font-weight: 400;
+}
+
+.price_style p {
+    font-family: 'Didact Gothic';
+    font-size: 20px;
+    position: relative;
+    color: #FFFFFF;
+    padding: 0;
+    text-align: right;
+    font-weight: bold;
+}
+
+
+</style>
+
+	
 
 	<br>
 	<div align="center">
 		<center>
 		<table class="center" style="">			
 				<tr>	<input autocomplete="off" type= "text" style="width: 30% ; height : 44px" id="search" maxlength="255" value="" name="search" />
-						<input  value= "search " type="submit" style=" width: 100px; height: 44px;" class='btn btn-primary' href='javascript:;'>
+     
+						<input  value= "search " name="ss"  id="ss"  type="submit" style=" width: 100px; height: 44px;" class='btn btn-primary' href='javascript:;'>
 				</tr>
 				<tr>	<div id="infoBox" class="searchInfo"></div></tr>
 		</table>
@@ -117,15 +248,34 @@ div.desc {
 		<div align="center" style="width: 80% ; left :15%;"></div>
 		<table style="width:80%;">
 			<tr >
-			<% for(var i=0;i<3;i++){ %>
+			<% for(var i=0;i<5;i++){ %>
 				<td>
-					<div class="img">
-						 <img
-							src="<%=items[i].picture%>" alt="" width="500"
-							height="400" onclick="window.location.href='111/productname/<%=items[i].name%>'">
-						
-						<div class="desc">Add a description of the image here</div>
-					</div>
+					
+            
+						<div  id="cart_item_id" name="cart_item_id" class="item square p item_detail">
+							 <div class="bottom-2-top">
+								<div class="img" style="border:none;width:300px;">
+									<img src="<%=items[i].picture%>" style="width:100%;height:220px;" alt="/" class="img-responsive gri-wid" >
+										<div class="info">
+											<div class="pull-left name_style">
+												<h3><%=items[i].name%></h3>
+											</div>
+											<div class="pull-right price_style">
+												<p><a   class="item_add">
+												<span class="glyphicon glyphicon-shopping-cart grid-cart" aria-hidden="true"></span
+                                                
+												<a class=" item_price" id="itemprice" name="itemprice"><%=items[i].price%></a></a></p>
+											</div>
+											<div class="clearfix"></div>
+										 </div>
+												
+										<div class="quick-view">
+											<a onclick="window.location.href='item_detail_page/productname/<%=items[i]._id%>'">Quick view</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					
 				</td>
 		<%	}%>
 				

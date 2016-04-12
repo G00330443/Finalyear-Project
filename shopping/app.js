@@ -6,7 +6,7 @@ var http = require('http');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var flash=require('connect-flash');
-
+var helmet = require('helmet');
 var routes = require('./routes');
 var users = require('./routes/users');
 var DB = require('./Database/MongoDB');
@@ -29,11 +29,22 @@ app.use(session({
     resave: false,
     saveUninitialized: false,
     store: new MongoStore({ 
-                          url: 'mongodb://localhost/webSite-app',
+                          url: 'mongodb://ccc:ccc@localhost/webSite-app',
                           ttl: 14 * 24 * 60 * 60, // = 14 days. Default
       })
 }));
 
+app.use(helmet.csp({
+  defaultSrc: ["'self'"],
+  scriptSrc: ['*.google-analytics.com'],
+  styleSrc: ["'unsafe-inline'"],
+  imgSrc: ['*.google-analytics.com'],
+  connectSrc: ["'none'"],
+  fontSrc: [],
+  objectSrc: [],
+  mediaSrc: [],
+  frameSrc: []
+}));
 //-------------------------------------------------------------------------------
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));

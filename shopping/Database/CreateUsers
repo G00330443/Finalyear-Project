@@ -1,0 +1,50 @@
+db.createUser( {user: "harry",pwd: "harry",roles: [ { role: "userAdminAnyDatabase", db: "admin" } ]  } )
+
+
+db.createUser( {user: "admin",pwd: "admin",roles: [ { role: "dbAdmin", db: "webSite" } ]  } )
+
+db.createUser( {user: "admin1",pwd: "admin1",roles: [ { role: "readWrite", db: "webSite" } ]  } )
+
+db.createUser( {user: "normalUser",pwd: "normalUser",roles: [ { role: "readWrite", db: "webSite" } ,{ role: "readWrite", db: "webSite-app" }]  } )
+
+
+db.createUser( {user: "user",pwd: "user",roles: [ { role: "dbOwner", db: "webSite-app" }]  } )
+
+
+db.createUser( {user: "ccc",pwd: "ccc",roles: [ { role: "readWrite", db: "webSite-app" }]  } )
+
+
+db.createUser( {user: "abcd",pwd: "abcd",roles: [ { role: "readWrite", db: "webSite" }]  } )
+
+db.createUser( {user: "ccc",pwd: "ccc",roles: [ { role: "readWrite", db: "webSite-app" }]  } )
+
+db.createUser( {user: "eee",pwd: "eee",roles: [ { role: "readWrite", db: "webSite" }]  } )
+
+
+//开启认证模式
+D:\mongodb\bin>mongod.exe -auth -config D:\mongodb\mongo.config
+
+mongod --dbpath D:\mongodb\data\db --port 27017  --logpath D:\mongodb\log\mongodb.log --logappend --auth
+
+mongod --dbpath D:\mongodb\data\db --port 27017  --logpath D:\mongodb\log\mongodb.log --logappend 
+
+//认证登录
+mongo -u accountAdmin01 -p yourpassward --authenticationDatabase products
+
+mongod --dbpath d:\mongodb\data\db --port 27017 --logpath d:\mongodb\log\mongodb.log --logappend  --auth --install
+
+ mongod.exe --remove --serviceName "MongoDB"
+ 
+ Read：允许用户读取指定数据库
+readWrite：允许用户读写指定数据库
+dbAdmin：允许用户在指定数据库中执行管理函数，如索引创建、删除，查看统计或访问system.profile
+userAdmin：允许用户向system.users集合写入，可以找指定数据库里创建、删除和管理用户
+clusterAdmin：只在admin数据库中可用，赋予用户所有分片和复制集相关函数的管理权限。
+readAnyDatabase：只在admin数据库中可用，赋予用户所有数据库的读权限
+readWriteAnyDatabase：只在admin数据库中可用，赋予用户所有数据库的读写权限
+userAdminAnyDatabase：只在admin数据库中可用，赋予用户所有数据库的userAdmin权限
+dbAdminAnyDatabase：只在admin数据库中可用，赋予用户所有数据库的dbAdmin权限。
+root：只在admin数据库中可用。超级账号，超级权限
+
+
+webSite-app connect problem :https://cnodejs.org/topic/55f552ccb8a2e3a367529bf7#55f62468386593bd6707bbe5

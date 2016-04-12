@@ -25,5 +25,18 @@
              }
          });
      });
+       
+       $("#ss").click(function(event){
+          alert("cc");
+          alert($("#search").val());
+         $.ajax({
+             url: "/searchitempage",
+             type: "POST",
+             data: 'search=' + $("#search").val(),
+             success: function (msg) {
+                    window.location="searchitempage";
+             }
+         });
+     });
   });
 </script>

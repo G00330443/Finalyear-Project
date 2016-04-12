@@ -16,7 +16,8 @@ var userScheMa = new Schema({
 	number: String,
 	createTime:String,
 	phone : String,
-	description : String
+	description : String,
+	price:String
 }); //  定义了一个新的模型，但是此模式还未和users集合有关联
 
 

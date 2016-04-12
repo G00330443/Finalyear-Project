@@ -1,6 +1,8 @@
 
 var session = require('express-session');
 var express = require('express');
+var querystring=require('querystring');
+var crypt=require('../include/Crypt_function.js');
 var router = express.Router();
 var fs=require('fs');
 //var db=require('../Database/user').db;
@@ -16,30 +18,62 @@ var item=require('../Database/itemsDB').user;
 //var db = mongoose.connect('mongodb://localhost/schools');
 
 router.get('/', function(req, res) {
-    item.find({},function(err,docs){
+  //  mongoose.connect('mongodb://harry:harry@192.168.1.100:27017/webSite');
+    
+    item.find({}).sort({'searchtimes': -1}).limit(10).exec(function(err,docs){
         req.session.items=docs;
      //   console.log(docs);
-        console.log(req.session.items);
-    console.log(req.session.picture);
-    res.render('index', { title: 'index' ,items:req.session.items,userpicture:req.session.userpicture,username:req.body.username});
+        console.log(docs);
+    console.log(req.session.picture+"00-0-");
+    res.render('index', { title: 'index' ,items:docs,
+               userpicture:req.session.userpicture,
+               username:req.session.username,
+               user:req.session.user,
+               sum:req.session.sum
+        });
     });
     
 });
 router.get('/login', function(req, res) {
-	res.render('login', { title: 'login' ,userpicture:req.session.userpicture})
+	res.render('login', { title: 'login' ,userpicture:req.session.userpicture,
+               username:req.session.username,
+                sum:req.session.sum})
 });
+
+router.get('/logout',function(req,res){  
+        req.session.user = null;
+        req.session.username=null;
+        req.flash('success','登出成功');  
+        res.redirect('/login');  
+    }); 
+
 router.get('/register', function(req, res) {
-	res.render('register', { title: 'register',userpicture:req.session.userpicture })
+	res.render('register', { title: 'register',
+               userpicture:req.session.userpicture ,
+               username:req.session.username,
+                 sum:req.session.sum           
+    })
 });
 router.get('/AdminManage', function(req, res) {
     
     if (req.session.user!='') {
-        res.render('AdminManage', { title: req.session.username ,userpicture:req.session.userpicture})
+        res.render('AdminManage', { title: req.session.username ,
+                   user:req.session.user,
+                   username:req.session.username,
+                   userpicture:req.session.userpicture,
+                    sum:req.session.sum
+        })
   //  res.locals.message = '<div  style="margin-bottom:20px;color:red;">'+req.session.username+'</div>';
     //res.write(req.session.username);
     //console.log(req.session.user[0].name);
     }else{
-        res.render('index');
+    res.render('index', { title: 'index' ,
+               items:req.session.items,
+               userpicture:req.session.userpicture,
+               username:req.session.username,
+               user:req.session.user,
+                 sum:req.session.sum       
+        });
     }
 });
 router.get('/Admin', function(req,res){
@@ -47,14 +81,24 @@ router.get('/Admin', function(req,res){
     var flag;
     if (req.session.username!="admin") {
         flag='1';
+	res.render('login', { title: 'login' ,
+               userpicture:req.session.userpicture,
+               username:req.session.username,
+               user:req.session.user,
+                sum:req.session.sum
+        });
     }
     User.find( function (err, docs) {
         if (docs!='' ) {
             if (flag=='1') {
                 res.render('index');
             }else{
-                
-                res.render('Admin', { posts: docs ,userpicture:req.session.userpicture})
+                res.render('Admin', { posts: docs ,
+                           user:req.session.user,
+                           username:req.session.username,
+                           userpicture:req.session.userpicture,
+                            sum:req.session.sum
+                           })
             }
         }else{
             return '';
@@ -62,10 +106,26 @@ router.get('/Admin', function(req,res){
     });
 });
 router.get('/item_category_add' , function(req,res){
-    res.render('../items/itemsAdd',{title : "CategoryAdd",username :req.session.username,userpicture:req.session.userpicture});
+    res.render('../items/itemsAdd',{title : "CategoryAdd",
+               user:req.session.user,
+               username :req.session.username,
+               userpicture:req.session.userpicture,
+                sum:req.session.sum
+        });
 });
 router.get('/userManagePage', function(req, res) {
-    res.render('userManagePage',{username:req.session.username,user:req.session.user,userpicture:req.session.userpicture});    
+    
+    if (req.session.user==undefined) {
+        res.render('login', { title: 'login' ,userpicture:req.session.userpicture,
+               username:req.session.username,
+                sum:req.session.sum})
+    }else{
+    res.render('userManagePage',{username:req.session.username,
+               user:req.session.user,
+               userpicture:req.session.userpicture,
+                sum:req.session.sum           
+    });
+    }
 });
 
 router.get('/showAllItems', function(req,res){
@@ -73,25 +133,117 @@ router.get('/showAllItems', function(req,res){
     item.find( { 'username': req.session.username },function (err, docs) {
         if (docs!='' ) {
             console.log(docs);
-                res.render('../items/showAllItems', { posts: docs ,userpicture:req.session.userpicture})
+                res.render('../items/showAllItems', { posts: docs ,
+                           userpicture:req.session.userpicture,
+                           user:req.session.user,
+                           username:req.session.username,
+                            sum:req.session.sum
+                            });
             }
     });
 });
 
-router.get('/111',function(req,res){
-    res.render('../items/111',{username:req.session.username,user:req.session.user,userpicture:req.session.userpicture});    
+router.get('/item_detail_page',function(req,res){
+    res.render('item_detail_page',{username:req.session.username,
+               user:req.session.user,
+               userpicture:req.session.userpicture,
+                sum:req.session.sum
+                });    
 });
-router.get('/111/productname/:name', function(req, res) {
-    console.log(req.params.name);
-    item.find({name:req.params.name},function(err,docs){
+
+router.get('/item_detail_page/productname/:_id', function(req, res) {
+    console.log(req.params._id);
+    var cc;
+    item.find({_id:req.params._id},function(err,docs){
         req.session.product=docs;
-    //    console.log(docs);
-    console.log(docs[0].picture);
-    res.render('../items/111', { title: '111' ,product:req.session.product,userpicture:req.session.userpicture,username:req.body.username});
+       console.log(docs);
+        cc=docs;
+        var vv=parseInt(docs[0].searchtimes)+1;
+        console.log(parseInt(docs[0].searchtimes)+1);
+        var conditions = {_id : req.params._id};
+    var update     = {$set : {searchtimes :vv}};
+    var options    = {upsert : true};
+    item.update(conditions, update, options, function(error){
+        if (error) {
+            //code
+        }else{
+            console.log("success");
+        }
     });
+    res.render('item_detail_page', { title: 'item_detail_page' ,
+               product:req.session.product,
+               userpicture:req.session.userpicture,
+               username:req.body.username,
+                sum:req.session.sum
+                });
+    });
+    
+    
     
 });
 
+router.get('/ordercheck', function(req, res) {
+    console.log(req.session.username+"-=-=-=-=-=");
+    if (req.session.username==undefined) {
+        res.render('login',{userpicture:req.session.userpicture,
+                    sum:req.session.sum,
+                    
+               username:req.session.username,
+               user:req.session.user,
+              
+                    });
+    }else{
+        console.log(req.body._id);
+        item.find({'_id':req.session.product[0]._id}, function (err, docs) {
+            if(err) {
+                console.log(err);
+            } else {
+                console.log("-=-=-=-=");
+               
+            
+            //    var result = replacer.replace(contents);
+                console.log(docs.picture);
+             
+               res.render('OrderCheck', { title: 'order' ,
+                          product:docs,
+                          userpicture:req.session.userpicture,
+                          username:req.body.username,
+                          user:req.session.user,
+                           sum:req.session.sum
+                           });
+             console.log(orders);
+            }
+        });
+    }   
+});
+
+router.get('/shoppingCart', function(req, res) {
+    
+        res.render('shoppingCart', { title: 'shoppingCart' ,
+                                       //   allorders:req.session.allorders,
+                                          userpicture:req.session.userpicture,
+                                          username:req.body.username,
+                                          user:req.session.user,
+                                           sum:req.session.sum
+                                           });
+      
+             
+});
+
+
+router.get('/searchitempage', function(req, res) {
+    console.log(req.session.seaitem);
+    res.render('searchitempage', { title: 'index' ,
+               ooo:req.session.ooo,
+               
+               itemss:req.session.seaitem,
+               userpicture:req.session.userpicture,
+               username:req.session.username,
+               user:req.session.user,
+               sum:req.session.sum
+        });
+    
+});
 
 //router.get('/showItems',function(req,res){
 //    res.render('../items/showItems',{usename:req.session.username,userpicture:req.session.userpicture});
@@ -120,6 +272,7 @@ res.render('Admin', { title: 'Admin' });
 */
 //****------------------------------------------------------------------------------------
 
+
 router.post('/post', function(req, res) {
   /*  var Schema = mongoose.Schema;
     var userScheMa = new Schema({
@@ -128,9 +281,10 @@ router.post('/post', function(req, res) {
     email : String
 });*/
     var mongooseModel = User.model('users', userScheMa);
+    var password = req.body.password;
+    var crypto=new crypt(password,'yuwhisn');
+    var doc = {name : req.body.username,password : crypto.encrypt  ,email:req.body.email ,phoneNumber : '000',Address : 'ssadasd',flag : '1'};
 
-    var doc = {name : req.body.username, password : req.body.password ,email:req.body.email ,phoneNumber : '000',Address : 'ssadasd',flag : '1'};
-    
     User.find({ 'name': req.body.username }, function (err, docs) {
             var c=docs.toString();
           //  console.log(c);
@@ -170,9 +324,12 @@ router.post("/logincheck", function (req, res) {
     email : String
 });*/
 	var mongooseModel = User.model('users', userScheMa);
-  //  console.log(req.body.username);
- //  (req.body.username, req.body.password)
-    User.find({ 'name': req.body.username ,'password':req.body.password}, function (err, docs) {
+    var password=req.body.password;
+    console.log(password+"$$");
+    var crypto=new crypt(password,'yuwhisn');
+    var code=crypto.encrypt;
+    console.log(code+"-=-=-=-=");
+    User.find({ 'name': req.body.username ,'password':code}, function (err, docs) {
 		if(docs!='') {	
             req.session.user=docs;
             req.session.username=req.body.username;
@@ -235,10 +392,10 @@ router.post('/userupdate',function (req,res){
 
 router.post('/itemsupdate',function (req,res){
     console.log("1");
-    console.log(req.body.picture);
-      item.find({ 'username': req.body.username }, function (err, docs) {
+  //  console.log(req.body.picture);
+      item.find({ 'username': req.session.username }, function (err, docs) {
          console.log("2");
-            if(docs!=''){
+            if(docs!=undefined){
           /*      var conditions = {username : req.body.username};
                 var update     = {$set : {location : req.body.location, category : req.body.category ,picture : req.body.picture,name:req.body.itemname,phone:req.body.phone,description:req.body.description}};
                 var options    = {upsert : true};
@@ -254,7 +411,7 @@ router.post('/itemsupdate',function (req,res){
                  console.log("3");
                  
                var doc={username : req.body.username,location : req.body.location,category : req.body.category,name : req.body.itemname, picture : req.body.picture,phone : req.body.phone,description:req.body.description};
-               var mongooseModel = item.model('items', itemScheMa);
+            //   var mongooseModel = item.model('items', itemScheMa);
                 item.create(doc, function(error){
                 if(error) {
                     console.log(error);
@@ -298,7 +455,137 @@ router.post('/searchitems', function(req, res) {
     });
 });
 
+var sum=0;
+var orders= new Array();
+orders.push({total:1});
 
+router.post('/addToCart123', function(req, res) {
+    console.log("123");
+    console.log(req.body._id);
+    
+    var len=orders.length;
+    var flag=0;
+    item.find({_id:req.body._id}, function (err, docs) {
+        if(err) {
+        
+        }else{
+            
+            var name=docs[0].name;
+            var ord={id:req.body._id,
+                name:docs[0].name,
+                price:parseInt(docs[0].price),
+                number:1,
+                username:docs[0].username,
+                category:docs[0].category,
+                color:docs[0].color,
+                picture:docs[0].picture
+                };
+                
+            orders[0].total=parseInt(orders[0].total)+parseInt(docs[0].price);
+            for(var i=0;i<len;i++){
+                
+                if (orders[i].name==name) {
+                    //code
+                   
+                    orders[i].number=orders[i].number+1;
+                    flag++;
+                }
+            }
+            
+            if (flag==0) {
+                orders.push(ord);
+            }
+            console.log(orders);
+            req.session.sum=orders;
+            console.log(orders[1].name);
+            res.send(orders);
+           
+         
+        }
+    });
+});
+
+router.post('/updatefromCart', function(req, res) {
+    
+    console.log(req.body._id);
+    var but_type=req.body.but_type;
+    var len=orders.length;
+    var flag=0;
+    item.find({_id:req.body._id}, function (err, docs) {
+        if(err) {
+        
+        }else{
+            
+            var name=docs[0].name;
+            var ord={id:req.body._id,
+                name:docs[0].name,
+                price:parseInt(docs[0].price),
+                number:1,
+                picture:docs[0].picture};
+                
+            if (but_type==1) {
+                orders[0].total=parseInt(orders[0].total)+parseInt(docs[0].price);
+            }else if(but_type==0){
+                orders[0].total=parseInt(orders[0].total)-parseInt(docs[0].price);
+            }
+                
+            
+            for(var i=1;i<len;i++){
+                
+                if (orders[i].name==name) {
+                    //code
+                     if (but_type==1) {
+                         orders[i].number=orders[i].number+1;
+
+                    }else if(but_type==0){
+                        orders[i].number=orders[i].number-1;
+
+                    }
+                    
+                    if ( orders[i].number<=0) {
+                    flag=i;
+                    }
+                }
+                
+              
+            }
+             
+             if(flag!=0){
+                orders.pop(orders[flag]); 
+             }              
+            
+           
+             
+            console.log(orders);
+            req.session.sum=orders;
+           console.log(orders[0].total);
+            res.send(orders);
+           
+         
+        }
+    });
+});
+
+
+router.post('/searchitempage', function(req, res) {
+   console.log("---");
+   console.log(req.body.search);
+   var c=req.body.search;
+    var pattern1 = new RegExp('^'+c,"i");;
+          
+    req.session.ooo=c;
+   item.find({name:pattern1}).sort({'searchtimes': -1}).limit(10).exec(function(err,docs){
+       
+     //   console.log(docs);
+        console.log(docs);
+    
+
+  req.session.seaitem=docs;
+             res.send(docs);
+    });
+   
+             
+});
 //----------------(**********************************************)
 //functions
 

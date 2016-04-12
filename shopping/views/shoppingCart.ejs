@@ -1,0 +1,66 @@
+<%include ../include/header.ejs%>
+<%include ../include/cart_change.js%>
+<style>
+.name_style h3 {
+    font-family: 'Pathway Gothic One';
+    text-transform: uppercase;
+    color: #272323;
+    text-align: center;
+    font-size: 25px;
+    padding: 0;
+    margin: 0px 0px 0px;
+    font-weight: 400;
+}
+
+.name_style input {
+border:0px;background:white;readOnly:true;    
+}
+
+</style>
+<div style="width: 700px; height: 900px; margin: 50px auto;" >
+    <table class="name_style" align="center" cellspacing="0px" cellpadding="0px" style="width:100%;">
+        
+        <tr><td><h3>Shopping Cart</h3></td></tr>
+        
+        <tr>
+             <td><h3</h3></td>
+            <td><h3>name</h3></td>
+            <td><h3>number</h3></td>
+            <td><h3>price</h3></td>
+        </tr>
+        <%var c=-1; if(sum!=null){ %>
+    
+        <%sum.forEach(function(order){ %>
+       
+        <%if(order.picture==null){c=c+1;%>
+ 
+<%}else{c=c+1;console.log(c);%>
+<%       var tt=order.picture;%>
+           <tr name="det<%=c%>" id="det<%=c%>" visibility="visible">
+            <input hidden value="<%=order.id%>" id="iddd<%=c%>"  name="iddd<%=c%>" type="text"/>
+            <td><img style="width:100px;" src="<%=tt%>" /></td>
+            <td><h3><input style="width:150px;" name="name<%=c%>" readOnly="true" id="name<%=c%>" value="<%=order.name%>" type="text"></input></h3></td>
+            <td><h3><input style="width:100px;" readOnly="true" name="number<%=c%>" id="number<%=c%>"value="<%=order.number%>" type="text"></input></h3></td>
+            <td><h3><input  style="width:100px;" name="price<%=c%>" readOnly="true" id="price<%=c%>"value="<%=order.price%>" type="text"></input></h3></td>
+           <td><h3><input value="-" type="button" name="t<%=c%>" id="t<%=c%>" style="width:20px; margin:10px;background-color:grey;"></input></h3></td>
+             <td><h3><input value="+" type="button" name="v<%=c%>" id="v<%=c%>" style=" width:20px;margin:10px;background-color:grey;"></input></h3></td>
+
+            <input hidden name="ttt<%=c%>" id="ttt<%=c%>" type="text" value="<%=c%>"/>
+           </tr>
+        <%}%>
+        <%});%>
+          <input hidden name="yt" id="yt" type="text" value="<%=c%>"/>
+        <tr>
+            <td><h3><input name="total" id="total"value="Total :<%=sum[0].total%>" type="text"><input></h3></td>
+            
+             <td><button name="eee" id="eee" onclick="window.location.href='/ordercheck'" class="btn btn-primary">SUMIT</button></td>
+
+        </tr>
+        <%}else{%>
+            <tr><td><h3>No Orders</h3></td></tr>
+            <%}%>
+    </table>
+</div>
+
+
+<%include ../include/footer.ejs%>

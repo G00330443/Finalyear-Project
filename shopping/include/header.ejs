@@ -2,44 +2,124 @@
 <html>
 <head>
 <title>Shopping</title>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-	<script src="http://libs.baidu.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-	<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all">
-	<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
-	
-	
-	<div class="header">
-		<div align="center">
-		<img src="images/title1.png" style="height:80px;"/>
-		<p>	<img src="images/Title.png" style="height:20px;"/></p>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet"
+	href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<script src="http://libs.baidu.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css"
+	media="all">
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+<% include ../include/Cart.js%>
+
+<div class="header">
+	<div align="center">
+		<img src="images/title1.png" style="height: 80px;" />
+		<p>
+			<img src="images/Title.png" style="height: 20px;" />
+		</p>
+	</div>
+	<div class="head-nav">
+		<% if(username==undefined){ %>
+
+		<div style="float: left; margin: 0;">
+			<input onclick="window.location.href='login'" type="image"
+				src="images/picture.png" /> <a><font size="4"
+				color="blue" onclick="window.location.href='login'">Login</font></a>
 		</div>
-		<div class="head-nav">
-						<% if(userpicture==undefined){ %>
-							<input onclick="window.location.href='login'"
-							type="image" src="images/picture.png"
-							style="float: left;" />
-						<%}else{%>
-							<img  style="float: left;" onclick="window.location.href='login'" height="80" src="<%= userpicture%>" alt="Press to Login"/>
-						<%}%>
-			<div class="container">
-					<ul class="cl-effect-7">
-						<font >
-						<li class="active"><a href="/">Home</a></li>
-						<li><a href="/userManagePage">Account</a></li>
-						<li><a href="">ShoppingCart</a></li>
-						<li><a href="">Favorite</a></li>
-						<li><a href="">Services</a></li>
-						<li><a href="">Category</a></li>
-						<li><a href="">Messages</a></li>
-						<li><a href="">About</a></li>
-						<li><a href="">Contact</a></li>
-						</font>
-							<div class="clearfix"> </div>
-					</ul>
-			</div>
+		<%}else{%>
+		<div style="float: left; margin: 0;">
+			<img onclick="window.location.href='login'" height="80"
+				src="<%=userpicture%>" alt="Press to Login" /> <a><font
+				size="4" color="blue"> Welcome <%=username%></font></a>
+		</div>
+		<%}%>
+
+		<div style="float: right; margin: 0;">
+			<a><font size="4" color="blue"
+				onclick="window.location.href='logout'"> Logout</font></a>
+		</div>
+		<div class="container">
+			<ul class="cl-effect-7">
+				<font>
+					<li class="active"><a href="/">Home</a></li>
+					<li><a href="/userManagePage">Account</a></li>
+					<li><a href="/shoppingCart">ShoppingCart</a></li>
+					<li><a href="">Favorite</a></li>
+					<li><a href="">Services</a></li>
+					<li><a href="">Category</a></li>
+					<li><a href="">Messages</a></li>
+					<li><a href="">About</a></li>
+					<li><a href="">Contact</a></li>
+				</font>
+				<div class="clearfix"></div>
+			</ul>
+		</div>
+
+	</div>
+</div>
+<style>
+.name_style h3 {
+    font-family: 'Pathway Gothic One';
+    text-transform: uppercase;
+    color: #272323;
+    text-align: left;
+    font-size: 10px;
+    padding: 0;
+    margin: 2px 0px 0px;
+    font-weight: 200;
+}
+</style>
+<% if(sum!=null){%>
+<%	var len=sum[0].length;%>
+<%	var total=sum[0].total;%>
+<%	 %>
+<%		 %>
+<%	%>
+<div class="head-bread" style="z-index:999;position: fixed; top: 0; width: 100%;">
+	<font size=4>
+			<tr>
+				<div style="float: right;">
+					<ol class="breadcrumb">
+						<li><a><input style="border:0px;background:#F5F5F5;width:100px;"readOnly="true" name="tot" id="tot" type="text" value="$ : <%=sum[0].total%>"/></a></li>
+						<li><a name="cart_status" id="cart_status">Cart Status</a></li>
+						<li><a name="checkout" id="checkout" type="button" class="btn btn-primary">Check Out </a></li>
+					</ol>
+				</div>
+			</ol>
+	</font>
+
+<div name="vis" id="vis" style="visibility:hidden;position: fixed;top:50px; width: 100%;">
+	<table style="float: right;background:white;" text-align="center" class="name_style">
+		<tr><div >
 		
-	</div>
-	</div>
+			<td><h3>name &nbsp; </h3></td>
+			<td><h3>number &nbsp; </h3></td>
+			<td><h3>price &nbsp;</h3></td>
+		
+	</div></tr>
+		<%var ll=-1;%>
+<% sum.forEach(function(s){ %>
+
+<tr><div >
+		<%ll++;%>
+			<td><h3> <%=s.name%>&nbsp;</h3></td>
+			<td><h3 > <%=s.number%></h3></td>
+			<td><h3> <%=s.price%></h3></td>
+		
+	</div></tr>
+<% }); %>
+
+<tr><div >
+		
+			<td><h3>Total :  &nbsp; <%=sum[0].total%> </h3></td>
+			
+	</div></tr>
+<%}%>
+
+
+</table>
+</div>
+</div>
 <body>
