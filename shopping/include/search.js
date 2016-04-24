@@ -25,18 +25,64 @@
              }
          });
      });
-       
-       $("#ss").click(function(event){
-          alert("cc");
-          alert($("#search").val());
-         $.ajax({
-             url: "/searchitempage",
-             type: "POST",
-             data: 'search=' + $("#search").val(),
-             success: function (msg) {
-                    window.location="searchitempage";
-             }
-         });
+   /*    $("#ss").click(function(event){
+          $.ajax({
+                         url: "/searchitempage",
+                         type: "POST",
+                         data: 'search=' + $("#search").val(),
+                         success: function (msg) {
+                                window.location="searchitempage";
+                         }
+                     });
      });
+       
+       $("#wwww").click(function(event){
+          $.ajax({
+                         url: "/searchitempage",
+                         type: "POST",
+                         data: 'search=' + $("#search").val(),'ww1=' + $("#ww1").val(),
+                      +'&ww2='+$("#ww2").val(),
+                      +'&ww3='+$("#ww3").val(),
+                      +'&type='+ 123,
+                         success: function (msg) {
+                                window.location="searchitempage";
+                         }
+                     });
+     });*/
+       
+       
+       $("input:button").click(function(){
+          alert("cc");
+          var value = $(this).attr("name");
+          var patt1=new RegExp("ss");
+          var patt2=new RegExp("wwww");
+          alert(value)
+          if (patt1.test(value)) {
+                $.ajax({
+                         url: "/searchitempage",
+                         type: "POST",
+                         data: 'search=' + $("#search").val(),
+                         success: function (msg) {
+                                window.location="searchitempage";
+                         }
+                     });
+          }
+          
+          if (patt2.test(value)) {
+             $.ajax({
+                    url: "/searchitempage",
+                    type: "POST",
+                    data: 'ww1=' + $("#ww1").val()
+                      +'&ww2='+$("#ww2").val()
+                      +'&ww3='+$("#ww3").val()
+                      +'&type='+ 123,
+                    success: function (msg) {
+                           window.location="searchitempage";
+                    }
+                });
+          }
+        
+     });
+       
   });
 </script>

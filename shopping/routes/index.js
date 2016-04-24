@@ -3,6 +3,25 @@ var session = require('express-session');
 var express = require('express');
 var querystring=require('querystring');
 var crypt=require('../include/Crypt_function.js');
+require('date-utils');
+//email
+var nodemailer = require('nodemailer');
+
+var transport = nodemailer.createTransport("SMTP", {
+    host: "smtp-mail.outlook.com",
+     port: 587, 
+    auth: {
+        user: "Sunnywanghaoyu@outlook.com",
+        pass: "wangqq626558736"
+    }
+}); 
+var mailOptions = {
+    from: 'sunny <Sunnywanghaoyu@outlook.com> ', // sender address
+    to: '626558736@qq.com', // list of receivers
+    subject: 'Hello ✔', // Subject line
+    text: 'Hello world ✔', // plaintext body
+    html: '<b>Hello world ✔</b>' // html body
+};
 var router = express.Router();
 var fs=require('fs');
 //var db=require('../Database/user').db;
@@ -14,23 +33,50 @@ var userScheMa=require('../Database/user').userSchema;
 var itemScheMa=require('../Database/itemsDB').userSchema;
 var itemMongoose=require('../Database/itemsDB').mongoose;
 var item=require('../Database/itemsDB').user;
+
+//Setting  orders DB
+var orderScheMa=require('../Database/Orders').userSchema;
+var orderMongoose=require('../Database/Orders').mongoose;
+var order=require('../Database/Orders').user;
 //var mongoose = require('mongoose');
 //var db = mongoose.connect('mongodb://localhost/schools');
 
+router.get('/test', function(req, res) {
+ 
+    
+    res.render('test');
+    });
 router.get('/', function(req, res) {
   //  mongoose.connect('mongodb://harry:harry@192.168.1.100:27017/webSite');
     
-    item.find({}).sort({'searchtimes': -1}).limit(10).exec(function(err,docs){
-        req.session.items=docs;
+    item.find({category:"sport"}).sort({'searchtimes': -1}).limit(10).exec(function(err,sport){
+        req.session.items_sport=sport;
      //   console.log(docs);
-        console.log(docs);
-    console.log(req.session.picture+"00-0-");
-    res.render('index', { title: 'index' ,items:docs,
-               userpicture:req.session.userpicture,
-               username:req.session.username,
-               user:req.session.user,
-               sum:req.session.sum
-        });
+       // console.log(sport);
+         // find book
+         item.find({category:"book"}).sort({'searchtimes': -1}).limit(10).exec(function(err,book){
+            req.session.items_book=book;
+           
+            item.find({category:"furniture"}).sort({'searchtimes': -1}).limit(10).exec(function(err,furniture){
+            
+                   req.session.items_furniture=furniture;
+                   
+                   
+                        item.find({}).sort({'searchtimes': -1}).limit(5).exec(function(err,hotest){
+                               
+                               
+                                res.render('index', { title: 'index' ,items_sport:sport,
+                                           hotest:hotest,
+                                           items_book:book,
+                                           items_furniture:furniture,
+                                           userpicture:req.session.userpicture,
+                                           username:req.session.username,
+                                           user:req.session.user,
+                                           sum:req.session.sum
+                                    });
+                        });
+                });
+         });
     });
     
 });
@@ -113,6 +159,24 @@ router.get('/item_category_add' , function(req,res){
                 sum:req.session.sum
         });
 });
+
+router.get('/about' , function(req,res){
+    res.render('about',{title : "about",
+               user:req.session.user,
+               username :req.session.username,
+               userpicture:req.session.userpicture,
+                sum:req.session.sum
+        });
+});
+
+router.get('/contact' , function(req,res){
+    res.render('contact',{title : "contact",
+               user:req.session.user,
+               username :req.session.username,
+               userpicture:req.session.userpicture,
+                sum:req.session.sum
+        });
+});
 router.get('/userManagePage', function(req, res) {
     
     if (req.session.user==undefined) {
@@ -132,7 +196,7 @@ router.get('/showAllItems', function(req,res){
     
     item.find( { 'username': req.session.username },function (err, docs) {
         if (docs!='' ) {
-            console.log(docs);
+            
                 res.render('../items/showAllItems', { posts: docs ,
                            userpicture:req.session.userpicture,
                            user:req.session.user,
@@ -187,7 +251,6 @@ router.get('/ordercheck', function(req, res) {
     if (req.session.username==undefined) {
         res.render('login',{userpicture:req.session.userpicture,
                     sum:req.session.sum,
-                    
                username:req.session.username,
                user:req.session.user,
               
@@ -206,10 +269,11 @@ router.get('/ordercheck', function(req, res) {
              
                res.render('OrderCheck', { title: 'order' ,
                           product:docs,
-                          userpicture:req.session.userpicture,
-                          username:req.body.username,
-                          user:req.session.user,
-                           sum:req.session.sum
+                         itemss:req.session.seaitem,
+               userpicture:req.session.userpicture,
+               username:req.session.username,
+               user:req.session.user,
+               sum:req.session.sum
                            });
              console.log(orders);
             }
@@ -220,11 +284,11 @@ router.get('/ordercheck', function(req, res) {
 router.get('/shoppingCart', function(req, res) {
     
         res.render('shoppingCart', { title: 'shoppingCart' ,
-                                       //   allorders:req.session.allorders,
-                                          userpicture:req.session.userpicture,
-                                          username:req.body.username,
-                                          user:req.session.user,
-                                           sum:req.session.sum
+                                      itemss:req.session.seaitem,
+               userpicture:req.session.userpicture,
+               username:req.session.username,
+               user:req.session.user,
+               sum:req.session.sum
                                            });
       
              
@@ -245,6 +309,51 @@ router.get('/searchitempage', function(req, res) {
     
 });
 
+router.get('/searchitem/category/:category', function(req, res) {
+   
+    item.find({category:req.params.category},function(err,docs){
+       
+        res.render('searchitem', { title: 'index' ,
+               ooo:req.body.category,
+               
+               itemss:docs,
+               userpicture:req.session.userpicture,
+               username:req.session.username,
+               user:req.session.user,
+               sum:req.session.sum
+        });
+    });
+    
+    
+});
+
+router.get('/showCategory', function(req, res) {
+    item.distinct("category",function(err,dd){
+        console.log(dd);
+          res.render('showCategory', { title: 'index' ,
+              category:dd,
+               itemss:req.session.seaitem,
+               userpicture:req.session.userpicture,
+               username:req.session.username,
+               user:req.session.user,
+               sum:req.session.sum
+        });
+    });   
+});
+
+router.get('/allorders', function(req, res) {
+    order.find({username:req.session.username},function(err,dd){
+        console.log(dd);
+          res.render('AllOrders', { title: 'index' ,
+               allorders:dd,
+               itemss:req.session.seaitem,
+               userpicture:req.session.userpicture,
+               username:req.session.username,
+               user:req.session.user,
+               sum:req.session.sum
+        });
+    });   
+});
 //router.get('/showItems',function(req,res){
 //    res.render('../items/showItems',{usename:req.session.username,userpicture:req.session.userpicture});
 //});
@@ -302,7 +411,21 @@ router.post('/post', function(req, res) {
                         console.log(error);
                       //  res.render('error');
                     } else {
-                     
+                        
+                        var mailOptions = {
+                            from: 'sunny <Sunnywanghaoyu@outlook.com> ', // sender address
+                            to: '626558736@qq.com', // list of receivers
+                            subject: 'Hello ✔', // Subject line
+                            text: 'Hello world ✔', // plaintext body
+                            html: '<b>Congrulation you register an account ✔</b>' // html body
+                        };
+                        transport.sendMail(mailOptions, function(error, info){
+                            if(error){
+                                console.log(error);
+                            }else{
+                                console.log('Message sent: ' + "congrulation you register a new account");
+                            }
+                        });
                         console.log('save ok----------');
                       //  res.render('/');
                         res.send('1');
@@ -330,6 +453,7 @@ router.post("/logincheck", function (req, res) {
     var code=crypto.encrypt;
     console.log(code+"-=-=-=-=");
     User.find({ 'name': req.body.username ,'password':code}, function (err, docs) {
+        
 		if(docs!='') {	
             req.session.user=docs;
             req.session.username=req.body.username;
@@ -391,8 +515,10 @@ router.post('/userupdate',function (req,res){
 });
 
 router.post('/itemsupdate',function (req,res){
-    console.log("1");
-  //  console.log(req.body.picture);
+    var dt = new Date();
+    var time=dt.toFormat("DD-MM-YYYY HH24:MI:SS");
+    time=time.toString();
+     console.log(time);
       item.find({ 'username': req.session.username }, function (err, docs) {
          console.log("2");
             if(docs!=undefined){
@@ -410,7 +536,10 @@ router.post('/itemsupdate',function (req,res){
             }else{*/
                  console.log("3");
                  
-               var doc={username : req.body.username,location : req.body.location,category : req.body.category,name : req.body.itemname, picture : req.body.picture,phone : req.body.phone,description:req.body.description};
+               var doc={username : req.body.username,location : req.body.location,category : req.body.category,name : req.body.itemname,
+               picture : req.body.picture,phone : req.body.phone,description:req.body.description,price:req.body.price,
+               createTime:time
+               };
             //   var mongooseModel = item.model('items', itemScheMa);
                 item.create(doc, function(error){
                 if(error) {
@@ -457,7 +586,7 @@ router.post('/searchitems', function(req, res) {
 
 var sum=0;
 var orders= new Array();
-orders.push({total:1});
+orders.push({total:0});
 
 router.post('/addToCart123', function(req, res) {
     console.log("123");
@@ -571,23 +700,120 @@ router.post('/searchitempage', function(req, res) {
    console.log("---");
    console.log(req.body.search);
    var c=req.body.search;
+   var type=req.body.type;
+   var ww1=req.body.ww1;
+   var ww2=req.body.ww2;
+   var ww3=req.body.ww3;
     var pattern1 = new RegExp('^'+c,"i");;
           
     req.session.ooo=c;
-   item.find({name:pattern1}).sort({'searchtimes': -1}).limit(10).exec(function(err,docs){
-       
+    if (type==123) {
+        item.find({Location:ww1,category:ww3}).sort({'searchtimes': -1}).limit(20).exec(function(err,docs){
      //   console.log(docs);
         console.log(docs);
-    
-
-  req.session.seaitem=docs;
+          req.session.seaitem=docs;
              res.send(docs);
+         });
+    }
+    if (type==undefined) {
+        item.find({name:pattern1}).sort({'searchtimes': -1}).limit(20).exec(function(err,docs){
+       //   console.log(docs);
+          console.log(docs);
+            req.session.seaitem=docs;
+               res.send(docs);
+      });
+    }           
+});
+
+
+router.post('/user_items_manage', function(req, res) {
+   console.log("---");
+   console.log(req.body._id);
+    var but_type=req.body.but_type;
+    var flag=0;
+     var conditions = {_id : req.body._id};
+    var update     = {$set : {name : req.body.name, price : req.body.price ,
+    description : req.body.description, createtime:req.body.createtime,number:req.body.number,
+    category:req.body.category
+    }};
+    var options    = {upsert : true};
+    if (but_type==0) {
+        item.update(conditions, update, options, function(error){
+            res.send('');
+    });
+    }
+    
+    if (but_type==1) {
+       item.remove({_id:req.body._id}, function (err, docs) {
+        res.send('');
+        });
+    }
+});
+
+
+router.post('/adminusermanage', function(req, res) {
+   console.log(req.body._id);
+   var c=req.body._id;
+   var nam=req.body.name;
+   User.remove({_id:c},function(err,docs){
+       
+       if (!err) {
+        item.remove({username:nam},function(error,dd){
+            res.send('');
+          });
+       }
+   });       
+});
+
+router.post('/paying', function(req, res) {
+   console.log(req.body._id);
+   var c=req.body._id;
+   
+   
+    var dt = new Date();
+    var time=dt.toFormat("DD-MM-YYYY HH24:MI:SS");
+    time=time.toString();
+   console.log(time);
+   var array=new Array();
+   var arrayname=new Array();
+   var len=orders.length;
+   console.log(len);
+   for(var i=1;i<len;i++){
+        array.push(orders[i].id);
+        arrayname.push(orders[i].name);
+        console.log(orders[i].id);
+        console.log(orders[i].name);
+   }
+   
+   var ord = {
+	userid:c,
+	username : req.session.username,
+	itemid : array,
+    name:arrayname,
+	total: req.session.sum[0].total,
+	createTime:time,
+    Address: req.session.user.Address
+    };
+    
+   order.find({userid:c},function(e,dess){
+        if (!e) {
+            order.create(ord,function(err,docs){
+                    
+                    if (!err) {
+                         sum=0;
+                        orders=new Array();
+                        req.session.sum=new Array();
+                       }
+                });       
+        }
     });
    
-             
 });
+
+
 //----------------(**********************************************)
 //functions
+
 
 
 module.exports = router;

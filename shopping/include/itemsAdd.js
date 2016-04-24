@@ -2,12 +2,13 @@
 
 $(document).ready(function(){
 $("#submititem").click(function(event){
-       
+    
         var file = document.getElementById('picture').files[0];
         var reader = new FileReader();
         reader.readAsDataURL(file);
        
         reader.onload = function () {
+               
 		$.ajax({
 			url: '/itemsupdate',
 			type: 'POST',
@@ -17,6 +18,7 @@ $("#submititem").click(function(event){
                     +'&itemname='+$("#itemname").val()
                     +'&picture='+encodeURI(this.result).replace(/\+/g,'%2B')
                     +'&phone='+$("#phone").val()
+                    +'&price='+$("#price").val()
                     +'&description='+$("#description").val()
 			,success: function(data) {
                if (data!='') {

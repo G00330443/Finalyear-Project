@@ -48,10 +48,10 @@
 					<li><a href="/shoppingCart">ShoppingCart</a></li>
 					<li><a href="">Favorite</a></li>
 					<li><a href="">Services</a></li>
-					<li><a href="">Category</a></li>
+					<li><a href="/showCategory">Category</a></li>
 					<li><a href="">Messages</a></li>
-					<li><a href="">About</a></li>
-					<li><a href="">Contact</a></li>
+					<li><a href="/about">About</a></li>
+					<li><a href="/contact">Contact</a></li>
 				</font>
 				<div class="clearfix"></div>
 			</ul>
@@ -84,7 +84,7 @@
 					<ol class="breadcrumb">
 						<li><a><input style="border:0px;background:#F5F5F5;width:100px;"readOnly="true" name="tot" id="tot" type="text" value="$ : <%=sum[0].total%>"/></a></li>
 						<li><a name="cart_status" id="cart_status">Cart Status</a></li>
-						<li><a name="checkout" id="checkout" type="button" class="btn btn-primary">Check Out </a></li>
+						<li><a name="checkout" id="checkout" type="button" onclick="window.location.href='ordercheck'" class="btn btn-primary">Check Out </a></li>
 					</ol>
 				</div>
 			</ol>
@@ -122,4 +122,4 @@
 </table>
 </div>
 </div>
-<body>
+<body style="background:#F0FFFF;">

@@ -4,7 +4,7 @@ var db=require('./user').db;
 console.log("itemDB connected");
 var Schema = mongoose.Schema;   //  创建模型
 var userScheMa = new Schema({
-	id:String,
+	id:Number,
 	username : String,
 	location : String,
 	category: String,
@@ -13,11 +13,11 @@ var userScheMa = new Schema({
 	item_code: String,
 	color : String,
 	searchtimes : String,
-	number: String,
+	number: Number,
 	createTime:String,
-	phone : String,
+	phone : Number,
 	description : String,
-	price:String
+	price:Number
 }); //  定义了一个新的模型，但是此模式还未和users集合有关联
 
 

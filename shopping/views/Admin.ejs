@@ -1,14 +1,15 @@
 <% include ../include/header.ejs %>
 <%include ../include/header_usermanage.ejs%>
+<%include ../include/usermanage.js%>
 <style>
 .usersList-table{position:relative;}
-.usersList-table table{color:#777;border-right:1px solid #dbdbdb;border-bottom:1px solid #dbdbdb;background:url(images/TI.jpg) top left no-repeat;margin-bottom:15px;}
-.usersList .list{height:44px;line-height:44px;color:#fff;font-size:16px;font-weight:bold;font-family:'微软雅黑','幼圆';width:740px;}
+.usersList-table table{color:#777;border-right:1px solid #dbdbdb;border-bottom:1px solid #dbdbdb;background:url(images/TI.jpg) ;margin-bottom:15px;}
+.usersList .list{height:44px;line-height:44px;color:#fff;font-size:16px;font-weight:bold;font-family:'微软雅黑','幼圆';width:1000px;}
 
 
 </style>
 <td>
-<div class="usersList" style="float:right;width:1000px; height:400px; margin:50px auto;">
+<div class="usersList" style="margin:100px auto;float:right;width:1000px; margin:50px auto;">
 	<div class="usersList-table">
 		<div class="confi">
 			
@@ -19,15 +20,15 @@
 				<div class="confi-border-b" style="width:121px;"></div>
 			</div><!--confi-border end-->
 			
-			<table width="738" id="usersList-table" CellSpacing=30>
+			<table width="1000" id="usersList-table" CellSpacing=30>
 				<tr class="list">
-					<td width="123">Name</td>
-					<td width="123">Phonenumber</td>
-					<td width="123">Email</td>
-					<td width="123">Address</td>
-                    <td width="123">Membership</td>
-					<td width="123">other</td>
-                    <td width="123">operation  </td>
+					<td width="141">Name</td>
+					<td width="141">Phonenumber</td>
+					<td width="141">Email</td>
+					<td width="141">Address</td>
+                    <td width="141">Membership</td>
+					<td width="141">other</td>
+                    <td width="141">operation  </td>
 				</tr>
 
 <style>
@@ -39,17 +40,37 @@
     border-top:1px solid #dbdbdb;}
 }
 
-</style>              
+</style>
+<%var c=-1;%>
 <% posts.forEach(function(post){ %>
-				<tr style="background:#f4f4f4;">
+<%c=c+1;%>
+
+<%if(post.name=="admin"){%>
+				<tr hidden style="background:#f4f4f4;">
+					<input hidden name="id<%=c%>" id="id<%=c%>" value="<%=post._id%>" />
+					<input hidden name="name<%=c%>" id="name<%=c%>" value="<%=post.name%>" />
 					<td style="font-weight:bold;"><%= post.name%></td>
 					<td><%= post.phoneNumber%></td>
 					<td><%= post.email%></td>
 					<td><%= post.Address%></td>
 					<td><%= post.flag%></td>
                     <td>null</td>
-                    <td id="delect" method ="POST" type="button" value="Delect" width="90%" class="btn btn-danger">Delect</td>
-				</tr>   
+                    <td><input id="delect<%=c%>" name="delect<%=c%>" method ="POST" type="button" value="Delect" width="90%" class="btn btn-danger" ></Input><td>
+				</tr>
+				<%}else{%>
+				
+				<tr style="background:#f4f4f4;">
+					<input hidden name="id<%=c%>" id="id<%=c%>" value="<%=post._id%>" />
+					<input hidden name="name<%=c%>" id="name<%=c%>" value="<%=post.name%>" />
+					<td style="font-weight:bold;"><%= post.name%></td>
+					<td><%= post.phoneNumber%></td>
+					<td><%= post.email%></td>
+					<td><%= post.Address%></td>
+					<td><%= post.flag%></td>
+                    <td>null</td>
+                    <td><input id="delect<%=c%>" name="delect<%=c%>" method ="POST" type="button" value="Delect" width="90%" class="btn btn-danger" ></Input><td>
+				</tr>
+				<%}%>
 <% });%>
 			</table>	
 		</div>

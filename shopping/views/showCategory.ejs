@@ -1,0 +1,23 @@
+<% include ../include/header.ejs%>
+                <div id="LOG" style="width:700px; height:400px; margin:100px auto;background-image:url(../images/ccc.png);">
+                    <
+                    <h2>Category List</h2>
+                            <form  action="" style="width:400px; left: 0; top: 0; right: 0; bottom: 0;margin:50px auto;" > 
+                               <font style=" font-family: 'Pathway Gothic One';
+											text-transform: uppercase;
+											color: #272323;
+											text-align: left;
+											font-size: 30px;
+											padding: 0;
+											margin: 2px 0px 0px;
+											font-weight: 300;">
+                                    
+                                    <%category.forEach(function(c){console.log(c);%>
+                                    <p onclick="window.location.href='/searchitem/category/<%=c%>'"><%=c%></p>
+                                    <%});%>
+								</font>
+                            </form>
+                      
+                </div>  
+    </body>
+<%include ../include/footer.ejs%>

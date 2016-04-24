@@ -1,25 +1,29 @@
 <!DOCTYPE html>
 <html>
 <head>
-   
+
 <title>Shopping</title>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-	<script src="http://libs.baidu.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-	<link href="../../css/bootstrap.css" rel="stylesheet" type="text/css" media="all">
-	<link href="../../css/style.css" rel="stylesheet" type="text/css" media="all" />
-	<link href="../../css/zoomcss.css" type="text/css" rel="stylesheet">	
-	<SCRIPT src="../../javascripts/jquery-1.2.6.pack.js" type=text/javascript></SCRIPT>
-	<SCRIPT src="../../javascripts/zoomcss.base.js" type=text/javascript></SCRIPT>
-	<SCRIPT src="../../javascripts/zoomcss.lib.js" type=text/javascript></SCRIPT>
-	<SCRIPT src="../../javascripts/zoomcss.js" type=text/javascript></SCRIPT>
-	
-	<%include ../include/BuyItems_Order.js%>
-	<%include ../include/addToCart.js%>
-	<%include ../include/Cart.js%>
-	
-	<SCRIPT type=text/javascript>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet"
+	href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<script src="http://libs.baidu.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<link href="../../css/bootstrap.css" rel="stylesheet" type="text/css"
+	media="all">
+<link href="../../css/style.css" rel="stylesheet" type="text/css"
+	media="all" />
+<link href="../../css/zoomcss.css" type="text/css" rel="stylesheet">
+<SCRIPT src="../../javascripts/jquery-1.2.6.pack.js"
+	type=text/javascript></SCRIPT>
+<SCRIPT src="../../javascripts/zoomcss.base.js" type=text/javascript></SCRIPT>
+<SCRIPT src="../../javascripts/zoomcss.lib.js" type=text/javascript></SCRIPT>
+<SCRIPT src="../../javascripts/zoomcss.js" type=text/javascript></SCRIPT>
+
+<%include ../include/BuyItems_Order.js%> <%include
+../include/addToCart.js%> <%include ../include/Cart.js%>
+
+<SCRIPT type=text/javascript>
 	$(function(){			
 	   $(".jqzoom").jqueryzoom({
 			xzoom:400,
@@ -58,334 +62,480 @@
 		});				
 	})
 	</SCRIPT>
-	
-	 <style>
-.footer-left li{
-    display:block;
+
+<style>
+.footer-left li {
+	display: block;
 }
-.soci li{
-    display:block;
+
+.soci li {
+	display: block;
 }
+
 i.facebk {
-  width: 32px;
-  height: 32px;
-  background: url(../../images/social.png)no-repeat -5px -43px;
-  float: left;
-  vertical-align: middle;
+	width: 32px;
+	height: 32px;
+	background: url(../../images/social.png) no-repeat -5px -43px;
+	float: left;
+	vertical-align: middle;
 }
+
 i.facebk:hover {
-  background: url(../../images/social.png)no-repeat -6px -4px;
+	background: url(../../images/social.png) no-repeat -6px -4px;
 }
+
 i.twter {
-  width: 32px;
-  height: 32px;
-  background: url(../../images/social.png)no-repeat -43px -44px;
-  float: left;
-  vertical-align: middle;
+	width: 32px;
+	height: 32px;
+	background: url(../../images/social.png) no-repeat -43px -44px;
+	float: left;
+	vertical-align: middle;
 }
+
 i.twter:hover {
-  background: url(../../images/social.png)no-repeat -43px -4px;
+	background: url(../../images/social.png) no-repeat -43px -4px;
 }
+
 i.goopl {
-  width: 32px;
-  height: 32px;
-  background: url(../../images/social.png)no-repeat -83px -44px;
-  float: left;
-  vertical-align: middle;
+	width: 32px;
+	height: 32px;
+	background: url(../../images/social.png) no-repeat -83px -44px;
+	float: left;
+	vertical-align: middle;
 }
+
 i.goopl:hover {
-  background: url(../../images/social.png)no-repeat -83px -4px;
+	background: url(../../images/social.png) no-repeat -83px -4px;
 }
+
 i.insta {
-  width: 32px;
-  height: 32px;
-  background: url(../../images/social.png)no-repeat -123px -44px;
-  float: left;
-  vertical-align: middle;
+	width: 32px;
+	height: 32px;
+	background: url(../../images/social.png) no-repeat -123px -44px;
+	float: left;
+	vertical-align: middle;
 }
+
 i.insta:hover {
-  background: url(../../images/social.png)no-repeat -123px -4px;
+	background: url(../../images/social.png) no-repeat -123px -4px;
 }
 </style>
-	<div class="header">
-		<div align="center">
-		<img src="../../images/title1.png" style="height:80px;"/>
-		<p>	<img src="../../images/Title.png" style="height:20px;"/></p>
-		</div>
-		
-		<!--
+
+
+
+<div class="header">
+	<div align="center">
+		<img src="../../images/title1.png" style="height: 80px;" />
+		<p>
+			<img src="../../images/Title.png" style="height: 20px;" />
+		</p>
+	</div>
+
+	<!--
 		!!!!!!
 		check Session have user login or not
 		-->
-		<div class="head-nav">
-						<% if(userpicture==undefined){ %>
-							<input onclick="window.location.href='../../login'"
-							type="image" src="../../images/picture.png"
-							style="float: left;" />
-						<%}else{%>
-							<img  style="float: left;" onclick="window.location.href='../../login'" height="80" src="<%= userpicture%>" alt="Press to Login"/>
-						<%}%>
-						
-			<!--
+	<div class="head-nav">
+		<% if(userpicture==undefined){ %> <input
+			onclick="window.location.href='../../login'" type="image"
+			src="../../images/picture.png" style="float: left;" /> <%}else{%> <img
+			style="float: left;" onclick="window.location.href='../../login'"
+			height="80" src="<%= userpicture%>" alt="Press to Login" /> <%}%>
+
+		<!--
 			this is container is used to create bar
-			-->			
-			<div class="container">
-					<ul class="cl-effect-7">
-						<font >
-						<li class="active"><a href="/">Home</a></li>
-						<li><a href="/userManagePage">Account</a></li>
-						<li><a href="/shoppingCart">ShoppingCart</a></li>
-						<li><a href="">Favorite</a></li>
-						<li><a href="">Services</a></li>
-						<li><a href="">Category</a></li>
-						<li><a href="">Messages</a></li>
-						<li><a href="">About</a></li>
-						<li><a href="">Contact</a></li>
-						</font>
-							<div class="clearfix"> </div>
-					</ul>
-			</div>
-		
+			-->
+		<div class="container">
+			<ul class="cl-effect-7">
+				<font>
+					<li class="active"><a href="/">Home</a></li>
+					<li><a href="/userManagePage">Account</a></li>
+					<li><a href="/shoppingCart">ShoppingCart</a></li>
+					<li><a href="">Favorite</a></li>
+					<li><a href="">Services</a></li>
+					<li><a href="/category">Category</a></li>
+					<li><a href="">Messages</a></li>
+					<li><a href="/about">About</a></li>
+					<li><a href="/contact">Contact</a></li>
+				</font>
+				<div class="clearfix"></div>
+			</ul>
+		</div>
+
 	</div>
-	</div>
+</div>
 <body>
-	
+
 	<!-- Below script is state of cart
 		Show total money of cart and checkout button
 	-->
-	
+
 	<a hidden id="product_id" name="product_id" value="<%=product[0]._id%>"></a>
-	
- <div class="head-bread" >
-         <font size=4>
-            <div class="container" >
-                <ol class="breadcrumb">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Category</a></li>
-                    <li class="active">Shop</li>
-                      
-                </ol>
-            </div>
-          </font>
-        </div>
- 
- <style>
+
+	<div class="head-bread">
+		<font size=4>
+			<div class="container">
+				<ol class="breadcrumb">
+					<li><a href="\">Home</a></li>
+					<li><a href=""><%=product[0].category%></a></li>
+					<li class="active">Shop</li>
+
+				</ol>
+			</div>
+		</font>
+	</div>
+
+	<style>
 .name_style h3 {
-    font-family: 'Pathway Gothic One';
-    text-transform: uppercase;
-    color: #272323;
-    text-align: left;
-    font-size: 20px;
-    padding: 0;
-    margin: 2px 0px 0px;
-    font-weight: 400;
+	font-family: 'Pathway Gothic One';
+	text-transform: uppercase;
+	color: #272323;
+	text-align: left;
+	font-size: 20px;
+	padding: 0;
+	margin: 2px 0px 0px;
+	font-weight: 400;
 }
 </style>
-<% if(sum!=null){%>
-<%	var len=sum[0].length;%>
-<%	var total=sum[0].total;%>
-<%	 var oo=1;%>
-<%		 %>
-<%	%>
+	<% if(sum!=null){%> <% var len=sum[0].length;%> <% var
+	total=sum[0].total;%> <% var oo=1;%> <% %> <% %>
 
-<div class="head-bread" style="z-index:999;position: fixed; top: 0; width: 100%;">
-	<font size=4>
+	<div class="head-bread"
+		style="z-index: 999; position: fixed; top: 0; width: 100%;">
+		<font size=4>
 			<tr>
 				<div style="float: right;">
 					<ol class="breadcrumb">
-						<li><input style="border:0px;background:#F5F5F5;width:70px;readOnly:true;"  name="total" id="total" value="$ : <%=sum[0].total%>" type="text"></li>
+						<li><input
+							style="border: 0px; background: #F5F5F5; width: 70px; readOnly: true;"
+							name="total" id="total" value="$ : <%=sum[0].total%>" type="text"></li>
 						<li><a name="cart_status" id="cart_status">Cart Status</a></li>
-						<li><a name="checkout" id="checkout" type="button" class="btn btn-primary">Check Out </a></li>
+						<li><a name="checkout" id="checkout" type="button"
+							class="btn btn-primary">Check Out </a></li>
 					</ol>
 				</div>
-			</ol>
-	</font>
+				</ol>
+		</font>
 
-<div name="vis1" id="vis1" style="visibility:hidden;position: fixed;top:50px; width: 100%;">
-	<table style="float: right;background:white;" text-align="center" class="name_style">
-		<tr><div >
-		
-			<td><h3>name &nbsp; </h3></td>
-			<td><h3>number &nbsp; </h3></td>
-			<td><h3>price &nbsp;</h3></td>
-		
-	</div></tr>
-		<% var dd=-1; %>
-<% sum.forEach(function(s){ %>
-<% dd=dd+1;%>
-<tr><div >
-		
-			<td><h3><input name="name<%=dd%>" id="name<%=dd%>" type="text"
-			style="border:0px;background:white;width:70px;"
-			value="<%=s.name%>"></input></h3></td>
-			<td><h3><input name="number<%=dd%>" id="number<%=dd%>" type="text"
-			style="border:0px;background:white;width:70px;"
-			value="<%=s.number%>"></input> </h3></td>
-			<td><h3><input name="price<%=dd%>" id="price<%=dd%>" type="text"
-			style="border:0px;background:white;width:70px;"
-			value="<%=s.price%>"></input></h3></td>
-		
-	</div></tr>
-<span name="pp" id="pp" />
-<% }); %>
+		<div name="vis1" id="vis1"
+			style="visibility: hidden; position: fixed; top: 50px; width: 100%;">
+			<table style="float: right; background: white;" text-align="center"
+				class="name_style">
+				<tr>
+					<div>
 
-<tr><div >
-		
-			<td><h3>Total :  &nbsp; <%=sum[0].total%> </h3></td>
-			
-	</div></tr>
-<%}%>
+						<td><h3>name &nbsp;</h3></td>
+						<td><h3>number &nbsp;</h3></td>
+						<td><h3>price &nbsp;</h3></td>
+
+					</div>
+				</tr>
+				<% var dd=-1; %> <% sum.forEach(function(s){ %> <% dd=dd+1;%>
+				<tr>
+					<div>
+
+						<td><h3>
+								<input name="name<%=dd%>" id="name<%=dd%>" type="text"
+									style="border: 0px; background: white; width: 70px;"
+									value="<%=s.name%>"></input>
+							</h3></td>
+						<td><h3>
+								<input name="number<%=dd%>" id="number<%=dd%>" type="text"
+									style="border: 0px; background: white; width: 70px;"
+									value="<%=s.number%>"></input>
+							</h3></td>
+						<td><h3>
+								<input name="price<%=dd%>" id="price<%=dd%>" type="text"
+									style="border: 0px; background: white; width: 70px;"
+									value="<%=s.price%>"></input>
+							</h3></td>
+
+					</div>
+				</tr>
+				<span name="pp" id="pp" /> <% }); %>
+
+				<tr>
+					<div>
+
+						<td><h3>Total : &nbsp; <%=sum[0].total%></h3></td>
+
+					</div>
+				</tr>
+				<%}%>
 
 
-</table>
-</div>
-</div>
+			</table>
+		</div>
+	</div>
 
- 
- 
-    <div style="width:1000px; height:500px; margin:50px auto;">
-		
-         <!-- This is special effect of  show picture by zoomout it
+
+
+	<div style="width: 1000px; height: 500px; margin: 50px auto;">
+
+		<!-- This is special effect of  show picture by zoomout it
 				and show some graph of items
 		 -->
-		 <div style="width:300px;height:500px;float:right;">
-			
-                    <div >
-                        <div >
-                            <h3>Category</h3>
-                            <p>Name</p>
-                            <h4 id="price" name="price" value="190">&#36;190</h4>
-                        </div>
-                     
-                    <hr >
-                    <div >
-                        <div >
-                        <ul>
-                            <li class="qty" >
-                                <h3>Size Chart</h3>
-                                <select id="size" name="size"class="form-control siz-option">
-                                  <option>6 US</option>
-                                  <option>7 US</option>
-                                  <option>8 US</option>
-                                  <option>9 US</option>
-                                  <option>10 US</option>
-                                  <option>11 US</option>
-                                </select>
-                            </li>
-                            <li class="qty" >
-                                <h4>QTY</h4>
-                                <select id="number" name="number" class="form-control qty-option">
-                                  <option>1</option>
-                                  <option>2</option>
-                                  <option>3</option>
-                                  <option>4</option>
-                                  <option>5</option>
-                                  <option>6</option>
-                                  <option>7</option>
-                                </select>
-                            </li>
-                        </ul>
-                      
-                        </div>
-                        <ul>
-                            <li class="but_buyitems">
-							  
-								 <input hidden name="asd" id="asd" value="<%=product[0]._id%>"></input>
-                                <button name="addToCart" id="addToCart" class="btn btn-primary"  type="button" >Add To Cart</button>
-                                <button name="BuyItems" id="BuyItems" class="btn btn-primary"  type="button" onclick="window.location.href='/ordercheck'">Buy Now</button>
-                            </li>
-                        </ul>
-                    </div>
-					
-                    <div id="description">
-                        <h3>product details</h3>
-                        <a>---<%= product[0].description%></a>
-                    </div>
-                
-			</div>
-		</div>	
-        
-					
-					<div style="width:300px;height:500px;float:left;">
-						<div id=preview>
-								<div class=jqzoom id=spec-n1 >
-									<IMG height=420 src="../../<%= product[0].picture%>" jqimg="../../<%= product[0].picture%>" width=420>
-								</div>
-								<div id=spec-n5>
-									<div class=control id=spec-left>
-										<img src="../../images/left.gif" />
-									</div>
-									<div id=spec-list>
-										<ul class=list-h>
-											<li><img width="500"   
-														height="400" src="../../<%= product[0].picture%>"> </li>
-											<li><img width="500"   
-														height="400" src="../../<%= product[0].picture%>"> </li>
-											<li><img width="500"   
-														height="400" src="../../<%= product[0].picture%>"> </li>
-										
-							
-										</ul>
-									</div>
-									<div class=control id=spec-right>
-										<img src="../../images/right.gif" />
-									</div>
-									
-								</div>
-							</div>
-						</div>
+		<div style="width: 300px; height: 500px; float: right;">
+
+			<div>
+				<div>
+					<h3>Category : <%=product[0].category%></h3>
+					<p>Name : <%=product[0].name%></p>
+					<h4 id="price" name="price" value="<%=product[0].price%>">&#36;<%=product[0].price%></h4>
 				</div>
-					
-						  
-</div>
- 
+
+				<hr>
+				<div>
+					<div>
+						<ul>
+							<li hidden class="qty">
+								<h3>Size Chart</h3> <select id="size" name="size"
+								class="form-control siz-option">
+									<option>6 US</option>
+									<option>7 US</option>
+									<option>8 US</option>
+									<option>9 US</option>
+									<option>10 US</option>
+									<option>11 US</option>
+							</select>
+							</li>
+							<li class="qty">
+								<h4>QTY</h4> <select id="number" name="number"
+								class="form-control qty-option">
+									<option>1</option>
+									<option>2</option>
+									<option>3</option>
+									<option>4</option>
+									<option>5</option>
+									<option>6</option>
+									<option>7</option>
+							</select>
+							</li>
+						</ul>
+
+					</div>
+					<ul>
+						<li class="but_buyitems"><input hidden name="asd" id="asd"
+							value="<%=product[0]._id%>"></input>
+							<button name="addToCart" id="addToCart" class="btn btn-primary"
+								type="button">Add To Cart</button>
+							<button name="BuyItems" id="BuyItems" class="btn btn-primary"
+								type="button" onclick="window.location.href='/ordercheck'">Buy
+								Now</button>
+							<form target="paypal"
+								action="https://www.paypal.com/cgi-bin/webscr" method="post">
+								<input type="hidden" name="cmd" value="_cart"> <input
+									type="hidden" name="business" value="FPGQ54XFWKEWA"> <input
+									type="hidden" name="lc" value="US"> <input
+									type="hidden" name="item_name" value="ddd"> <input
+									type="hidden" name="button_subtype" value="products"> <input
+									type="hidden" name="currency_code" value="USD"> <input
+									type="hidden" name="tax_rate" value="0.000"> <input
+									type="hidden" name="shipping" value="3.00"> <input
+									type="hidden" name="add" value="1"> <input
+									type="hidden" name="bn"
+									value="PP-ShopCartBF:btn_cart_LG.gif:NonHosted">
+								<table>
+									<tr>
+										<td><input hidden type="hidden" name="on0" value="Colors">Colors</td>
+									</tr>
+									<tr>
+										<td><select hidden name="os0">
+												<option value="blue">blue $12.00 USD</option>
+												<option value="red">red $12.00 USD</option>
+												<option value="white">white $12.00 USD</option>
+										</select></td>
+									</tr>
+									<tr>
+										<td><input type="hidden" name="on1" value="size">size</td>
+									</tr>
+									<tr>
+										<td><select hidden name="os1">
+												<option value="6">6</option>
+												<option value="7">7</option>
+												<option value="8">8</option>
+										</select></td>
+									</tr>
+									<tr>
+										<td><input type="hidden" name="on2" value="Quality">Quality</td>
+									</tr>
+									<tr>
+										<td><select name="os2">
+												<option value="1">1</option>
+												<option value="2">2</option>
+												<option value="3">3</option>
+										</select></td>
+									</tr>
+								</table>
+								<input type="hidden" name="currency_code" value="USD"> <input
+									type="hidden" name="option_select0" value="blue"> <input
+									type="hidden" name="option_amount0" value="12.00"> <input
+									type="hidden" name="option_select1" value="red"> <input
+									type="hidden" name="option_amount1" value="12.00"> <input
+									type="hidden" name="option_select2" value="white"> <input
+									type="hidden" name="option_amount2" value="12.00"> <input
+									type="hidden" name="option_index" value="0"> <input
+									type="image"
+									src="https://www.paypalobjects.com/en_US/i/btn/btn_cart_LG.gif"
+									border="0" name="submit"
+									alt="PayPal - The safer, easier way to pay online!"> <img
+									alt="" border="0"
+									src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif"
+									width="1" height="1">
+							</form></li>
+					</ul>
+				</div>
+
+				<div id="description">
+					<h3>product details</h3>
+					<a>---<%= product[0].description%></a>
+				</div>
+
+			</div>
+		</div>
+
+
+		<div style="width: 300px; height: 500px; float: left;">
+			<div id=preview>
+				<div class=jqzoom id=spec-n1>
+					<IMG height=420 src="../../<%= product[0].picture%>"
+						jqimg="../../<%= product[0].picture%>" width=420>
+				</div>
+				<div id=spec-n5>
+					<div class=control id=spec-left>
+						<img src="../../images/left.gif" />
+					</div>
+					<div id=spec-list>
+						<ul class=list-h>
+							<li><img width="500" height="400"
+								src="../../<%= product[0].picture%>"></li>
+							<li><img width="500" height="400"
+								src="../../<%= product[0].picture%>"></li>
+							<li><img width="500" height="400"
+								src="../../<%= product[0].picture%>"></li>
+
+
+						</ul>
+					</div>
+					<div class=control id=spec-right>
+						<img src="../../images/right.gif" />
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+	<div style="width: 1000px; margin: 50px auto;">
+		<div style="width: 1000px; margin: 10px auto;">
+			<div name="comment" id="comment"
+				style="width: 800px; margin: 10px auto;">
+				<table class="table table-hover">
+					<h3
+						style="font-family: 'Pathway Gothic One'; font-weight: 300; size: 20px;">Consumers
+						Comment</h3>
+					<thead>
+						<tr>
+							<th style="width: 123px;">User Name</th>
+							<th style="width: 200px;">Item Name</th>
+							<th>Comment</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>harry</td>
+							<td>Fifty shades of Greys</td>
+							<td>This is test comment</td>
+						</tr>
+						<tr>
+							<td>test1</td>
+							<td>Fifty shades of Greys</td>
+							<td>Final Year Project</td>
+						</tr>
+						<tr>
+							<td>test2</td>
+							<td>Fifty shades of Greys</td>
+							<td>Software Development</td>
+						</tr>
+					</tbody>
+				</table>
+
+			</div>
+
+			<div style="width: 800px; height: 100px; margin: 0px auto;"
+				class="input-group">
+				<textarea name="description" style="width: 800px;" rows="5"
+					id="description"></textarea>
+				<span>
+					<button name="comment" id="comment" class="btn-primary">
+						Comment</button>
+				</span>
+			</div>
+			<!-- /input-group -->
+
+		</div>
+	</div>
 </body>
 <footer>
-<div class="footer" style="background:#C1FFC1 ; font-weight: 700;font-family: Overlock-Regular;">
-	<table>
-		
-		<div class="container">
-			<tr>
-			<div class="col-md-3 footer-left">
-				<h3>Navigation</h3>
-				<li><a href="">About</a></li>
-				<li><a href="">Services</a></li>
-				<li><a href="">Blog</a></li>
-				<li><a href="">Contact</a></li>
-			</div></tr>
-			
-		<tr>	<div class="col-md-3 footer-left">
-				<h3>For Members</h3>
-				<li><a href="#">Forums</a></li>
-				<li><a href="#">Promotions</a></li>
-				<li><a href="login.ejs">Sign In</a></li>
-				<li><a href="#">News</a></li>
-			</div></tr>
-		
-		<tr>	<div class="col-md-3 soci" >
-				<h3>Follow Us</h3>
-                <div style="float:left;">
-				<ul>
-						<li><a href="#"><i class="facebk"> </i></a></li>
-						<li><a href="#"><i class="twter"> </i></a></li>
-						<li><a href="#"><i class="goopl"> </i></a></li>
-						<li><a href="#"><i class="insta"> </i></a></li>
-							<div class="clearfix"></div>	
-					</ul>
-                </div>
-            </div><tr>
-			
-		<tr>	<div class="col-md-3 footer-left">
-				<h3>Our Location</h3>
-				<li><i class="add"> </i>Harry</li>
-				<li><i class="phone"> </i>1234567890</li>
-				<li><a href="mailto:info@example.com"><i class="mail"> </i>info@sitename.com </a></li>
-			</div></tr>
-		<tr>		<div class="clearfix"> </div>
-		<p>Copyright &copy; 2015.Company name All rights reserved.More Templates <a href="" target="_blank" title="Take">Take What U Want</a> - Collect from 
-		</div></tr>
-		<a href="#" id="toTop" style="display: block;"><span id="toTopHover" style="opacity: 0;"></span> <span id="toTopHover" style="opacity: 0;"> </span></a>
-	</div>
-</table>
+	<div class="footer"
+		style="background: #C1FFC1; font-weight: 700; font-family: Overlock-Regular;">
+		<table>
+
+			<div class="container">
+				<tr>
+					<div class="col-md-3 footer-left">
+						<h3>Navigation</h3>
+						<li><a href="">About</a></li>
+						<li><a href="">Services</a></li>
+						<li><a href="">Blog</a></li>
+						<li><a href="">Contact</a></li>
+					</div>
+				</tr>
+
+				<tr>
+					<div class="col-md-3 footer-left">
+						<h3>For Members</h3>
+						<li><a href="#">Forums</a></li>
+						<li><a href="#">Promotions</a></li>
+						<li><a href="login.ejs">Sign In</a></li>
+						<li><a href="#">News</a></li>
+					</div>
+				</tr>
+
+				<tr>
+					<div class="col-md-3 soci">
+						<h3>Follow Us</h3>
+						<div style="float: left;">
+							<ul>
+								<li><a href="#"><i class="facebk"> </i></a></li>
+								<li><a href="#"><i class="twter"> </i></a></li>
+								<li><a href="#"><i class="goopl"> </i></a></li>
+								<li><a href="#"><i class="insta"> </i></a></li>
+								<div class="clearfix"></div>
+							</ul>
+						</div>
+					</div>
+				<tr>
+				<tr>
+					<div class="col-md-3 footer-left">
+						<h3>Our Location</h3>
+						<li><i class="add"> </i>Harry</li>
+						<li><i class="phone"> </i>1234567890</li>
+						<li><a href="mailto:info@example.com"><i class="mail">
+							</i>info@sitename.com </a></li>
+					</div>
+				</tr>
+				<tr>
+					<div class="clearfix"></div>
+					<p>
+						Copyright &copy; 2015.Company name All rights reserved.More
+						Templates <a href="" target="_blank" title="Take">Take What U
+							Want</a> - Collect from
+			</div>
+			</tr>
+			<a href="#" id="toTop" style="display: block;"><span
+				id="toTopHover" style="opacity: 0;"></span> <span id="toTopHover"
+				style="opacity: 0;"> </span></a>
+			</div>
+		</table>
 </footer>
 <html>

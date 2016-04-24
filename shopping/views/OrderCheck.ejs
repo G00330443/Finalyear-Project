@@ -1,62 +1,75 @@
 <%include ../include/header.ejs%>
 
-<div style="width: 900px; height: 900px; margin: 50px auto;">
+<script type="text/javascript">
+
+$(document).ready(function(){
+$("#ppp").click(function(event){
+       alert("c");
+		$.ajax({
+			url: '/paying',
+			type: 'POST',
+			data: 	'_id=' + $("#userid").val()
+			,success: function(data) {
+               alert("Successful Pay");
+			     window.location="/";
+			}
+		});
+	});
+});
+
+</script>
+
+<div style="width: 900px; margin: 50px auto;">
 	<body data-spm="1">
 		<div id="page">
 			<div id="content" class="grid-c">
 				<div id="address" class="address" style="margin-top: 20px;"
 					data-spm="2">
 					<form name="addrForm" id="addrForm" action="#">
-						<h3>
-							Confirm Delivery Address & Manage Delivery Address 
-							
-						</h3>
-						
+						<h3>Confirm Delivery Address & Manage Delivery Address</h3>
+
 						<!--
 						This Below script is used to
 						get user's address and set new
 						address to take item
 						-->
-						<ul ><li><h4>Delivery to : </h4>
+						<ul>
+							<li><h4>Delivery to :</h4>
 								<div class="address-info">
-									<input name="address" type="radio">
-									<label>
-										<%=user[0].Address%> (XXXXX Receive)
-										<em>-------Phonenumber : <%=user[0].phoneNumber%></em>
-									</label> 
-								</div>
-							</input>
-						</li>
-							<li><h4>Send to : </h4>
+									<input name="address" type="radio"> <label>
+										<%=user[0].Address%> (XXXXX Receive) <em>-------Phonenumber
+											: <%=user[0].phoneNumber%></em>
+									</label>
+								</div> </input></li>
+							<li><h4>Send to :</h4>
 								<div class="address-info">
-									<input name="address" type="radio">
-									<label>
-										<%=user[0].Address%> (XXXXX Receive)
-										<em>-------Phonenumber : <%=user[0].phoneNumber%></em>
-									</label> 
-								</div>
-							</input>
-						</li>
+									<input name="address" type="radio"> <label>
+										<%=user[0].Address%> (XXXXX Receive) <em>-------Phonenumber
+											: <%=user[0].phoneNumber%></em>
+									</label>
+								</div> </input></li>
 						</ul>
 						<br>
 						<div class="address-bar">
-							<a href="#" class="btn btn-primary" id="add_new_address" type="button">Add new Address</a>
+							<a href="#" class="btn btn-primary" id="add_new_address"
+								type="button">Add new Address</a>
 						</div>
 						<br>
 					</form>
 				</div>
-				<form name="order_detail" id="order_detail">
+				<form name="order_detail" id="order_detail"
+					action="https://www.paypal.com/cgi-bin/webscr">
 					<div>
 						<h3 class="dib">Confirm Order Infro</h3>
 						<br>
-						<table cellspacing="0" cellpadding="0" class="order-table"
-							id="J_OrderTable" summary="统一下单订单信息区域">
-							
+						<table width="100%" border="1" cellspacing="20%" cellpadding="80"
+							class="order-table" id="J_OrderTable" summary="统一下单订单信息区域">
+
 							<!--
 							THis below script is used to show detail of
 							this product price saler and other detail
 							-->
-							
+
 							<thead>
 								<tr>
 									<th class="s-title">Shop_Item&nbsp;&nbsp;
@@ -76,71 +89,66 @@
 									</th>
 								</tr>
 							</thead>
-<style>
-	.secccc input {
-border:0px;background:white;   
+							<style>
+.secccc input {
+	border: 0px;
+	background: white;
 }
-.h3{
-	 font-family: 'Pathway Gothic One';
-	 font-size: 15px;
-    padding: 0;
-    margin: 0px 0px 0px;
-    font-weight: 200;
+
+.h3 {
+	font-family: 'Pathway Gothic One';
+	font-size: 15px;
+	padding: 0;
+	margin: 0px 0px 0px;
+	font-weight: 200;
 }
 </style>
 
 
-					<tbody >
-					<%sum.forEach(function(ss){%>
-							<%if(ss.name==null){%>
-							<%}else{%>
+							<tbody>
+								<%sum.forEach(function(ss){%> <%if(ss.name==null){%> <%}else{%>
 								<tr class="firsttt">
 									<td colspan="5"></td>
 								</tr>
-								<tr style="font-family: 'Pathway Gothic One';
-	 font-size: 20px;
-    padding: 0;
-    margin: 0px 0px 0px;
-    font-weight: 400;">
-									<td colspan="3">Shop :<a ><%=ss.username%>&nbsp;&nbsp;</a> <span class="seller">Seller :<a
-											><%=ss.username%></a></span> 
+								<tr
+									style="font-family: 'Pathway Gothic One'; font-size: 20px; padding: 0; margin: 0px 0px 0px; font-weight: 400;">
+									<td colspan="3">Shop :<a><%=ss.username%>&nbsp;&nbsp;</a>
+										<span class="seller">Seller :<a><%=ss.username%></a></span>
 									</td>
 									<td colspan="2" class="promo">
-										<div>
-											
-										</div>
+										<div></div>
 									</td>
 								</tr>
 								<tr class="secccc">
 									<!--
 									Product detail
 								-->
-									<td >
-										<img src="<%=ss.picture%>" style="width:50px;" />
-										<span class="item_name"><%=ss.name%></span></a>
+									<td><img src="<%=ss.picture%>" style="width: 50px;" /> <span
+										class="item_name"><%=ss.name%></span></a>
 
 										<div name="sales_detail">
-											<span>Color: <%=ss.color%> </span> <span>Category : <%=ss.category%> </span> 
+											<span>Color: <%=ss.color%> </span> <span>Category :
+												<%=ss.category%> </span>
 										</div> <a title="消费者保障服务，卖家承诺商品如实描述" href="#" target="_blank"> <img
 											src="http://img03.taobaocdn.com/tps/i3/T1bnR4XEBhXXcQVo..-14-16.png" />
 									</a>
 										<div>
-											<span style="color: gray;">Seller guarantee shipping in 72hours</span>
+											<span style="color: gray;">Seller guarantee shipping
+												in 72hours</span>
 										</div></td>
-									<td class="s-price"><span class='price '>
-									<em	><%=ss.price%></em>
+									<td class="s-price"><span class='price '> <em><%=ss.price%></em>
 									</span></td>
-									<td class="s-amount" ><%=ss.number%></td>
+									<td class="s-amount"><%=ss.number%></td>
 									<td class="s-agio">
-										<div class="J_Promotion promotion" data-point-url="">No Discount</div>
+										<div class="J_Promotion promotion" data-point-url="">No
+											Discount</div>
 									</td>
-									<td class="s-total"><span class='price '>
-									<%var h=parseInt(ss.price)*parseInt(ss.number);%>
-									<input readOnly="true" name="total" id="total"value="Total : $ <%=h%>" type="text"><input>
-									</td>
+									<td class="s-total"><span class='price '> <%var
+											h=parseInt(ss.price)*parseInt(ss.number);%> <input
+											readOnly="true" name="total" id="total"
+											value="Total : $ <%=h%>" type="text"><input></td>
 								</tr>
-								<%}%>
-							<%});%>
+								<%}%> <%});%>
 
 
 								<tr class="item-service">
@@ -158,8 +166,8 @@ border:0px;background:white;
 													<li>
 														<div class="field gbook">
 															<label class="label">Leave message to seller : </label>
-															<textarea style="width: 350px; height: 80px;"
-																title="" name=""></textarea>
+															<textarea style="width: 350px; height: 80px;" title=""
+																name=""></textarea>
 														</div>
 													</li>
 												</ul>
@@ -169,8 +177,7 @@ border:0px;background:white;
 												<div class="shoparea">
 													<ul class="dib-wrap">
 														<li class="dib title">Shop favorable</li>
-														<li class="dib sel">
-															</li>
+														<li class="dib sel"></li>
 														<li class="dib fee"><span class='price '> -<em
 																class="style-normal-bold-black J_ShopPromo_Result">0.00</em>
 														</span></li>
@@ -182,23 +189,23 @@ border:0px;background:white;
 												<div class="farearea">
 													<ul class="dib-wrap J_farearea">
 														<li class="dib title">Delivery Method ：</li>
-														<li >
-
-															<select name ="deliver_method"  id="delivery_method">
-																<option value=" 2 "	selected="selected">Post $5.00</option>
-																<option  value=" 7 " >Post $4.00 </option>
+														<li><select name="deliver_method"
+															id="delivery_method">
+																<option value=" 2 " selected="selected">Post
+																	$5.00</option>
+																<option value=" 7 ">Post $4.00</option>
 																<option value="5">Normal Post $2.00</option>
 														</select> <em tabindex="0" class="J_FareFree" style="display: none">免邮费</em>
 														</li>
-														<li class="dib fee"><span class='price '> <em
-																class="style-normal-bold-red J_FareSum">30.00</em>
-														</span></li>
+
 													</ul>
 												</div>
 												<div class="extra-area">
 													<ul class="dib-wrap">
 														<li class="dib title">Shipping Time：</li>
-														<li class="dib content">Seller guarantee shipping in 72hours<a href="#"></a></li>
+														<li class="dib content">Seller guarantee shipping in
+															72hours<a href="#"></a>
+														</li>
 													</ul>
 												</div>
 
@@ -210,11 +217,11 @@ border:0px;background:white;
 
 								<tr class="shop-total blue-line">
 									<td colspan="5">Total Amount :(<span class="J_Exclude"
-										style="display: none"></span>No delivery fee<span class="J_ServiceText"
-										style="display: none">fee </span>)： <span
+										style="display: none"></span>No delivery fee<span
+										class="J_ServiceText" style="display: none">fee </span>)： <span
 										class='price g_price '> <span>&yen;</span><em
-											class="style-middle-bold-red J_ShopTotal">630.00</em>
-									</span> 
+											class="style-middle-bold-red J_ShopTotal"><%=sum[0].total%></em>
+									</span>
 
 									</td>
 								</tr>
@@ -225,32 +232,110 @@ border:0px;background:white;
 
 										<div class="order-go" data-spm="4">
 											<div class="J_AddressConfirm address-confirm">
-												<div class="kd-popup pop-back" style="margin-bottom: 40px;">
-													<div class="box">
-														<div class="bd">
-															<div class="point-in">
-<br>
-																<em class="t">Total ：</em> <span class='price g_price '>
-																	<span>&yen;</span><em class="style-large-bold-red"
-																	id="J_ActualFee">630.00</em>
-																</span>
+												<table width="80%" cellspacing="50%" cellpadding="80">
+
+													<td>
+														<div class="kd-popup pop-back"
+															style="margin-bottom: 40px;">
+															<div class="box">
+																<div class="bd">
+																	<div class="point-in">
+																		<br> <em class="t">Total ：</em> <span
+																			class='price g_price '> <span>&yen;</span><em
+																			class="style-large-bold-red" id="J_ActualFee"><%=sum[0].total%></em>
+																		</span>
+																	</div>
+																	<br>
+																	<ul>
+																		<li><em>Send to :</em><span id="J_AddrConfirm"
+																			style="word-break: break-all;">
+																				<%=user[0].Address%></span></li>
+																		<li><em>Consignee : </em><span id="consignee"
+																			name="consignee"><%=user[0].username%>
+																				<%=user[0].phoneNumber%> </span></li>
+																	</ul>
+																</div>
 															</div>
-<br>
-															<ul>
-																<li><em>Send to :</em><span id="J_AddrConfirm"
-																	style="word-break: break-all;"> <%=user[0].Address%></span></li>
-																<li><em>Consignee : </em><span id="consignee" name="consignee"><%=user[0].username%>
-																		<%=user[0].phoneNumber%> </span></li>
-															</ul>
+															<input hidden  name="userid" id="userid" value="<%=user[0]._id%>"></input>
+												
+															<br> <a href="/shoppingCart" class="btn btn-primary"
+																type="button" data-point-url="">Go back to Cart</a>
+																<input name="ppp" id="ppp" value="Pay Now" class="btn btn-primary"
+																type="button" ></input>
+
 														</div>
-													</div>
-													<br>
-													<a href="#"  class="btn btn-primary" type="button"
-														data-point-url="">Go back to Cart</a>
-													<a id="J_Go"  class="btn btn-primary" type="button"
-														title="点击此按钮，提交订单。">Submit<b
-														class="dpl-button"></b></a>
-												</div>
+													</td>
+													<td>
+														<div></div>
+													</td>
+
+												</table>
+											</div>
+
+											<div class="pull-right price_style">
+												<form action="https://www.paypal.com/cgi-bin/webscr"
+													method="post" target="_top">
+													<input type="hidden" name="cmd" value="_xclick"> <input
+														type="hidden" name="business" value="FPGQ54XFWKEWA">
+													<input type="hidden" name="lc" value="US"> <input
+														type="hidden" name="item_name"
+														value="second-hand shopping website"> <input
+														type="hidden" name="item_number" value="1"> <input
+														type="hidden" name="button_subtype" value="services">
+													<input type="hidden" name="currency_code" value="USD">
+													<input type="hidden" name="tax_rate" value="0.000">
+													<input type="hidden" name="shipping" value="3.00">
+													<input type="hidden" name="bn"
+														value="PP-BuyNowBF:btn_buynowCC_LG.gif:NonHosted">
+													<table>
+														<tr>
+															<td><input type="hidden" name="on0" value="Sizes"></td>
+														</tr>
+														<tr>
+															<td><select hidden name="os0">
+																	<option value="6">6 $<%=sum[0].total%>USD</option>
+																	<option value="7">7 $<%=sum[0].total%>USD</option>
+																	<option value="8">8 $<%=sum[0].total%>USD</option>
+
+															</select></td>
+														</tr>
+														<tr>
+															<td><input type="hidden" name="on1" value="Colors"></td>
+														</tr>
+														<tr>
+															<td><select hidden name="os1">
+																	<option value="blue">blue</option>
+																	<option value="white">white</option>
+																	<option value="black">black</option>
+															</select></td>
+														</tr>
+														<tr>
+															<td><input type="hidden" name="on2" value="Quality"></td>
+														</tr>
+														<tr>
+															<td><select hidden name="os2">
+																	<option value="1">1</option>
+																	<option value="2">2</option>
+																	<option value="3">3</option>
+															</select></td>
+														</tr>
+													</table>
+													<input type="hidden" name="currency_code" value="USD">
+													<input type="hidden" name="option_select0" value="6">
+													<input type="hidden" name="option_amount0" value="<%=sum[0].total%>">
+													<input type="hidden" name="option_select1" value="7">
+													<input type="hidden" name="option_amount1" value="<%=sum[0].total%>">
+													<input type="hidden" name="option_select2" value="8">
+													<input type="hidden" name="option_amount2" value="<%=sum[0].total%>">
+													<input type="hidden" name="option_index" value="0">
+													<input type="image"
+														src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif"
+														border="0" name="submit1" style="width: 400px;"
+														alt="PayPal - The safer, easier way to pay online!">
+													<img alt="" border="0"
+														src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif"
+														width="1" height="1">
+												</form>
 											</div>
 
 
@@ -263,7 +348,6 @@ border:0px;background:white;
 							</tfoot>
 						</table>
 					</div>
-
 				</form>
 			</div>
 		</div>

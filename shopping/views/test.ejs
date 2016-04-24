@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Shopping</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet"
+	href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<script src="http://libs.baidu.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css"
+	media="all">
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+
+<SCRIPT type=text/javascript>
+			var areaDailyList = [{"content":"我喜欢互联网,更喜欢web前端开发的各种技术,我认为css和js天生就是应该结合在一起的,这两种技术可以产生无数让人惊叹的效果!<br>","id":29,"title":"广州网页设计制作","image":"http:\/\/www.163css.com\/myweb\/jmeii\/template\/haoqi\/images\/gz02.jpg","date":"2010-07-09","imageFrom":"www.163css.com"},{"content":"重构设计,不但要掌握看家技术css和js,还要学会ps,因为我们要和设计师打交道,也不开服务器端技术,比如php或是c#,因为我们同样要和程序员交流,前端技术ajax就是一个非常好的例子!","id":28,"title":"广州网页设计制作","image":"http:\/\/www.163css.com\/myweb\/jmeii\/template\/haoqi\/images\/tc11.jpg","date":"2010-07-08","imageFrom":"www.163css.com"},{"content":"我的目标是要成为中国最优秀的前端开发,并为之而不契努力!把我的才能贡献给互联网事业!","id":27,"title":"广州网站设计制作","image":"http:\/\/www.163css.com\/myweb\/jmeii\/template\/haoqi\/images\/fz07.jpg","date":"2010-07-07","imageFrom":"www.163css.com"},{"content":"林炜贤,2007年毕业于广东工业大学,管理学学士,就职于广州简美网络科技有限公司担任web前端开发程师,擅长css及js实现各种web页面及特效!","id":20,"title":"林炜贤","image":"http:\/\/www.163css.com\/myweb\/jmeii\/template\/haoqi\/images\/xz03.jpg","date":"2010-07-06","imageFrom":"www.163css.com"},{"content":"我喜欢互联网,更喜欢web前端开发的各种技术,我认为css和js天生就是应该结合在一起的,这两种技术可以产生无数让人惊叹的效果!","id":24,"title":"网页重构","image":"http:\/\/www.163css.com\/myweb\/jmeii\/template\/haoqi\/images\/tc01.jpg","date":"2010-07-05","imageFrom":"www.163css.com"}];
+			jQuery(function(){
+			if (!$('#slidePic')[0]) 
+			return;
+			var i = 0, p = $('#slidePic ul'), pList = $('#slidePic ul li'), len = pList.length;
+			var elePrev = $('#prev'), eleNext = $('#next');
+			//var firstClick = false;
+            alert(len);
+			var w = 100, num = 3;
+			p.css('width',w*len);
+			if (len <= num) 
+			eleNext.addClass('gray');
+			function prev(){
+			if (elePrev.hasClass('gray')) {
+			//alert('已经是第一张了');
+			return;
+			}
+			p.css('margin-left',-(--i) * w);
+			p.animate({
+		//	marginTop:-(--i) * w
+			},500);
+			if (i < len - num) {
+			eleNext.removeClass('gray');
+			}
+			if (i == 0) {
+			elePrev.addClass('gray');
+			}
+			}
+			function next(){
+			if (eleNext.hasClass('gray')) {
+			//alert('已经是最后一张了');
+			return;
+			}
+			p.css('margin-left',-(++i) * w);
+			p.animate({
+			//marginTop:-(++i) * w
+			},500);
+			if (i != 0) {
+			elePrev.removeClass('gray');
+			}
+			if (i == len - num) {
+			eleNext.addClass('gray');
+			}
+			}
+			elePrev.bind('click',prev);
+			eleNext.bind('click',next);
+			pList.each(function(n,v){
+			$(this).click(function(){
+			if(n-i == 2){
+			next();
+			}
+			if(n-i == 0){
+			prev()
+			}
+			$('#slidePic ul li.cur').removeClass('cur');
+			$(this).addClass('cur');
+			show(n);
+			}).mouseover(function(){
+			$(this).addClass('hover');
+			}).mouseout(function(){
+			$(this).removeClass('hover');
+			})
+			});
+			function show(i){
+			var ad = areaDailyList[i];
+			var t = ad.date.split('-');
+		
+			
+			}
+			});
+			</SCRIPT>
+
+
+<style>/* CSS Document */
+body,h1,h2,h3,h4,h5,h6,p,ul,ol,li,form,img,dl,dt,dd,table,th,td,blockquote,fieldset,div,strong,label,em{margin:0;padding:0;border:0;}
+ul,ol,li{list-style:none;}
+input,button{margin:0;font-size:12px;vertical-align:middle;}
+body{font-size:12px;font-family:Arial, Helvetica, sans-serif;  margin:0 auto;}
+table{border-collapse:collapse;border-spacing:0;}
+
+.clearfloat{height:0;font-size:1px;clear:both;line-height:0;}
+
+#container{  width:250px; margin:20px auto; }
+a{color:#333;text-decoration:none;}
+a:hover{color:#ef9b11; text-decoration:underline;}
+
+
+.left{ width:420px; float:left;}
+.left h3{ font-size:18px; padding-bottom:8px; font-weight:normal;}
+.s-t{ width:100%; padding-bottom:10px;}
+.s-c{ width:100%;}
+.s-c h4{ font-size:14px; font-weight:normal; padding-bottom:9px;}
+.s-c .pics{ width:107px; float:left;}
+.s-c .p1 img{ width:100%;}
+.s-c .s-detail{ width:285px; float:left; display:inline; margin-left:7px;}
+.cnt{ text-indent:2em; line-height:18px;}
+
+.right{ width:480px; BACKGROUND:white;}
+.slide-pic { padding:10px 0px 10px 15px; HEIGHT: auto}
+.slide-pic A#prev {DISPLAY: block; BACKGROUND: url(../images/slide.png) no-repeat; MARGIN: 0px; OVERFLOW: hidden; WIDTH: 150px; TEXT-INDENT: -9999em; HEIGHT: 14px; outline: none}
+.slide-pic A#next {DISPLAY: block; BACKGROUND: url(../images/slide.png) no-repeat; MARGIN: 0px; OVERFLOW: hidden; WIDTH: 150px; TEXT-INDENT: -9999em; HEIGHT: 14px; outline: none}
+.slide-pic A#prev {BACKGROUND-POSITION: left 100px}
+.slide-pic A#next {BACKGROUND-POSITION: right -20px}
+.slide-pic A#prev:hover {BACKGROUND-POSITION: left -40px}
+.slide-pic A#next:hover {BACKGROUND-POSITION: right -60px}
+.slide-pic A.gray#prev {BACKGROUND-POSITION: left -80px}
+.slide-pic A.gray#next {BACKGROUND-POSITION: right -100px}
+.slide-pic .pic-container {MARGIN: 5px 0px; OVERFLOW: hidden; WIDTH: 250px; HEIGHT: 150px}
+.slide-pic UL {WIDTH: 100px}
+.slide-pic UL LI {PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 5px; CURSOR: pointer; PADDING-TOP: 5px
+}
+.slide-pic UL LI P {BORDER-RIGHT: #fff 5px solid; BORDER-TOP: #fff 5px solid; OVERFLOW: hidden; BORDER-LEFT: #fff 5px solid; WIDTH: 140px; BORDER-BOTTOM: #fff 5px solid; HEIGHT: 80px}
+.slide-pic UL LI.hover P {BORDER-LEFT-COLOR: #bbbbbb; BORDER-BOTTOM-COLOR: #bbbbbb; BORDER-TOP-COLOR: #bbbbbb; BORDER-RIGHT-COLOR: #bbbbbb}
+.slide-pic UL LI P IMG {WIDTH: 20px; HEIGHT: 80px}
+.slide-pic UL LI.cur P {BORDER-LEFT-COLOR: #2c2c2c! important; BORDER-BOTTOM-COLOR: #2c2c2c! important; BORDER-TOP-COLOR: #2c2c2c! important; BORDER-RIGHT-COLOR: #2c2c2c! important}
+.slide-pic UL LI .date {MARGIN-TOP: -20px; DISPLAY: block; Z-INDEX: 1; BACKGROUND: #5a5a5a; WIDTH: 140px; COLOR: #fff; LINE-HEIGHT: 20px; POSITION: static; HEIGHT: 20px; TEXT-ALIGN: center}</style>
+
+<script>
+$(document).ready(function(){
+$(":button").click(function() {		
+		var value = $(this).attr("name"); // $(this)表示获取当前被点击元素的name值
+        var type;
+        alert(value);	
+			
+});
+});
+</script>
+
+
+<div id="container">
+		             <td><h3><input value="+" type="button" name="v" id="v" style=" width:20px;margin:10px;background-color:grey;"></input></h3></td>
+             <td><h3><input value="+" type="button" name="v22" id="v22" style=" width:20px;margin:10px;background-color:grey;"></input></h3></td>
+
+		<DIV class=right>
+			<DIV class=slide-pic id=slidePic>
+			<A class=gray id=prev hideFocus href="javascript:;">前移</A> 
+			<DIV class=pic-container>
+			<ul>
+                 
+               <table>
+                <%for(var i=0;i<4;i++){%>
+                <LI class=cur>
+                <td>
+                    
+						<div  id="cart_item_id" name="cart_item_id" class="item square p item_detail">
+							 <div class="bottom-2-top">
+								<div class="img" >
+									<img src="images/11.jpg"  alt="/" class="img-responsive gri-wid" >
+										<div class="info">
+											<div class="pull-left name_style">
+												<h3>ss<%=i%></h3>
+                                            </div>
+												
+										<div class="quick-view">
+											<a >Quick view</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					
+				</td>
+                <%}%>
+               
+					
+				</li></table>
+		 
+			</DIV>
+			
+				 <A id=next hideFocus href="javascript:;">后移</A>
+			</div>
+</ul>
+            </div>
+                        </div>
+                        </div>
+<%include ../include/footer.ejs%>

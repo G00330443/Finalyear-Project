@@ -1,18 +1,27 @@
 <% include ../include/header.ejs%>
 <% include ../include/register.js%>
 
-<div id="register" class="" style="width:468px; height:400px; margin:100px auto;">
-                            <form > 
+<div id="register" class="" style="width:700px; height:400px; margin:100px auto;background-image:url(../images/ccc.png);">
+                            -
+							<form style="width:400px; left: 0; top: 0; right: 0; bottom: 0;margin:50px auto;">
+							 <font style=" font-family: 'Pathway Gothic One';
+											text-transform: uppercase;
+											color: #272323;
+											text-align: left;
+											font-size: 13px;
+											padding: 0;
+											margin: 2px 0px 0px;
+											font-weight: 200;">
                                 <h1> Sign up </h1> 
                                 <p> 
                                     <label >Your username</label>
-                                    <input id="username" name="username"  type="text" placeholder="mysuperusername690" onblur="checkUserName()" ><span id="usernamespan"></span>
+                                    <input id="username" name="username"  type="text" placeholder="mysuperusername690" onblur="checkUserName()" ><span id="us1"></span>
                                 </p>
 								<tr>
-							<label>性别</label>
+							<label>Gender</label>
 							<td>
-								<input type=radio name="sex" value="male">男
-								<input type=radio name="sex" value="female">女
+								<input type=radio name="sex" value="male">Male
+								<input type=radio name="sex" value="female">Female
 							</td>
 							
                                 <p> 
@@ -21,7 +30,7 @@
                                 </p>
                                 <p> 
                                     <label >Your password </label>
-                                    <input id="password" name="password"  type="password" placeholder="eg. X8df!90EO"/>
+                                    <input id="password" name="password"  type="password" placeholder="eg. X8df!90EO"/><span name="pa1" id="pa1" />
                                 </p>
                                 <p> 
                                     <label >Please confirm your password </label>
@@ -34,6 +43,7 @@
 									Already a member ?
 									<a href="#tologin" class="to_register"> Go and log in </a>
 								</p>
+								</font>
                             </form>
                         </div>
     </body>

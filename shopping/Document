@@ -15,3 +15,9 @@ MyModel.find({}).sort({'_id':-1}).limit(6).exec(function(err,docs){})
 ----------------------------------------------------------------------------------------------------
 
 encrypto 模块
+marquee
+
+npm install nodemailer
+
+
+npm install -g date-utils

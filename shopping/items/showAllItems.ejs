@@ -1,14 +1,16 @@
 <% include ../include/header.ejs %>
 <%include ../include/header_usermanage.ejs%>
+<%include ../include/update_change_user_sell.js %>
+
 <style>
-.usersList-table{position:relative;}
-.usersList-table table{color:#777;border-right:1px solid #dbdbdb;border-bottom:1px solid #dbdbdb;background:url(images/TI.jpg) top left no-repeat;margin-bottom:15px;}
+.usersList-table{}
+.usersList-table table{color:#777;border-right:1px solid #dbdbdb;border-bottom:1px solid #dbdbdb;background:url(images/TI.jpg) top left ;margin-bottom:15px;}
 .usersList .list{height:44px;line-height:44px;color:#fff;font-size:16px;font-weight:bold;font-family:'微软雅黑','幼圆';width:740px;}
 
 
 </style>
 <td>
-<div class="usersList" style="float:right;width:1000px; height:400px; margin:50px auto;">
+<div class="usersList" style="float:right;width:1200px;margin:50px auto;">
 	<div class="usersList-table">
 		<div class="confi">
 			
@@ -19,7 +21,7 @@
 				<div class="confi-border-b" style="width:121px;"></div>
 			</div><!--confi-border end-->
 			
-			<table width="738" id="usersList-table" CellSpacing=30>
+			<table style="width:1000px;" id="usersList-table" CellSpacing=30>
 				<tr class="list">
 					<td width="123">Name</td>
 					<td width="123">Price</td>
@@ -27,7 +29,8 @@
 					<td width="123">Time</td>
                     <td width="123">Number  </td>
                     <td width="123">Category  </td>
-                    <td width="123">Operation  </td>
+                    <td width="123">Update  </td>
+					<td width="123">Delect  </td>
 				</tr>
 
 <style>
@@ -39,16 +42,40 @@
     border-top:1px solid #dbdbdb;}
 }
 
-</style>              
+</style>
+
+<p>Update : Please Typing update Information on cells and click Update button</p>
+<p>Delect : Please click Delect button</p>
+<%var n=-1;%>
 <% posts.forEach(function(post){ %>
-				<tr style="background:#f4f4f4;">
-					<td style="font-weight:bold;"><%= post.name%></td>
-					<td><%= post.price%></td>
-					<td><%= post.description%></td>
-                    <td><%= post.createTime%></td>
-					<td><%= post.number%></td>
-                    <td><%= post.category%></td>
-                    <td id="delect" method ="POST" type="button" value="Delect" width="90%" class="btn btn-danger">Delect</td>
+<%n=n+1;%>
+				<tr class="kkk" style="background:#f4f4f4;">
+					<input hidden  name="id<%=n%>" id="id<%=n%>"  value="<%=post._id%>"/>
+					<td style="font-weight:bold;"><input  style="border:0px;width:100px;height:50px;"
+					name="name<%=n%>" id="name<%=n%>" value="<%= post.name%>"></input></td>
+					
+					<td><input  style="border:0px;width:100px;height:50px;"
+					name="price<%=n%>" id="price<%=n%>" value="<%= post.price%>"></input></td>
+					
+					<td><input  style="border:0px;width:100px;height:50px;"
+					name="description<%=n%>" id="description<%=n%>" value="<%= post.description%>"></input></td>
+					
+                    <td><input  ReadOnly style="border:0px;width:150px;height:50px;"
+					name="createtime<%=n%>" id="createtime<%=n%>" value="<%= post.createTime%>"></input></td>
+					
+					<td><input  style="border:0px;width:100px;height:50px;"
+					name="number<%=n%>" id="number<%=n%>" value="<%= post.number%>"></input></td>
+					
+                    <td><input  style="border:0px;width:100px;height:50px;"
+					name="category<%=n%>" id="category<%=n%>" value="<%= post.category%>"></input></td>
+					
+					<td>
+					<input type="button" name="update<%=n%>" id="update<%=n%>"   value="UPDATE" style="width:70px;"class="btn btn-primary"></input>
+					</td>
+					
+					<td>
+                    <input type="button" id="delect<%=n%>" name="delect<%=n%>"  value="Delect" style="width:70px;" class="btn btn-danger"></input>
+					</td>
 				</tr>   
 <% });%>
 			</table>	

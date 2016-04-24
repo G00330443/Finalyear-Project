@@ -17,6 +17,7 @@ border:0px;background:white;readOnly:true;
 }
 
 </style>
+
 <div style="width: 700px; height: 900px; margin: 50px auto;" >
     <table class="name_style" align="center" cellspacing="0px" cellpadding="0px" style="width:100%;">
         
@@ -38,7 +39,7 @@ border:0px;background:white;readOnly:true;
 <%       var tt=order.picture;%>
            <tr name="det<%=c%>" id="det<%=c%>" visibility="visible">
             <input hidden value="<%=order.id%>" id="iddd<%=c%>"  name="iddd<%=c%>" type="text"/>
-            <td><img style="width:100px;" src="<%=tt%>" /></td>
+            <td><img style="width:70px;height:70px;" src="<%=tt%>" /></td>
             <td><h3><input style="width:150px;" name="name<%=c%>" readOnly="true" id="name<%=c%>" value="<%=order.name%>" type="text"></input></h3></td>
             <td><h3><input style="width:100px;" readOnly="true" name="number<%=c%>" id="number<%=c%>"value="<%=order.number%>" type="text"></input></h3></td>
             <td><h3><input  style="width:100px;" name="price<%=c%>" readOnly="true" id="price<%=c%>"value="<%=order.price%>" type="text"></input></h3></td>
@@ -51,8 +52,8 @@ border:0px;background:white;readOnly:true;
         <%});%>
           <input hidden name="yt" id="yt" type="text" value="<%=c%>"/>
         <tr>
-            <td><h3><input name="total" id="total"value="Total :<%=sum[0].total%>" type="text"><input></h3></td>
-            
+            <td><h3><input readOnly name="total" id="total"value="Total :<%=sum[0].total%>" type="text"><input></h3></td>
+            <input hidden readOnly name="total1" id="total1"value="<%=sum[0].total%>" type="text"></input>
              <td><button name="eee" id="eee" onclick="window.location.href='/ordercheck'" class="btn btn-primary">SUMIT</button></td>
 
         </tr>

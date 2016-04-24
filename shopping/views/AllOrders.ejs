@@ -1,0 +1,64 @@
+<% include ../include/header.ejs %>
+<%include ../include/header_usermanage.ejs%>
+<%include ../include/orders.js%>
+<style>
+.usersList-table{position:relative;}
+.usersList-table table{color:#777;border-right:1px solid #dbdbdb;border-bottom:1px solid #dbdbdb;background:url(images/TI.jpg) ;margin-bottom:15px;}
+.usersList .list{height:44px;line-height:44px;color:#fff;font-size:16px;font-weight:bold;font-family:'微软雅黑','幼圆';width:600px;}
+
+
+</style>
+<td>
+<div class="usersList" style="margin:100px auto;float:right;width:600px; margin:50px auto;">
+	<div class="usersList-table">
+		<div class="confi">
+			
+			<div class="confi-border" style="top:0;left:123px;">
+				<div class="confi-bg-out" style="width:123px;">
+					<div class="confi-bg-in"></div>
+				</div>
+				<div class="confi-border-b" style="width:121px;"></div>
+			</div><!--confi-border end-->
+			
+			<table width="600" id="usersList-table" CellSpacing=30>
+				<tr class="list">
+					<td width="123">Name</td>
+					<td width="147">CreateTime</td>
+					<td width="123">Total Price</td>
+                    <td width="123">operation  </td>
+				</tr>
+
+<style>
+.usersList td{
+    text-align:center;
+    height:30px;
+    vertical-align:middle;
+    border-left:1px solid #dbdbdb;
+    border-top:1px solid #dbdbdb;}
+}
+
+</style>
+<%var c=-1;%>
+<% allorders.forEach(function(post){ %>
+<%c=c+1;%>
+
+				
+				<tr style="background:#f4f4f4;">
+					<input hidden name="id<%=c%>" id="id<%=c%>" value="<%=post._id%>" />
+					<input hidden name="name<%=c%>" id="name<%=c%>" value="<%=post.username%>" />
+					<td style="font-weight:bold;"><%= post.username%></td>
+					<td><%= post.createTime%></td>
+                    <td>$ : <%= post.total%></td>
+                    <td><input id="delect<%=c%>" name="delect<%=c%>" method ="POST" type="button" value="Delect" width="90%" class="btn btn-danger" ></Input><td>
+				</tr>
+				
+<% });%>
+			</table>	
+		</div>
+	</div>
+</div>
+
+</td>
+</table>
+
+<%- include ../include/footer.ejs %>

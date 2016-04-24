@@ -4,7 +4,7 @@ module.exports = function(data, key) {
     var crypto = require('crypto');
     console.log('Original cleartext: ' + data);
     var algorithm = 'aes-128-ecb';
-   // var key = '78541561566';
+    //var key = '78541561566';
     var clearEncoding = 'utf8';
     //var cipherEncoding = 'hex';
     //If the next line is uncommented, the final cleartext is wrong.
@@ -36,7 +36,7 @@ module.exports = function(data, key) {
    
    
     this.about = function() { 
-    console.log(plainChunks); 
+   // console.log(plainChunks); 
     };
     
 }; 

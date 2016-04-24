@@ -1,6 +1,5 @@
 <script type="text/javascript">
-
-$(document).ready(function(){
+$(document).ready(function(){ 
 $("input:button").click(function() {
 		var value = $(this).attr("name"); // $(this)表示获取当前被点击元素的name值
         var type;
@@ -31,49 +30,30 @@ $("input:button").click(function() {
             //number of item
             if (type==1) {
                 document.getElementById("number"+value).value=parseInt(document.getElementById("number"+value).value)+1;
+                alert("price"+parseInt(document.getElementById("total1").value));
+                alert("total"+parseInt(document.getElementById("price"+value).value));
+                var total=parseInt(document.getElementById("total1").value)+parseInt(document.getElementById("price"+value).value);
+                document.getElementById("total1").value=total;
+                document.getElementById("total").value=total;
                 if (document.getElementById("number"+value).value==0) {
                     document.getElementById("det"+value).style.visibility="hidden";
                 }
             }
+            
             if (type==0) {
                 document.getElementById("number"+value).value=document.getElementById("number"+value).value-1;
+                var total=parseInt(document.getElementById("total1").value)-parseInt(document.getElementById("price"+value).value);
+                alert(total);
+                document.getElementById("total1").value=total;
+                document.getElementById("total").value=total;
                 if (document.getElementById("number"+value).value==0) {
                     document.getElementById("det"+value).style.visibility="hidden";
                 }
             }
            
            //bar
-                
-                console.log(data[0].total);
-                 document.getElementById("tot").value="$ : "data[0].total;
-                 document.getElementById("total").value="$ : "data[0].total;
-            
+              
             }
-		});
-	});
-
-    
-    $("#eee").click(function(event){
-       
-		$.ajax({
-			url: '/ordercheck',
-			type: 'GET',
-			data: 	'total=' + $("#total").val()
-					
-			,success: function(data) {
-              if (data!=null) {
-                
-                var a=JSON.parse(data);
-                
-                for(var i=1;i<a.length;i++){
-
-                        document.getElementById("name"+i).value =a[i].name;
-                         document.getElementById("number"+i).value =a[i].number;
-                          document.getElementById("price"+i).value =a[i].price;
-                        document.getElementById("total").value ="$ :"+a[0].total;
-                }
-              }
-			}
 		});
 	});
 

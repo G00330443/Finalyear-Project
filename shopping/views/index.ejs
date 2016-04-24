@@ -1,229 +1,238 @@
 <%include ../include/header.ejs%>
 <%include ../include/search.js%>
 <%include ../include/addToCart.js%>
+<% include ../include/picturemove.js%>
 
 <style>
 .item.square.p.item_detail .bottom-2-top:hover .img {
-    -webkit-transform: translateY(-200px);
-    -moz-transform: translateY(-500px);
-    -ms-transform: translateY(-500px);
-    -o-transform: translateY(-50px);
-    transform: translateY(-50px);
+	-webkit-transform: translateY(-200px);
+	-moz-transform: translateY(-500px);
+	-ms-transform: translateY(-500px);
+	-o-transform: translateY(-50px);
+	transform: translateY(-50px);
 }
-
 
 .item.square.p.item_detail .bottom-2-top:hover .info {
-    -webkit-transform: translateY(0);
-    -moz-transform: translateY(0);
-    -ms-transform: translateY(0);
-    -o-transform: translateY(0);
-    transform: translateY(0);
-}
-.quick-view a {
-     font-family: 'SimHei';
-    background-color: #A5E126;
-    padding: 5px;
-    font-weight: 400;
-    text-decoration: none;
-    font-size: 16px;
-    color: #1F1818;
-    text-transform: uppercase;
-    display:none;
-}
-.quick-view {
-    position: absolute;
-    top: 44%;
-    right: 44%;
+	-webkit-transform: translateY(0);
+	-moz-transform: translateY(0);
+	-ms-transform: translateY(0);
+	-o-transform: translateY(0);
+	transform: translateY(0);
 }
 
-.item.square.p.item_detail .bottom-2-top:hover .quick-view a{
-    display: block;
+.quick-view a {
+	font-family: 'SimHei';
+	background-color: #A5E126;
+	padding: 5px;
+	font-weight: 400;
+	text-decoration: none;
+	font-size: 16px;
+	color: #1F1818;
+	text-transform: uppercase;
+	display: none;
+}
+
+.quick-view {
+	position: absolute;
+	top: 44%;
+	right: 44%;
+}
+
+.item.square.p.item_detail .bottom-2-top:hover .quick-view a {
+	display: block;
 }
 
 .item.square.p a:hover .info {
-    visibility: visible;
-    opacity: 999;
+	visibility: visible;
+	opacity: 999;
 }
 
 .item.square.p.item_detail .info {
-    top: auto;
-    -webkit-transform: translateY(100%);
-    -moz-transform: translateY(100%);
-    -ms-transform: translateY(100%);
-    -o-transform: translateY(100%);
-    transform: translateY(100%);
-    z-index: 999 !important;
-    background-color:rgba(250, 84, 0, 0) !important;
-    opacity: 1;
+	top: auto;
+	-webkit-transform: translateY(100%);
+	-moz-transform: translateY(100%);
+	-ms-transform: translateY(100%);
+	-o-transform: translateY(100%);
+	transform: translateY(100%);
+	z-index: 999 !important;
+	background-color: rgba(250, 84, 0, 0) !important;
+	opacity: 1;
 }
 
 .info {
-    background: #1a4a72;
+	background: #1a4a72;
 }
 
 .info {
-    padding: 6px 12px;
-    background: #fa5400;
-    opacity: 0;
-    -webkit-transition: all 0.35s ease-in-out;
-    -moz-transition: all 0.35s ease-in-out;
-    transition: all 0.35s ease-in-out;
-    z-index: 999;   
+	padding: 6px 12px;
+	background: #fa5400;
+	opacity: 0;
+	-webkit-transition: all 0.35s ease-in-out;
+	-moz-transition: all 0.35s ease-in-out;
+	transition: all 0.35s ease-in-out;
+	z-index: 999;
 }
 
 .item.square.p.item_detail .bottom-2-top:hover .info {
-    -webkit-transform: translateY(0);
-    -moz-transform: translateY(0);
-    -ms-transform: translateY(0);
-    -o-transform: translateY(0);
-    transform: translateY(0);
+	-webkit-transform: translateY(0);
+	-moz-transform: translateY(0);
+	-ms-transform: translateY(0);
+	-o-transform: translateY(0);
+	transform: translateY(0);
 }
+
 .item.square.p {
-    overflow: hidden;
+	overflow: hidden;
 }
 
 .item.square.p.colored .info {
-    background: #1a4a72;
+	background: #1a4a72;
 }
+
 .item.square.p .img {
-    -webkit-transform: translateY(0);
-    -moz-transform: translateY(0);
-    -ms-transform: translateY(0);
-    -o-transform: translateY(0);
-    transform: translateY(0);
-    -webkit-transition: all 0.35s ease-in-out;
-    -moz-transition: all 0.35s ease-in-out;
-    transition: all 0.35s ease-in-out;
+	-webkit-transform: translateY(0);
+	-moz-transform: translateY(0);
+	-ms-transform: translateY(0);
+	-o-transform: translateY(0);
+	transform: translateY(0);
+	-webkit-transition: all 0.35s ease-in-out;
+	-moz-transition: all 0.35s ease-in-out;
+	transition: all 0.35s ease-in-out;
 }
+
 .item.square.p .info {
-    padding: 6px 12px;
-    background: #fa5400;
-    opacity: 0;
-    -webkit-transition: all 0.35s ease-in-out;
-    -moz-transition: all 0.35s ease-in-out;
-    transition: all 0.35s ease-in-out;
-    z-index: 999;   
+	padding: 6px 12px;
+	background: #fa5400;
+	opacity: 0;
+	-webkit-transition: all 0.35s ease-in-out;
+	-moz-transition: all 0.35s ease-in-out;
+	transition: all 0.35s ease-in-out;
+	z-index: 999;
 }
 
 .name_style h3 {
-    font-family: 'Pathway Gothic One';
-    text-transform: uppercase;
-    color: #272323;
-    text-align: left;
-    font-size: 22px;
-    padding: 0;
-    margin: 2px 0px 0px;
-    font-weight: 400;
+	font-family: 'Pathway Gothic One';
+	text-transform: uppercase;
+	color: #272323;
+	text-align: left;
+	font-size: 22px;
+	padding: 0;
+	margin: 2px 0px 0px;
+	font-weight: 400;
 }
 
 .price_style p {
-    font-family: 'Didact Gothic';
-    font-size: 20px;
-    position: relative;
-    color: #FFFFFF;
-    padding: 0;
-    text-align: right;
-    font-weight: bold;
+	font-family: 'Didact Gothic';
+	font-size: 20px;
+	position: relative;
+	color: #FFFFFF;
+	padding: 0;
+	text-align: right;
+	font-weight: bold;
 }
-
-
 </style>
 
-	
 
-	<br>
-	<div align="center">
-		<center>
-		<table class="center" style="">			
-				<tr>	<input autocomplete="off" type= "text" style="width: 30% ; height : 44px" id="search" maxlength="255" value="" name="search" />
-     
-						<input  value= "search " name="ss"  id="ss"  type="submit" style=" width: 100px; height: 44px;" class='btn btn-primary' href='javascript:;'>
+
+<div style="margin:0px auto;">
+	<div style="background: #F0FFFF;">
+		<br>
+		<div style="" align="center">
+			<center>
+				<table class="center" style="">
+					<tr>
+						<input autocomplete="off" type="text"
+							style="width: 30%; height: 44px" id="search" maxlength="255"
+							value="" name="search" />
+
+						<input value="search " name="ss" id="ss" type="button"
+							style="width: 100px; height: 44px;" class='btn btn-primary'
+							>
+					</tr>
+					<tr>
+						<div id="infoBox" class="searchInfo"></div>
+					</tr>
+				</table>
+
+			</center>
+			<table
+				style="background-color: #f2f2f2; width: 80%; border-collapse: collapse; border: 0px solid black;">
+				<tr>
+					<th>Please Choose City :</th>
+					<th>Please Choose area :</th>
+					<th>Please Choose Item type :</th>
 				</tr>
-				<tr>	<div id="infoBox" class="searchInfo"></div></tr>
-		</table>
-		
-	</center>
-		<table
-			style="background-color: #f2f2f2; width: 80%; border-collapse: collapse; border: 0px solid black;">
-			<tr>
-				<th>Please Choose City :</th>
-				<th>Please Choose area :</th>
-				<th>Please Choose Item type :</th>
-			</tr>
-			<tr>
-				<td style="width: 30%"><select
-					style="width: 100%; height: 50px;">
-						<option value="Dublin">Dublin</option>
-						<option value="Galway">Galway</option>
-						<option value="Cork">Cork</option>
-						<option value="Waterford">Waterford</option>
-						<option value="Belfast">Belfast</option>
-						<option value="Derry">Derry</option>
-						<option value="Drogheda">Drogheda</option>
-						<option value="Sligo">Sligo</option>
-						<option value="Dundalk">Dundalk</option>
-						<option value="Wexford">Wexford</option>
-						<option value="Bray">Bray</option>
-						<option value="Ennis">Ennis</option>
-				</select></td>
+				<tr>
+					<td style="width: 30%"><select name="ww1" id="ww1"
+						style="width: 100%; height: 50px;">
+							<option value="dublin">Dublin</option>
+							<option value="galway">Galway</option>
+							<option value="cork">Cork</option>
+							<option value="waterford">Waterford</option>
+							<option value="belfast">Belfast</option>
+							<option value="derry">Derry</option>
+							<option value="Drogheda">Drogheda</option>
+							<option value="Sligo">Sligo</option>
+							<option value="Dundalk">Dundalk</option>
+							<option value="Wexford">Wexford</option>
+							<option value="Bray">Bray</option>
+							<option value="Ennis">Ennis</option>
+					</select></td>
 
-				<td style="width: 30%"><select
-					style="width: 100%; height: 50px;">
-						<option value="Dublin">Dublin</option>
-						<option value="Galway">Galway</option>
-						<option value="Cork">Cork</option>
-						<option value="Waterford">Waterford</option>
-						<option value="Belfast">Belfast</option>
-						<option value="Derry">Derry</option>
-						<option value="Drogheda">Drogheda</option>
-						<option value="Sligo">Sligo</option>
-						<option value="Dundalk">Dundalk</option>
-						<option value="Wexford">Wexford</option>
-						<option value="Bray">Bray</option>
-						<option value="Ennis">Ennis</option>
-				</select></td>
+					<td style="width: 30%"><select name="ww2" id="ww2"
+						style="width: 100%; height: 50px;">
+							<option value="Dublin">Dublin</option>
+							<option value="Galway">Galway</option>
+							<option value="Cork">Cork</option>
+							<option value="Waterford">Waterford</option>
+							<option value="Belfast">Belfast</option>
+							<option value="Derry">Derry</option>
+							<option value="Drogheda">Drogheda</option>
+							<option value="Sligo">Sligo</option>
+							<option value="Dundalk">Dundalk</option>
+							<option value="Wexford">Wexford</option>
+							<option value="Bray">Bray</option>
+							<option value="Ennis">Ennis</option>
+					</select></td>
 
-				<td style="width: 30%"><select
-					style="width: 100%; height: 50px;">
-						<option value="Video">Video</option>
-						<option value="Books ">Books</option>
-						<option value="Home, Garden & Tools">Home, Garden & Tools</option>
-						<option value="Beauty, Health & Grocery">Beauty, Health &
-							Grocery</option>
-						<option value="Sports & Outdoors">Sports & Outdoors</option>
-						<option value="Automotive & Industrial">Automotive &
-							Industrial</option>
-						<!-- <option value="Drogheda">Drogheda</option>
+					<td style="width: 30%"><select name="ww3" id="ww3"
+						style="width: 100%; height: 50px;">
+							<option value="Video">Video</option>
+							<option value="book ">Books</option>
+							<option value="home">Home, Garden &
+								Tools</option>
+							<option value="fruniture">Beauty, Health
+								& Grocery</option>
+							<option value="sport">Sports & Outdoors</option>
+							<option value="Automotive & Industrial">Automotive &
+								Industrial</option>
+							<!-- <option value="Drogheda">Drogheda</option>
 						<option value="Sligo">Sligo</option>
 						<option value="Dundalk">Dundalk</option>
 						<option value="Wexford">Wexford</option>
 						<option value="Bray">Bray</option>
 						<option value="Ennis">Ennis</option> -->
-				</select></td>
-				
-				<td>
-					<input value= "searchItem " type="submit" style=" width: 100px; height: 44px;" class='btn btn-primary' href='javascript:;'></a>
-				</td>
-			</tr>
-		</table>
-	</div>
-	<br>
-	<div align="center">
-	 <marquee  scrollamount="1" scrolldelay="10" direction= "right" width="80%" height="300">
-       <img src="images/11.jpg" width="600px"  auto/>
+					</select></td>
+<input hidden type="button" name="er" id="er" value="po"></input>
+					<td><input value="searchItem " type="button" name="wwww" id="wwww"
+						style="width: 100px; height: 44px;" class='btn btn-primary'
+						></input></td>
+				</tr>
+			</table>
+		</div>
+		<br>
+		<div align="center">
+			<MARQUEE scrollAmount=4 direction=right>
 
-       <img src="images/11.jpg" width="600px"  auto/>
+				<%hotest.forEach(function(hot){%> <img src="<%=hot.picture%>"
+					height="400px" auto /> <%});%>
+			</marquee>
+		</div>
 
-      <img src="images/11.jpg" width="600px" auto/>
 
-      <img src="images/11.jpg" width="600px" auto/>
-
-    </marquee></div>
-	
-	
-	<!-- 
+		<!-- 
 图片的风格 -->
-	<style>
+		<style>
 div.img {
 	margin: 5px;
 	border: 1px solid #ccc;
@@ -242,249 +251,392 @@ div.desc {
 }
 </style>
 
-	<br>
-	<div  name="item_sport" align="center" Style="width: 100% ;">
-	<tr><th><h1>Sport</h1></tr></tr>
-		<div align="center" style="width: 80% ; left :15%;"></div>
-		<table style="width:80%;">
-			<tr >
-			<% for(var i=0;i<5;i++){ %>
-				<td>
-					
-            
-						<div  id="cart_item_id" name="cart_item_id" class="item square p item_detail">
-							 <div class="bottom-2-top">
-								<div class="img" style="border:none;width:300px;">
-									<img src="<%=items[i].picture%>" style="width:100%;height:220px;" alt="/" class="img-responsive gri-wid" >
-										<div class="info">
-											<div class="pull-left name_style">
-												<h3><%=items[i].name%></h3>
+		<br>
+
+		<div name="item_sport" align="center" Style="width: 100%;">
+			<tr>
+				<th><h1 style="font-family: Comic Sans MS;">SPORT</h1>
+			</tr>
+			</tr>
+			<div align="center" style="width: 100%; left: 15%;"></div>
+
+			<div class="box">
+				<div class="og_prev"></div>
+				<div class="picbox">
+					<ul class="piclist mainlist">
+						<table>
+							<% for(var i=0;i<10;i++){ %>
+							<li>
+							<td>
+								<div id="cart_item_id" name="cart_item_id"
+									class="item square p item_detail">
+									<div class="bottom-2-top">
+										<div class="img" style="border: none; width: 300px;">
+											<img src="<%=items_sport[i].picture%>"
+												style="width: 100%; height: 220px;" alt="/"
+												class="img-responsive gri-wid">
+											<div class="info">
+												<div class="pull-left name_style">
+													<h3><%=items_sport[i].name%></h3>
+												</div>
+												<div class="pull-right price_style">
+													<form action="https://www.paypal.com/cgi-bin/webscr"
+														method="post" target="_top">
+														<input type="hidden" name="cmd" value="_xclick"> <input
+															type="hidden" name="business" value="FPGQ54XFWKEWA">
+														<input type="hidden" name="lc" value="US"> <input
+															type="hidden" name="item_name"
+															value="<%=items_sport[i].name%>"> <input
+															type="hidden" name="item_number" value="1"> <input
+															type="hidden" name="button_subtype" value="services">
+														<input type="hidden" name="currency_code" value="USD">
+														<input type="hidden" name="tax_rate" value="0.000">
+														<input type="hidden" name="shipping" value="3.00">
+														<input type="hidden" name="bn"
+															value="PP-BuyNowBF:btn_buynowCC_LG.gif:NonHosted">
+														<table>
+															<tr>
+																<td><input type="hidden" name="on0" value="Sizes"></td>
+															</tr>
+															<tr>
+																<td><select hidden name="os0">
+																		<option value="6">6 $56.00 USD</option>
+																		<option value="7">7 $56.00 USD</option>
+																		<option value="8">8 $56.00 USD</option>
+																</select></td>
+															</tr>
+															<tr>
+																<td><input type="hidden" name="on1" value="Colors"></td>
+															</tr>
+															<tr>
+																<td><select hidden name="os1">
+																		<option value="blue">blue</option>
+																		<option value="white">white</option>
+																		<option value="black">black</option>
+																</select></td>
+															</tr>
+															<tr>
+																<td><input type="hidden" name="on2" value="Quality"></td>
+															</tr>
+															<tr>
+																<td><select hidden name="os2">
+																		<option value="1">1</option>
+																		<option value="2">2</option>
+																		<option value="3">3</option>
+																</select></td>
+															</tr>
+														</table>
+														<input type="hidden" name="currency_code" value="USD">
+														<input type="hidden" name="option_select0" value="6">
+														<input type="hidden" name="option_amount0" value="56.00">
+														<input type="hidden" name="option_select1" value="7">
+														<input type="hidden" name="option_amount1" value="56.00">
+														<input type="hidden" name="option_select2" value="8">
+														<input type="hidden" name="option_amount2" value="56.00">
+														<input type="hidden" name="option_index" value="0">
+														<input type="image"
+															src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif"
+															border="0" name="submit" style="width: 70px;"
+															alt="PayPal - The safer, easier way to pay online!">
+														<img alt="" border="0"
+															src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif"
+															width="1" height="1">
+													</form>
+												</div>
+												<div class="pull-right price_style">
+													<p>
+														<a class="item_add"> <span
+															class="glyphicon glyphicon-shopping-cart grid-cart"
+															aria-hidden="true"></span> <a class=" item_price"
+															id="itemprice" name="itemprice">$ :
+																<%=items_sport[i].price%></a></a>
+													</p>
+												</div>
+												<div class="clearfix"></div>
 											</div>
-											<div class="pull-right price_style">
-												<p><a   class="item_add">
-												<span class="glyphicon glyphicon-shopping-cart grid-cart" aria-hidden="true"></span
-                                                
-												<a class=" item_price" id="itemprice" name="itemprice"><%=items[i].price%></a></a></p>
+
+											<div class="quick-view">
+												<a
+													onclick="window.location.href='item_detail_page/productname/<%=items_sport[i]._id%>'">Quick
+													view</a>
 											</div>
-											<div class="clearfix"></div>
-										 </div>
-												
-										<div class="quick-view">
-											<a onclick="window.location.href='item_detail_page/productname/<%=items[i]._id%>'">Quick view</a>
+										</div>
 									</div>
+								</div>
+
+							</td> <% }%>
+
+							</ul>
+							<ul hidden class="piclist swaplist"></ul>
+							</div>
+
+
+							</div>
+						</table>
+				</div>
+
+				<hr
+					style="height: 1px; border: none; border-top: 1px solid #555555; width: 80%" />
+
+
+				<br> <br>
+				<div name="item_book" align="center" Style="width: 100%;">
+					<tr>
+						<th><h1 style="font-family: Comic Sans MS;">BOOK</h1>
+					</tr>
+					</tr>
+					<div align="center" style="width: 100%; left: 15%;"></div>
+
+					<div class="box">
+						<div class="og_prev1"></div>
+						<div class="picbox">
+							<ul class="piclist1 mainlist1">
+								<table>
+									<% for(var i=0;i<8;i++){ %>
+									<li>
+									<td>
+										<div id="cart_item_id" name="cart_item_id"
+											class="item square p item_detail">
+											<div class="bottom-2-top">
+												<div class="img" style="border: none; width: 300px;">
+													<img src="<%=items_book[i].picture%>"
+														style="width: 100%; height: 220px;" alt="/"
+														class="img-responsive gri-wid">
+													<div class="info">
+														<div class="pull-left name_style">
+															<h3><%=items_book[i].name%></h3>
+														</div>
+														<div class="pull-right price_style">
+															<form action="https://www.paypal.com/cgi-bin/webscr"
+																method="post" target="_top">
+																<input type="hidden" name="cmd" value="_xclick">
+																<input type="hidden" name="business"
+																	value="FPGQ54XFWKEWA"> <input type="hidden"
+																	name="lc" value="US"> <input type="hidden"
+																	name="item_name" value="<%=items_book[i].name%>">
+																<input type="hidden" name="item_number" value="1">
+																<input type="hidden" name="button_subtype"
+																	value="services"> <input type="hidden"
+																	name="currency_code" value="USD"> <input
+																	type="hidden" name="tax_rate" value="0.000"> <input
+																	type="hidden" name="shipping" value="3.00"> <input
+																	type="hidden" name="bn"
+																	value="PP-BuyNowBF:btn_buynowCC_LG.gif:NonHosted">
+																<table>
+																	<tr>
+																		<td><input type="hidden" name="on0" value="Sizes"></td>
+																	</tr>
+																	<tr>
+																		<td><select hidden name="os0">
+																				<option value="6">6 $56.00 USD</option>
+																				<option value="7">7 $56.00 USD</option>
+																				<option value="8">8 $56.00 USD</option>
+																		</select></td>
+																	</tr>
+																	<tr>
+																		<td><input type="hidden" name="on1"
+																			value="Colors"></td>
+																	</tr>
+																	<tr>
+																		<td><select hidden name="os1">
+																				<option value="blue">blue</option>
+																				<option value="white">white</option>
+																				<option value="black">black</option>
+																		</select></td>
+																	</tr>
+																	<tr>
+																		<td><input type="hidden" name="on2"
+																			value="Quality"></td>
+																	</tr>
+																	<tr>
+																		<td><select hidden name="os2">
+																				<option value="1">1</option>
+																				<option value="2">2</option>
+																				<option value="3">3</option>
+																		</select></td>
+																	</tr>
+																</table>
+																<input type="hidden" name="currency_code" value="USD">
+																<input type="hidden" name="option_select0" value="6">
+																<input type="hidden" name="option_amount0" value="56.00">
+																<input type="hidden" name="option_select1" value="7">
+																<input type="hidden" name="option_amount1" value="56.00">
+																<input type="hidden" name="option_select2" value="8">
+																<input type="hidden" name="option_amount2" value="56.00">
+																<input type="hidden" name="option_index" value="0">
+																<input type="image"
+																	src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif"
+																	border="0" name="submit" style="width: 70px;"
+																	alt="PayPal - The safer, easier way to pay online!">
+																<img alt="" border="0"
+																	src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif"
+																	width="1" height="1">
+															</form>
+														</div>
+														<div class="pull-right price_style">
+															<p>
+																<a class="item_add"> <span
+																	class="glyphicon glyphicon-shopping-cart grid-cart"
+																	aria-hidden="true"></span> <a class=" item_price"
+																	id="itemprice" name="itemprice">$ :
+																		<%=items_book[i].price%></a></a>
+															</p>
+														</div>
+														<div class="clearfix"></div>
+													</div>
+
+													<div class="quick-view">
+														<a
+															onclick="window.location.href='item_detail_page/productname/<%=items_book[i]._id%>'">Quick
+															view</a>
+													</div>
+												</div>
+											</div>
+										</div>
+
+									</td> <% }%>
+
+									</ul>
+									<ul hidden class="piclist1 swaplist1"></ul>
+									</div>
+
+
+									</div>
+								</table>
+						</div>
+						<hr
+							style="height: 1px; border: none; border-top: 1px solid #555555; width: 80%" />
+
+
+						<br> <br>
+						<div name="item_furniture" align="center" Style="width: 100%;">
+							<tr>
+								<th><h1 style="font-family: Comic Sans MS;">FURNITURE</h1>
+							</tr>
+							</tr>
+							<div align="center" style="width: 100%; left: 15%;"></div>
+
+							<div class="box">
+								<div class="og_prev2"></div>
+								<div class="picbox">
+									<ul class="piclist2 mainlist2">
+										<table>
+											<% for(var i=0;i<9;i++){ %>
+											<li>
+											<td>
+												<div id="cart_item_id" name="cart_item_id"
+													class="item square p item_detail">
+													<div class="bottom-2-top">
+														<div class="img" style="border: none; width: 300px;">
+															<img src="<%=items_furniture[i].picture%>"
+																style="width: 100%; height: 220px;" alt="/"
+																class="img-responsive gri-wid">
+															<div class="info">
+																<div class="pull-left name_style">
+																	<h3><%=items_furniture[i].name%></h3>
+																</div>
+																<div class="pull-right price_style">
+																	<form action="https://www.paypal.com/cgi-bin/webscr"
+																		method="post" target="_top">
+																		<input type="hidden" name="cmd" value="_xclick">
+																		<input type="hidden" name="business"
+																			value="FPGQ54XFWKEWA"> <input type="hidden"
+																			name="lc" value="US"> <input type="hidden"
+																			name="item_name" value="<%=items_furniture[i].name%>">
+																		<input type="hidden" name="item_number" value="1">
+																		<input type="hidden" name="button_subtype"
+																			value="services"> <input type="hidden"
+																			name="currency_code" value="USD"> <input
+																			type="hidden" name="tax_rate" value="0.000">
+																		<input type="hidden" name="shipping" value="3.00">
+																		<input type="hidden" name="bn"
+																			value="PP-BuyNowBF:btn_buynowCC_LG.gif:NonHosted">
+																		<table>
+																			<tr>
+																				<td><input type="hidden" name="on0"
+																					value="Sizes"></td>
+																			</tr>
+																			<tr>
+																				<td><select hidden name="os0">
+																						<option value="6">6 $56.00 USD</option>
+																						<option value="7">7 $56.00 USD</option>
+																						<option value="8">8 $56.00 USD</option>
+																				</select></td>
+																			</tr>
+																			<tr>
+																				<td><input type="hidden" name="on1"
+																					value="Colors"></td>
+																			</tr>
+																			<tr>
+																				<td><select hidden name="os1">
+																						<option value="blue">blue</option>
+																						<option value="white">white</option>
+																						<option value="black">black</option>
+																				</select></td>
+																			</tr>
+																			<tr>
+																				<td><input type="hidden" name="on2"
+																					value="Quality"></td>
+																			</tr>
+																			<tr>
+																				<td><select hidden name="os2">
+																						<option value="1">1</option>
+																						<option value="2">2</option>
+																						<option value="3">3</option>
+																				</select></td>
+																			</tr>
+																		</table>
+																		<input type="hidden" name="currency_code" value="USD">
+																		<input type="hidden" name="option_select0" value="6">
+																		<input type="hidden" name="option_amount0"
+																			value="56.00"> <input type="hidden"
+																			name="option_select1" value="7"> <input
+																			type="hidden" name="option_amount1" value="56.00">
+																		<input type="hidden" name="option_select2" value="8">
+																		<input type="hidden" name="option_amount2"
+																			value="56.00"> <input type="hidden"
+																			name="option_index" value="0"> <input
+																			type="image"
+																			src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif"
+																			border="0" name="submit" style="width: 70px;"
+																			alt="PayPal - The safer, easier way to pay online!">
+																		<img alt="" border="0"
+																			src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif"
+																			width="1" height="1">
+																	</form>
+																</div>
+																<div class="pull-right price_style">
+																	<p>
+																		<a class="item_add"> <span
+																			class="glyphicon glyphicon-shopping-cart grid-cart"
+																			aria-hidden="true"></span> <a class=" item_price"
+																			id="itemprice" name="itemprice">$ :
+																				<%=items_furniture[i].price%></a></a>
+																	</p>
+																</div>
+																<div class="clearfix"></div>
+															</div>
+
+															<div class="quick-view">
+																<a
+																	onclick="window.location.href='item_detail_page/productname/<%=items_furniture[i]._id%>'">Quick
+																	view</a>
+															</div>
+														</div>
+													</div>
+												</div>
+
+											</td> <% }%>
+
+											</ul>
+											<ul hidden class="piclist2 swaplist2"></ul>
+											</div>
+
+
+											</div>
+										</table>
 								</div>
 							</div>
 						</div>
-					
-				</td>
-		<%	}%>
-				
-				
-			</tr>
-		</table>
-	</div>
-<hr style="height:1px;border:none;border-top:1px solid #555555;width:80%" />
-  
-		
-	<br>
-	<br>
-		<div  name="item_Book" align="center" Style="width: 100% ;">
-	<tr><th><h1>Book</h1></tr></tr>
-		<div align="center" style="width: 80% ; left :15%;"></div>
-		<table style="width:80%;">
-			<tr >
-				<td>
-					<div class="img">
-						 <img
-							src="images/11.jpg" alt="" width="300"
-							height="200">
 						
-						<div class="desc">Add a description of the image here</div>
-					</div>
-				</td>
-				
-				<td>
-					<div class="img">
-						 <img
-							src="images/11.jpg" alt="" width="300"
-							height="200">
-						
-						<div class="desc">Add a description of the image here</div>
-					</div>
-				</td>
-				
-				<td>
-					<div class="img">
-						 <img
-							src="images/11.jpg" alt="" width="300"
-							height="200">
-						
-						<div class="desc">Add a description of the image here</div>
-					</div>
-				</td>
-				
-				<td>
-					<div class="img">
-						 <img
-							src="images/11.jpg" alt="" width="300"
-							height="200">
-						
-						<div class="desc">Add a description of the image here</div>
-					</div>
-				</td>
-				
-				<td>
-					<div class="img">
-						 <img
-							src="images/11.jpg" alt="" width="300"
-							height="200">
-						
-						<div class="desc">Add a description of the image here</div>
-					</div>
-				</td>
-				
-			</tr>
-		</table>
-	</div>
-<hr style="height:1px;border:none;border-top:1px solid #555555;width:80%" />
-  
-		
-	<br>
-	<br>
-		<div  name="item_furniture" align="center" Style="width: 100% ;">
-	<tr><th><h1>Fruniture</h1></tr></tr>
-		<div align="center" style="width: 80% ; left :15%;"></div>
-		<table style="width:80%;">
-			<tr >
-				<td>
-					<div class="img">
-						 <img
-							src="images/11.jpg" alt="" width="300"
-							height="200">
-						
-						<div class="desc">Add a description of the image here</div>
-					</div>
-				</td>
-				
-				<td>
-					<div class="img">
-						 <img
-							src="images/11.jpg" alt="" width="300"
-							height="200">
-						
-						<div class="desc">Add a description of the image here</div>
-					</div>
-				</td>
-				
-				<td>
-					<div class="img">
-						 <img
-							src="images/11.jpg" alt="" width="300"
-							height="200">
-						
-						<div class="desc">Add a description of the image here</div>
-					</div>
-				</td>
-				
-				<td>
-					<div class="img">
-						 <img
-							src="images/11.jpg" alt="" width="300"
-							height="200">
-						
-						<div class="desc">Add a description of the image here</div>
-					</div>
-				</td>
-				
-				<td>
-					<div class="img">
-						 <img
-							src="images/11.jpg" alt="" width="300"
-							height="200">
-						
-						<div class="desc">Add a description of the image here</div>
-					</div>
-				</td>
-				
-			</tr>
-		</table>
-	</div>
-<hr style="height:1px;border:none;border-top:1px solid #555555;width:80%" />
-
-
-		
-	<br>
-	<br>
-		<div  name="item_cloth" align="center" Style="width: 100% ;">
-	<tr><th><h1>Cloth</h1></tr></tr>
-		<div align="center" style="width: 80% ; left :15%;"></div>
-		<table style="width:80%;">
-			<tr >
-				<td>
-					<div class="img">
-						 <img
-							src="images/11.jpg" alt="" width="300"
-							height="200">
-						
-						<div class="desc">Add a description of the image here</div>
-					</div>
-				</td>
-				
-				<td>
-					<div class="img">
-						 <img
-							src="images/11.jpg" alt="" width="300"
-							height="200">
-						
-						<div class="desc">Add a description of the image here</div>
-					</div>
-				</td>
-				
-				<td>
-					<div class="img">
-						 <img
-							src="images/11.jpg" alt="" width="300"
-							height="200">
-						
-						<div class="desc">Add a description of the image here</div>
-					</div>
-				</td>
-				
-				<td>
-					<div class="img">
-						 <img
-							src="images/11.jpg" alt="" width="300"
-							height="200">
-						
-						<div class="desc">Add a description of the image here</div>
-					</div>
-				</td>
-				
-				<td>
-					<div class="img">
-						 <img
-							src="images/11.jpg" alt="" width="300"
-							height="200">
-						
-						<div class="desc">Add a description of the image here</div>
-					</div>
-				</td>
-			
-			</tr>
-		</table>
-	</div>
-
-	
-<!-- 	
-	 <marquee scrollamount="1" scrolldelay="100" direction= "right" width="200" height="200">
-       <img src="../graph/11.jpg" width="100" height="100" />
-
-       <img src="../graph/11.jpg" width="100" height="100" />
-
-      <img src="../graph/11.jpg" width="100" height="100" />
-
-      <img src="../graph/11.jpg" width="100" height="100" />
-
-    </marquee> -->
-</body>
-<%include ../include/footer.ejs%>
+						<%include ../include/footer.ejs%>

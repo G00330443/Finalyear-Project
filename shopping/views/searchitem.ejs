@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Shopping</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet"
+	href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<script src="http://libs.baidu.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<link href="../../css/bootstrap.css" rel="stylesheet" type="text/css"
+	media="all">
+<link href="../../css/style.css" rel="stylesheet" type="text/css" media="all" />
+<% include ../include/Cart.js%>
+
+<div class="header">
+	<div align="center">
+		<img src="../../images/title1.png" style="height: 80px;" />
+		<p>
+			<img src="../../images/Title.png" style="height: 20px;" />
+		</p>
+	</div>
+	<div class="head-nav">
+		<% if(username==undefined){ %>
+
+		<div style="float: left; margin: 0;">
+			<input onclick="window.location.href='login'" type="image"
+				src="images/picture.png" /> <a><font size="4"
+				color="blue" onclick="window.location.href='login'">Login</font></a>
+		</div>
+		<%}else{%>
+		<div style="float: left; margin: 0;">
+			<img onclick="window.location.href='login'" height="80"
+				src="<%=userpicture%>" alt="Press to Login" /> <a><font
+				size="4" color="blue"> Welcome <%=username%></font></a>
+		</div>
+		<%}%>
+
+		<div style="float: right; margin: 0;">
+			<a><font size="4" color="blue"
+				onclick="window.location.href='logout'"> Logout</font></a>
+		</div>
+		<div class="container">
+			<ul class="cl-effect-7">
+				<font>
+					<li class="active"><a href="/">Home</a></li>
+					<li><a href="/userManagePage">Account</a></li>
+					<li><a href="/shoppingCart">ShoppingCart</a></li>
+					<li><a href="">Favorite</a></li>
+					<li><a href="">Services</a></li>
+					<li><a href="/showCategory">Category</a></li>
+					<li><a href="">Messages</a></li>
+					<li><a href="">About</a></li>
+					<li><a href="">Contact</a></li>
+				</font>
+				<div class="clearfix"></div>
+			</ul>
+		</div>
+
+	</div>
+</div>
+<style>
+.name_style h3 {
+    font-family: 'Pathway Gothic One';
+    text-transform: uppercase;
+    color: #272323;
+    text-align: left;
+    font-size: 10px;
+    padding: 0;
+    margin: 2px 0px 0px;
+    font-weight: 200;
+}
+</style>
+<% if(sum!=null){%>
+<%	var len=sum[0].length;%>
+<%	var total=sum[0].total;%>
+<%	 %>
+<%		 %>
+<%	%>
+<div class="head-bread" style="z-index:999;position: fixed; top: 0; width: 100%;">
+	<font size=4>
+			<tr>
+				<div style="float: right;">
+					<ol class="breadcrumb">
+						<li><a><input style="border:0px;background:#F5F5F5;width:100px;"readOnly="true" name="tot" id="tot" type="text" value="$ : <%=sum[0].total%>"/></a></li>
+						<li><a name="cart_status" id="cart_status">Cart Status</a></li>
+						<li><a name="checkout" id="checkout" type="button" class="btn btn-primary">Check Out </a></li>
+					</ol>
+				</div>
+			</ol>
+	</font>
+
+<div name="vis" id="vis" style="visibility:hidden;position: fixed;top:50px; width: 100%;">
+	<table style="float: right;background:white;" text-align="center" class="name_style">
+		<tr><div >
+		
+			<td><h3>name &nbsp; </h3></td>
+			<td><h3>number &nbsp; </h3></td>
+			<td><h3>price &nbsp;</h3></td>
+		
+	</div></tr>
+		<%var ll=-1;%>
+<% sum.forEach(function(s){ %>
+
+<tr><div >
+		<%ll++;%>
+			<td><h3> <%=s.name%>&nbsp;</h3></td>
+			<td><h3 > <%=s.number%></h3></td>
+			<td><h3> <%=s.price%></h3></td>
+		
+	</div></tr>
+<% }); %>
+
+<tr><div >
+		
+			<td><h3>Total :  &nbsp; <%=sum[0].total%> </h3></td>
+			
+	</div></tr>
+<%}%>
+
+
+</table>
+</div>
+</div>
+<body style="background:#F0FFFF;">
+<%include ../include/search.js%>
+<style>
+.item.square.p.item_detail .bottom-2-top:hover .img {
+    -webkit-transform: translateY(-200px);
+    -moz-transform: translateY(-500px);
+    -ms-transform: translateY(-500px);
+    -o-transform: translateY(-50px);
+    transform: translateY(-50px);
+}
+
+
+.item.square.p.item_detail .bottom-2-top:hover .info {
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+    transform: translateY(0);
+}
+.quick-view a {
+     font-family: 'SimHei';
+    background-color: #A5E126;
+    padding: 5px;
+    font-weight: 400;
+    text-decoration: none;
+    font-size: 16px;
+    color: #1F1818;
+    text-transform: uppercase;
+    display:none;
+}
+.quick-view {
+    position: absolute;
+    top: 44%;
+    right: 44%;
+}
+
+.item.square.p.item_detail .bottom-2-top:hover .quick-view a{
+    display: block;
+}
+
+.item.square.p a:hover .info {
+    visibility: visible;
+    opacity: 999;
+}
+
+.item.square.p.item_detail .info {
+    top: auto;
+    -webkit-transform: translateY(100%);
+    -moz-transform: translateY(100%);
+    -ms-transform: translateY(100%);
+    -o-transform: translateY(100%);
+    transform: translateY(100%);
+    z-index: 999 !important;
+    background-color:rgba(250, 84, 0, 0) !important;
+    opacity: 1;
+}
+
+.info {
+    background: #1a4a72;
+}
+
+.info {
+    padding: 6px 12px;
+    background: #fa5400;
+    opacity: 0;
+    -webkit-transition: all 0.35s ease-in-out;
+    -moz-transition: all 0.35s ease-in-out;
+    transition: all 0.35s ease-in-out;
+    z-index: 999;   
+}
+
+.item.square.p.item_detail .bottom-2-top:hover .info {
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+    transform: translateY(0);
+}
+.item.square.p {
+    overflow: hidden;
+}
+
+.item.square.p.colored .info {
+    background: #1a4a72;
+}
+.item.square.p .img {
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+    transform: translateY(0);
+    -webkit-transition: all 0.35s ease-in-out;
+    -moz-transition: all 0.35s ease-in-out;
+    transition: all 0.35s ease-in-out;
+}
+.item.square.p .info {
+    padding: 6px 12px;
+    background: #fa5400;
+    opacity: 0;
+    -webkit-transition: all 0.35s ease-in-out;
+    -moz-transition: all 0.35s ease-in-out;
+    transition: all 0.35s ease-in-out;
+    z-index: 999;   
+}
+
+.name_style h3 {
+    font-family: 'Pathway Gothic One';
+    text-transform: uppercase;
+    color: #272323;
+    text-align: left;
+    font-size: 22px;
+    padding: 0;
+    margin: 2px 0px 0px;
+    font-weight: 400;
+}
+
+.price_style p {
+    font-family: 'Didact Gothic';
+    font-size: 20px;
+    position: relative;
+    color: #FFFFFF;
+    padding: 0;
+    text-align: right;
+    font-weight: bold;
+}
+
+
+</style>
+
+<div align="center">
+		<center>
+		<table class="center" style="">			
+				<tr>	<input autocomplete="off" type= "text" style="width: 30% ; height : 44px" id="search" maxlength="255" value="" name="search" />
+     
+						<input  value= "search " name="ss"  id="ss"  type="submit" style=" width: 100px; height: 44px;" class='btn btn-primary' href='javascript:;'>
+				</tr>
+				<tr>	<div id="infoBox" class="searchInfo"></div></tr>
+		</table>
+		
+	</center>
+		<table
+			style="background-color: #f2f2f2; width: 80%; border-collapse: collapse; border: 0px solid black;">
+			<tr>
+				<th>Please Choose City :</th>
+				<th>Please Choose area :</th>
+				<th>Please Choose Item type :</th>
+			</tr>
+			<tr>
+				<td style="width: 30%"><select
+					style="width: 100%; height: 50px;">
+						<option value="Dublin">Dublin</option>
+						<option value="Galway">Galway</option>
+						<option value="Cork">Cork</option>
+						<option value="Waterford">Waterford</option>
+						<option value="Belfast">Belfast</option>
+						<option value="Derry">Derry</option>
+						<option value="Drogheda">Drogheda</option>
+						<option value="Sligo">Sligo</option>
+						<option value="Dundalk">Dundalk</option>
+						<option value="Wexford">Wexford</option>
+						<option value="Bray">Bray</option>
+						<option value="Ennis">Ennis</option>
+				</select></td>
+
+				<td style="width: 30%"><select
+					style="width: 100%; height: 50px;">
+						<option value="Dublin">Dublin</option>
+						<option value="Galway">Galway</option>
+						<option value="Cork">Cork</option>
+						<option value="Waterford">Waterford</option>
+						<option value="Belfast">Belfast</option>
+						<option value="Derry">Derry</option>
+						<option value="Drogheda">Drogheda</option>
+						<option value="Sligo">Sligo</option>
+						<option value="Dundalk">Dundalk</option>
+						<option value="Wexford">Wexford</option>
+						<option value="Bray">Bray</option>
+						<option value="Ennis">Ennis</option>
+				</select></td>
+
+				<td style="width: 30%"><select
+					style="width: 100%; height: 50px;">
+						<option value="Video">Video</option>
+						<option value="Books ">Books</option>
+						<option value="Home, Garden & Tools">Home, Garden & Tools</option>
+						<option value="Beauty, Health & Grocery">Beauty, Health &
+							Grocery</option>
+						<option value="Sports & Outdoors">Sports & Outdoors</option>
+						<option value="Automotive & Industrial">Automotive &
+							Industrial</option>
+						<!-- <option value="Drogheda">Drogheda</option>
+						<option value="Sligo">Sligo</option>
+						<option value="Dundalk">Dundalk</option>
+						<option value="Wexford">Wexford</option>
+						<option value="Bray">Bray</option>
+						<option value="Ennis">Ennis</option> -->
+				</select></td>
+				
+				<td>
+					<input value= "searchItem " type="submit" style=" width: 100px; height: 44px;" class='btn btn-primary' href='javascript:;'></a>
+				</td>
+			</tr>
+		</table>
+	</div>
+
+<div style="width:1000px;  margin:50px auto;">
+			<font style="font-family: 'Pathway Gothic One'; text-transform: uppercase;color:blue;font-weight: 300;text-align: left;">
+			<h4> Search item name is ---<%=ooo%></h4>			
+			<h4>Display <%=itemss.length%> items</h4>
+			
+</div>
+
+<%if(itemss.length==0){%>
+<br>
+<h4 style="color:red;" align="center">No Matched Items</h4>
+<%}%></font>
+<div style="width:1000px;  margin:50px auto;">
+<%var num=-1;%>
+<table style="width:80%;">
+			
+			<% itemss.forEach(function(items){ %>
+			<%num++;%>
+			<%if(num%4==0){%>
+			<tr ></tr>
+		
+			<%}%>
+				<td>
+					
+            
+						<div  id="cart_item_id" name="cart_item_id" class="item square p item_detail">
+							 <div class="bottom-2-top">
+								<div class="img" style="border:none;width:300px;">
+									<img src="../<%=items.picture%>" style="width:240px;height:200px;" alt="/" class="img-responsive gri-wid" >
+										<div class="info">
+											<div class="pull-left name_style">
+												<h3><%=items.name%></h3>
+											</div>
+											<div class="pull-right price_style">
+												<p><a   class="item_add">
+												<span class="glyphicon glyphicon-shopping-cart grid-cart" aria-hidden="true"></span
+                                                
+												<a class=" item_price" id="itemprice" name="itemprice"><%=items.price%></a></a></p>
+											</div>
+											<div class="clearfix"></div>
+										 </div>
+												
+										<div class="quick-view">
+											<a onclick="window.location.href='item_detail_page/productname/<%=items._id%>'">Quick view</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					
+				</td>
+			
+		<%	});%>
+				
+	
+		</table>
+
+</div>
+<%include ../include/footer.ejs%>
