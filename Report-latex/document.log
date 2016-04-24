@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/W32TeX) (preloaded format=pdflatex 2016.4.15)  24 APR 2016 14:03
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/W32TeX) (preloaded format=pdflatex 2016.4.15)  24 APR 2016 14:17
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -923,24 +923,1635 @@ Package biblatex Info: Reference section=0 on input line 27.
 Package biblatex Info: Reference segment=0 on input line 27.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
- (./titlepage.tex
-! I can't write on file `document.pdf'.
-(Press Enter to retry, or Control-Z to exit; default file extension is `.pdf')
-Please type another file name for output
-! Emergency stop.
-<argument> ...stobj \GPT@objref }}}\fi \pdfximage 
-                                                  \GPT@RuleAttr \ifx \GPT@pa...
-l.23 ...degraphics[width=0.8\textwidth]{gmit-logo}
-                                                  
-*** (job aborted, file error in nonstop mode)
+ (./titlepage.tex <images/gmit-logo.jpg, id=1, 281.853pt x 88.4103pt>
+File: images/gmit-logo.jpg Graphic file (type jpg)
 
- 
+<use images/gmit-logo.jpg>
+Package pdftex.def Info: images/gmit-logo.jpg used on input line 23.
+(pdftex.def)             Requested size: 341.43436pt x 107.10222pt.
+ [1
+
+{c:/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./images/gmit-l
+ogo.jpg>]) (./document.toc
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 7.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 7.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 7.
+ [2
+
+])
+\tf@toc=\write6
+\openout6 = `document.toc'.
+
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[3]
+Chapter 1.
+(./chapters/abstract.tex)
+Underfull \hbox (badness 10000) in paragraph at lines 1--34
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1--34
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1--34
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1--34
+
+ []
+
+[4
+
+]
+Chapter 2.
+(./chapters/introduction.tex
+
+! LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.3 T
+     his is a Node.js Project that for Final year project named Second-Hand ...
+
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3--9
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3--9
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3--9
+
+ []
+
+<images/14.png, id=18, 347.49825pt x 284.262pt>
+File: images/14.png Graphic file (type png)
+ <use images/14.png>
+Package pdftex.def Info: images/14.png used on input line 12.
+(pdftex.def)             Requested size: 173.74869pt x 142.13065pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 16--18
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 19--23
+
+ []
+
+[5
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 24--29
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 24--29
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 30--32
+
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[6 <./images/14.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 33--35
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 36--40
+
+ []
+
+)
+Underfull \hbox (badness 10000) in paragraph at lines 41--37
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 41--37
+
+ []
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[7]
+Chapter 3.
+(./chapters/Methodology.tex
+
+LaTeX Warning: Citation '17' on page 8 undefined on input line 3.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3--5
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3--5
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 6--15
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 6--15
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 17--23
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 17--23
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 17--23
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 17--23
+
+ []
+
+[8
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 24--32
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 24--32
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 24--32
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 24--32
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 24--32
+
+ []
+
+
+! LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.34 D
+      ownload address: https://github.com/Komodo/KomodoEdit\\
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 34--38
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 34--38
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 34--38
+
+ []
+
+
+! LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.41 G
+      itHub is a shared hosting services that use the Git to share system pr...
+
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+)
+Underfull \hbox (badness 10000) in paragraph at lines 41--40
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 41--40
+
+ []
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[9]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[10]
+Chapter 4.
+(./chapters/TechnologyReview.tex
+<images/a.png, id=40, 408.92775pt x 231.264pt>
+File: images/a.png Graphic file (type png)
+ <use images/a.png>
+Package pdftex.def Info: images/a.png used on input line 8.
+(pdftex.def)             Requested size: 204.46336pt x 115.63171pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 2--13
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2--13
+
+ []
+
+[11
+
+ <./images/a.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 23--27
+
+ []
+
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 42.
+(c:/texlive/2015/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 42.
+
+Underfull \hbox (badness 10000) in paragraph at lines 39--45
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 39--45
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 46--52
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 46--52
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 46--52
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 52--108
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 52--108
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 52--108
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 52--108
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 52--108
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 52--108
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 52--108
+
+ []
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[12]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[13] <images/5.png, id=53, 472.164pt x 316.7835pt>
+File: images/5.png Graphic file (type png)
+ <use images/5.png>
+Package pdftex.def Info: images/5.png used on input line 121.
+(pdftex.def)             Requested size: 236.08142pt x 158.39136pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 113--126
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 113--126
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 113--126
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 127--133
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 127--133
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 134--136
+
+ []
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[14 <./images/5.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 137--144
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 137--144
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 137--144
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 145--148
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 145--148
+
+ []
+
+<images/39.png, id=58, 575.14874pt x 275.8305pt>
+File: images/39.png Graphic file (type png)
+ <use images/39.png>
+Package pdftex.def Info: images/39.png used on input line 155.
+(pdftex.def)             Requested size: 287.57367pt x 137.9149pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 148--164
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 148--164
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 148--164
+
+ []
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[15]
+
+! LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.166 P
+       ayPal Sandbox environment is an independent Environment and in a Sand...
+
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 166--168
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 169--177
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 169--177
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 169--177
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 169--177
+
+ []
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[16 <./images/39.png>]
+
+! LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.179 D
+       ate-utils is a package in npm. In Nodejs get current system time is h...
+
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 179--186
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 179--186
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 179--186
+
+ []
+
+
+LaTeX Warning: Citation '18' on page 17 undefined on input line 186.
+
+)
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[17]
+Chapter 5.
+(./chapters/SystemDesign.tex
+Underfull \hbox (badness 10000) in paragraph at lines 2--10
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2--10
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2--10
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2--10
+
+ []
+
+
+! LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.12 T
+      alking about the object-oriented programming language, most people imm...
+
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 12--14
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 12--14
+
+ []
+
+[18
+
+]
+
+! LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.16 T
+      he object in JavaScript actually is a related Array that made by prope...
+
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 16--18
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 16--18
+
+ []
+
+
+! LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.20 J
+      avaScript scripting language is not dependent on the operating system,...
+
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 20--22
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 20--22
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 22--26
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 22--26
+
+ []
+
+
+! LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.28 N
+      ode.js use event-driven, asynchronous programming, and network design ...
+
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 28--32
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 28--32
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 28--32
+
+ []
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[19]
+
+! LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.34 1
+      .Pay Pal \cite{5}\\
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 34--44
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 34--44
+
+ []
+
+<images/27.png, id=76, 503.481pt x 392.667pt>
+File: images/27.png Graphic file (type png)
+ <use images/27.png>
+Package pdftex.def Info: images/27.png used on input line 70.
+(pdftex.def)             Requested size: 251.73988pt x 196.33302pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 46--75
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 46--75
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 46--75
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 46--75
+
+ []
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[20] <images/28.png, id=80, 514.92375pt x 270.41025pt>
+File: images/28.png Graphic file (type png)
+ <use images/28.png>
+Package pdftex.def Info: images/28.png used on input line 136.
+(pdftex.def)             Requested size: 257.46124pt x 135.20479pt.
+
+<images/29.png, id=81, 536.0025pt x 314.3745pt>
+File: images/29.png Graphic file (type png)
+ <use images/29.png>
+Package pdftex.def Info: images/29.png used on input line 149.
+(pdftex.def)             Requested size: 268.0006pt x 157.18686pt.
+
+<images/30.png, id=82, 403.5075pt x 409.53pt>
+File: images/30.png Graphic file (type png)
+ <use images/30.png>
+Package pdftex.def Info: images/30.png used on input line 158.
+(pdftex.def)             Requested size: 201.75325pt x 204.7645pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 76--163
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 76--163
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 76--163
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 76--163
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 76--163
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 76--163
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 76--163
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 76--163
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 76--163
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 76--163
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 76--163
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 76--163
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 76--163
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 76--163
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 76--163
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 76--163
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 76--163
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 76--163
+
+ []
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[21 <./images/27.png>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[22]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[23 <./images/28.png> <./images/29.png>]
+<images/15.png, id=95, 420.97275pt x 239.09325pt>
+File: images/15.png Graphic file (type png)
+ <use images/15.png>
+Package pdftex.def Info: images/15.png used on input line 172.
+(pdftex.def)             Requested size: 128.0387pt x 72.7172pt.
+
+<images/16.png, id=96, 311.9655pt x 34.9305pt>
+File: images/16.png Graphic file (type png)
+ <use images/16.png>
+Package pdftex.def Info: images/16.png used on input line 179.
+(pdftex.def)             Requested size: 128.0387pt x 14.33652pt.
+
+<images/17.png, id=97, 351.11176pt x 50.589pt>
+File: images/17.png Graphic file (type png)
+ <use images/17.png>
+Package pdftex.def Info: images/17.png used on input line 186.
+(pdftex.def)             Requested size: 128.0387pt x 18.44745pt.
+
+<images/18.png, id=98, 367.97475pt x 63.23625pt>
+File: images/18.png Graphic file (type png)
+ <use images/18.png>
+Package pdftex.def Info: images/18.png used on input line 198.
+(pdftex.def)             Requested size: 183.98692pt x 31.61804pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 194--203
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 194--203
+
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 203--215
+
+ []
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[24 <./images/30.png> <./images/15.png> <./images/16.png> <./images/17.png>]
+
+! LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.217 I
+       n MongoDB 2.4 version it do a new adjustment on users right managemen...
+
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+<images/19.png, id=107, 564.9105pt x 249.93375pt>
+File: images/19.png Graphic file (type png)
+ <use images/19.png>
+Package pdftex.def Info: images/19.png used on input line 229.
+(pdftex.def)             Requested size: 282.45456pt x 124.96657pt.
+
+Overfull \hbox (12.78465pt too wide) in paragraph at lines 217--233
+\OT1/cmr/m/n/12 mongod --dbpath (db ad-dress) --port 27017 --logpath (mon-godb.
+log ad-dress) --logappend
+ []
+
+<images/20.png, id=108, 579.3645pt x 215.00325pt>
+File: images/20.png Graphic file (type png)
+ <use images/20.png>
+Package pdftex.def Info: images/20.png used on input line 236.
+(pdftex.def)             Requested size: 289.68153pt x 107.50136pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+! LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.241 \subsection
+                 {Face to Face Trade}
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 242--245
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 242--245
+
+ []
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[25 <./images/18.png> <./images/19.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 246--248
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 246--248
+
+ []
+
+<images/32.png, id=115, 294.50024pt x 154.77824pt>
+File: images/32.png Graphic file (type png)
+ <use images/32.png>
+Package pdftex.def Info: images/32.png used on input line 317.
+(pdftex.def)             Requested size: 147.24976pt x 77.38893pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 265--322
+
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[26 <./images/20.png>] <images/31.png, id=120, 263.7855pt x 322.806pt>
+File: images/31.png Graphic file (type png)
+
+<use images/31.png>
+Package pdftex.def Info: images/31.png used on input line 328.
+(pdftex.def)             Requested size: 131.89243pt x 161.4026pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 323--333
+
+ []
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[27 <./images/32.png>]
+
+! LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.335 T
+       his collection used to store all orders generated from website.
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 335--355
+
+ []
+
+
+! LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.357 (
+       1)Items Table\\
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+<images/33.png, id=125, 388.45125pt x 389.0535pt>
+File: images/33.png Graphic file (type png)
+ <use images/33.png>
+Package pdftex.def Info: images/33.png used on input line 361.
+(pdftex.def)             Requested size: 116.53627pt x 116.71693pt.
+
+<images/34.png, id=126, 414.348pt x 414.348pt>
+File: images/34.png Graphic file (type png)
+ <use images/34.png>
+Package pdftex.def Info: images/34.png used on input line 370.
+(pdftex.def)             Requested size: 124.30536pt x 124.30536pt.
+
+<images/54.png, id=127, 397.485pt x 278.2395pt>
+File: images/54.png Graphic file (type png)
+ <use images/54.png>
+Package pdftex.def Info: images/54.png used on input line 379.
+(pdftex.def)             Requested size: 119.24641pt x 83.47249pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 357--384
+
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[28 <./images/31.png>] <images/35.png, id=132, 436.63126pt x 398.6895pt>
+File: images/35.png Graphic file (type png)
+
+<use images/35.png>
+Package pdftex.def Info: images/35.png used on input line 390.
+(pdftex.def)             Requested size: 218.3151pt x 199.34425pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 386--395
+
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<images/36.png, id=133, 965.40675pt x 101.178pt>
+File: images/36.png Graphic file (type png)
+ <use images/36.png>
+Package pdftex.def Info: images/36.png used on input line 400.
+(pdftex.def)             Requested size: 482.7022pt x 50.58887pt.
+
+Overfull \hbox (55.91086pt too wide) in paragraph at lines 400--401
+ [][] 
+ []
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[29 <./images/33.png> <./images/34.png> <./images/54.png>]
+<images/37.png, id=140, 283.0575pt x 233.673pt>
+File: images/37.png Graphic file (type png)
+ <use images/37.png>
+Package pdftex.def Info: images/37.png used on input line 412.
+(pdftex.def)             Requested size: 170.71393pt x 140.93225pt.
+
+<images/38.png, id=141, 419.166pt x 270.41025pt>
+File: images/38.png Graphic file (type png)
+ <use images/38.png>
+Package pdftex.def Info: images/38.png used on input line 419.
+(pdftex.def)             Requested size: 170.71393pt x 110.13034pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 404--427
+
+ []
+
+
+! LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.431 T
+       his Section used to describe Main page design:\\
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+<images/21.png, id=142, 1156.32pt x 596.82974pt>
+File: images/21.png Graphic file (type png)
+ <use images/21.png>
+Package pdftex.def Info: images/21.png used on input line 436.
+(pdftex.def)             Requested size: 462.5198pt x 238.72766pt.
+
+Overfull \hbox (35.72847pt too wide) in paragraph at lines 436--437
+ [][] 
+ []
+
+<images/40.png, id=143, 1010.5755pt x 263.18324pt>
+File: images/40.png Graphic file (type png)
+ <use images/40.png>
+Package pdftex.def Info: images/40.png used on input line 446.
+(pdftex.def)             Requested size: 404.22304pt x 105.27142pt.
+
+<images/41.png, id=144, 188.50426pt x 186.09525pt>
+File: images/41.png Graphic file (type png)
+ <use images/41.png>
+Package pdftex.def Info: images/41.png used on input line 460.
+(pdftex.def)             Requested size: 75.40036pt x 74.43677pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 431--465
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 431--465
+
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[30 <./images/35.png> <./images/36.png>]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+! LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.467 (
+       1)Login Page see graph \ref{fig:21 cubed graph}
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+<images/22.png, id=150, 466.1415pt x 260.77425pt>
+File: images/22.png Graphic file (type png)
+ <use images/22.png>
+Package pdftex.def Info: images/22.png used on input line 471.
+(pdftex.def)             Requested size: 233.07018pt x 130.3868pt.
+
+<images/42.png, id=151, 479.391pt x 316.18124pt>
+File: images/42.png Graphic file (type png)
+ <use images/42.png>
+Package pdftex.def Info: images/42.png used on input line 480.
+(pdftex.def)             Requested size: 239.69492pt x 158.09023pt.
+
+<images/43.png, id=152, 797.98125pt x 333.6465pt>
+File: images/43.png Graphic file (type png)
+ <use images/43.png>
+Package pdftex.def Info: images/43.png used on input line 490.
+(pdftex.def)             Requested size: 239.39621pt x 100.09471pt.
+
+<images/44.png, id=153, 743.77875pt x 354.72525pt>
+File: images/44.png Graphic file (type png)
+ <use images/44.png>
+Package pdftex.def Info: images/44.png used on input line 500.
+(pdftex.def)             Requested size: 223.13535pt x 106.4184pt.
+
+<images/53.png, id=154, 734.14275pt x 549.85425pt>
+File: images/53.png Graphic file (type png)
+ <use images/53.png>
+Package pdftex.def Info: images/53.png used on input line 509.
+(pdftex.def)             Requested size: 220.24452pt x 164.95753pt.
+
+<images/47.png, id=155, 863.6265pt x 398.6895pt>
+File: images/47.png Graphic file (type png)
+ <use images/47.png>
+Package pdftex.def Info: images/47.png used on input line 522.
+(pdftex.def)             Requested size: 259.08995pt x 119.60777pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 467--527
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 467--527
+
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[31 <./images/37.png> <./images/38.png> <./images/21.png>]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[32 <./images/40.png> <./images/41.png> <./images/22.png>]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+! LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.529 (
+       1)Add Product that you want to sale see graph \ref{fig:25 cubed graph}:
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+<images/45.png, id=169, 746.79pt x 398.08725pt>
+File: images/45.png Graphic file (type png)
+ <use images/45.png>
+Package pdftex.def Info: images/45.png used on input line 532.
+(pdftex.def)             Requested size: 224.03873pt x 119.4271pt.
+
+<images/46.png, id=170, 867.84225pt x 289.68225pt>
+File: images/46.png Graphic file (type png)
+ <use images/46.png>
+Package pdftex.def Info: images/46.png used on input line 541.
+(pdftex.def)             Requested size: 260.35468pt x 86.90533pt.
+
+<images/48.png, id=171, 602.85225pt x 530.58224pt>
+File: images/48.png Graphic file (type png)
+ <use images/48.png>
+Package pdftex.def Info: images/48.png used on input line 550.
+(pdftex.def)             Requested size: 180.85707pt x 159.1759pt.
+
+<images/49.png, id=172, 836.52525pt x 585.387pt>
+File: images/49.png Graphic file (type png)
+ <use images/49.png>
+Package pdftex.def Info: images/49.png used on input line 561.
+(pdftex.def)             Requested size: 250.9595pt x 175.61745pt.
+
+<images/50.png, id=173, 1156.32pt x 604.659pt>
+File: images/50.png Graphic file (type png)
+ <use images/50.png>
+Package pdftex.def Info: images/50.png used on input line 570.
+(pdftex.def)             Requested size: 346.89868pt x 181.3991pt.
+
+<images/51.png, id=174, 981.06525pt x 434.22224pt>
+File: images/51.png Graphic file (type png)
+ <use images/51.png>
+Package pdftex.def Info: images/51.png used on input line 579.
+(pdftex.def)             Requested size: 392.41914pt x 173.6858pt.
+
+<images/52.png, id=175, 310.761pt x 260.77425pt>
+File: images/52.png Graphic file (type png)
+ <use images/52.png>
+Package pdftex.def Info: images/52.png used on input line 590.
+(pdftex.def)             Requested size: 155.38011pt x 130.3868pt.
+)
+Underfull \hbox (badness 10000) in paragraph at lines 529--46
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 529--46
+
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[33 <./images/42.png> <./images/43.png>]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[34 <./images/44.png> <./images/53.png>]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[35 <./images/47.png> <./images/45.png> <./images/46.png> <./images/48.png>]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[36 <./images/49.png> <./images/50.png> <./images/51.png>]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[37 <./images/52.png>]
+Chapter 6.
+(./chapters/SystemEvaluation.tex
+Underfull \hbox (badness 10000) in paragraph at lines 2--3
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4--18
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4--18
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4--18
+
+ []
+
+[38
+
+])
+Underfull \hbox (badness 10000) in paragraph at lines 19--49
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 19--49
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 19--49
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 19--49
+
+ []
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[39]
+Chapter 7.
+(./chapters/conclusion.tex)
+Underfull \hbox (badness 10000) in paragraph at lines 1--52
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1--52
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1--52
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1--52
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1--52
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1--52
+
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [40
+
+]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[41]
+Appendix A.
+(./chapters/appendix.tex)
+Overfull \hbox (22.59848pt too wide) in paragraph at lines 1--56
+\OT1/cmr/m/n/12 All avail-able source in Github link :https://github.com/G00330
+443/Finalyear-Project.git 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1--56
+
+ []
+
+[42
+
+]
+Overfull \hbox (24.96806pt too wide) in paragraph at lines 58--58
+[]\OT1/cmr/m/n/12 AJAX. \OT1/cmr/m/it/12 AJAX\OT1/cmr/m/n/12 . -. \OT1/cmr/m/sc
+/12 url\OT1/cmr/m/n/12 : $\OT1/cmtt/m/n/12 https : / / en . wikipedia . org / w
+iki / Ajax _ %28programming %
+ []
+
+
+Overfull \hbox (10.10977pt too wide) in paragraph at lines 58--58
+[]\OT1/cmr/m/n/12 Nicholas C.Zakas. \OT1/cmr/m/it/12 << JavaScript ad-vanced pr
+o-gram de-sign>>\OT1/cmr/m/n/12 . Read-ing, JavaScript:
+ []
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.58 
+     
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.58 
+     
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+[43
+
+] (./document.aux)
+
+LaTeX Warning: There were undefined references.
+
+
+Package biblatex Warning: Please (re)run Biber on the file:
+(biblatex)                document
+(biblatex)                and rerun LaTeX afterwards.
+
+Package logreq Info: Writing requests to 'document.run.xml'.
+\openout1 = `document.run.xml'.
+
+ )
+(\end occurred inside a group at level 1)
+
+### simple group (level 1) entered at line 64 ({)
+### bottom level 
 Here is how much of TeX's memory you used:
- 10582 strings out of 493027
- 173065 string characters out of 6137684
- 581944 words of memory out of 5000000
- 14013 multiletter control sequences out of 15000+600000
- 5149 words of font info for 19 fonts, out of 8000000 for 9000
+ 11041 strings out of 493027
+ 180711 string characters out of 6137684
+ 590563 words of memory out of 5000000
+ 14389 multiletter control sequences out of 15000+600000
+ 9617 words of font info for 34 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 36i,1n,43p,821b,668s stack positions out of 5000i,500n,10000p,200000b,80000s
-!  ==> Fatal error occurred, no output PDF file produced!
+ 36i,11n,45p,1413b,1022s stack positions out of 5000i,500n,10000p,200000b,80000s
+<c:/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx
+12.pfb><c:/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><
+c:/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texliv
+e/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2015/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2015/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2015/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmsy10.pfb><c:/texlive/2015/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmti12.pfb><c:/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmtt12.pfb>
+Output written on document.pdf (43 pages, 4944374 bytes).
+PDF statistics:
+ 261 PDF objects out of 1000 (max. 8388607)
+ 126 compressed objects within 2 object streams
+ 0 named destinations out of 1000 (max. 500000)
+ 201 words of extra memory for PDF output out of 10000 (max. 10000000)
+
