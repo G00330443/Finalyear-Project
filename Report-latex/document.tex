@@ -1,0 +1,59 @@
+\documentclass[12pt,twoside]{report}
+\usepackage[utf8]{inputenc}
+\usepackage{pdftexcmds} 
+\usepackage[]{minted}%  ell-escape
+\usepackage{graphicx}
+\graphicspath{ {images/} }
+\usepackage[a4paper,width=150mm,top=25mm,bottom=25mm,bindingoffset=6mm]{geometry}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhead{}
+\fancyhead[RO,LE]{Second-Hand Shopping Website Report}
+\fancyfoot{}
+\fancyfoot[LE,RO]{\thepage}
+\fancyfoot[LO,CE]{Chapter \thechapter}
+\fancyfoot[CO,RE]{HAOYU WANG}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+\usepackage{biblatex}
+\usepackage[style=authoryear,sorting=none]{biblatex}
+\title{Second-Hand Shopping Website}
+\usepackage{caption}
+\usepackage{subcaption}
+\addbibresource{references.bib}
+\author{HAOYU WANG}
+\date{4/18/2016}
+		
+\begin{document}
+	\input{titlepage}
+		
+	\tableofcontents
+	
+	\chapter{Abstract}
+	\input{chapters/abstract}
+	
+	\chapter{Introduction}
+	\input{chapters/introduction}
+	
+	\chapter{Methodology}
+	\input{chapters/Methodology}
+	
+	\chapter{Technology Review}
+	\input{chapters/TechnologyReview}
+
+	\chapter{System Design}
+	\input{chapters/SystemDesign}
+	
+	\chapter{System Evaluation}		
+	\input{chapters/SystemEvaluation}
+		
+	\chapter{Conclusion}
+	\input{chapters/conclusion}
+		
+	\appendix
+	\chapter{Appendix}
+	\input{chapters/appendix}
+   
+\printbibliography
+	
+\end{document}

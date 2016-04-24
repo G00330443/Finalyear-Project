@@ -1,0 +1,30 @@
+[1] Config.pm:340> INFO - This is Biber 2.4
+[2] Config.pm:343> INFO - Logfile is 'document.blg'
+[174] biber-MSWIN32:287> INFO - === 
+[235] Biber.pm:347> INFO - Reading 'document.bcf'
+[734] Biber.pm:741> INFO - Found 16 citekeys in bib section 0
+[796] Biber.pm:3150> INFO - Processing section 0
+[1332] Biber.pm:3307> INFO - Looking for bibtex format file 'references.bib' for section 0
+[1347] bibtex.pm:1124> INFO - Decoding LaTeX character macros into UTF-8
+[1359] bibtex.pm:985> INFO - Found BibTeX data source 'references.bib'
+[2246] Utils.pm:147> WARN - BibTeX subsystem: C:\Users\wang\AppData\Local\Temp\EJy0OtM_D6\references.bib_20004.utf8, line 31, warning: 2 characters of junk seen at toplevel
+[2247] Utils.pm:147> WARN - BibTeX subsystem: C:\Users\wang\AppData\Local\Temp\EJy0OtM_D6\references.bib_20004.utf8, line 37, warning: 2 characters of junk seen at toplevel
+[2247] Utils.pm:147> WARN - BibTeX subsystem: C:\Users\wang\AppData\Local\Temp\EJy0OtM_D6\references.bib_20004.utf8, line 44, warning: 2 characters of junk seen at toplevel
+[2247] Utils.pm:147> WARN - BibTeX subsystem: C:\Users\wang\AppData\Local\Temp\EJy0OtM_D6\references.bib_20004.utf8, line 50, warning: 2 characters of junk seen at toplevel
+[2248] Utils.pm:147> WARN - BibTeX subsystem: C:\Users\wang\AppData\Local\Temp\EJy0OtM_D6\references.bib_20004.utf8, line 56, warning: 2 characters of junk seen at toplevel
+[2248] Utils.pm:147> WARN - BibTeX subsystem: C:\Users\wang\AppData\Local\Temp\EJy0OtM_D6\references.bib_20004.utf8, line 62, warning: 2 characters of junk seen at toplevel
+[2248] Utils.pm:147> WARN - BibTeX subsystem: C:\Users\wang\AppData\Local\Temp\EJy0OtM_D6\references.bib_20004.utf8, line 68, warning: 2 characters of junk seen at toplevel
+[2249] Utils.pm:147> WARN - BibTeX subsystem: C:\Users\wang\AppData\Local\Temp\EJy0OtM_D6\references.bib_20004.utf8, line 74, warning: 2 characters of junk seen at toplevel
+[2249] Utils.pm:147> WARN - BibTeX subsystem: C:\Users\wang\AppData\Local\Temp\EJy0OtM_D6\references.bib_20004.utf8, line 80, warning: 2 characters of junk seen at toplevel
+[2249] Utils.pm:147> WARN - BibTeX subsystem: C:\Users\wang\AppData\Local\Temp\EJy0OtM_D6\references.bib_20004.utf8, line 86, warning: 2 characters of junk seen at toplevel
+[2249] Utils.pm:147> WARN - BibTeX subsystem: C:\Users\wang\AppData\Local\Temp\EJy0OtM_D6\references.bib_20004.utf8, line 92, warning: 2 characters of junk seen at toplevel
+[2250] Utils.pm:147> WARN - BibTeX subsystem: C:\Users\wang\AppData\Local\Temp\EJy0OtM_D6\references.bib_20004.utf8, line 98, warning: 2 characters of junk seen at toplevel
+[2250] Utils.pm:147> WARN - BibTeX subsystem: C:\Users\wang\AppData\Local\Temp\EJy0OtM_D6\references.bib_20004.utf8, line 104, warning: 2 characters of junk seen at toplevel
+[2259] Utils.pm:147> WARN - I didn't find a database entry for 'rapid prototype model' (section 0)
+[3232] UCollate.pm:65> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[3233] UCollate.pm:65> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[3233] Biber.pm:3027> INFO - Sorting list 'nty/global' of type 'entry' with scheme 'nty' and locale 'en-US'
+[3234] Biber.pm:3031> INFO - No sort tailoring available for locale 'en-US'
+[3398] bbl.pm:519> INFO - Writing 'document.bbl' with encoding 'UTF-8'
+[3410] bbl.pm:615> INFO - Output to document.bbl
+[3412] Biber.pm:108> INFO - WARNINGS: 14

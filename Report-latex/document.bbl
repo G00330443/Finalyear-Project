@@ -1,0 +1,308 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 2.6 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \sortlist[entry]{nty/global}
+    \entry{12}{online}{}
+      \name{author}{1}{}{%
+        {{hash=a34a6659bceae779f28185e757abfca5}{%
+           family={AJAX},
+           family_i={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{a34a6659bceae779f28185e757abfca5}
+      \strng{fullhash}{a34a6659bceae779f28185e757abfca5}
+      \field{sortinit}{A}
+      \field{sortinithash}{b685c7856330eaee22789815b49de9bb}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{AJAX}
+      \field{year}{-}
+      \verb{url}
+      \verb https://en.wikipedia.org/wiki/Ajax_%28programming%29
+      \endverb
+    \endentry
+    \entry{14}{online}{}
+      \name{author}{1}{}{%
+        {{hash=fd2328fd4c59f1b444f59cc5aac22bcc}{%
+           family={Buying},
+           family_i={B\bibinitperiod},
+           given={Implusive},
+           given_i={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{fd2328fd4c59f1b444f59cc5aac22bcc}
+      \strng{fullhash}{fd2328fd4c59f1b444f59cc5aac22bcc}
+      \field{sortinit}{B}
+      \field{sortinithash}{4ecbea03efd0532989d3836d1a048c32}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{The Psychology of Impulse Buying}
+      \field{year}{2005}
+      \verb{url}
+      \verb http://specialtyretail.com/issue/2005/10/merchandising-and-marketing/the-psychology-of-impulse-buying/
+      \endverb
+    \endentry
+    \entry{7}{book}{}
+      \name{author}{1}{}{%
+        {{hash=e51dcda60995c12a3dd764cc79bb1f65}{%
+           family={C.Zakas},
+           family_i={C\bibinitperiod},
+           given={Nicholas},
+           given_i={N\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Reading, JavaScript}%
+      }
+      \list{publisher}{1}{%
+        {---}%
+      }
+      \strng{namehash}{e51dcda60995c12a3dd764cc79bb1f65}
+      \strng{fullhash}{e51dcda60995c12a3dd764cc79bb1f65}
+      \field{sortinit}{C}
+      \field{sortinithash}{59f25d509f3381b07695554a9f35ecb2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{<< JavaScript advanced program design>>}
+      \field{year}{2005}
+    \endentry
+    \entry{session}{online}{}
+      \name{author}{1}{}{%
+        {{hash=e1adbcbb92c622d0b3e619f9d0730abf}{%
+           family={Github},
+           family_i={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{e1adbcbb92c622d0b3e619f9d0730abf}
+      \strng{fullhash}{e1adbcbb92c622d0b3e619f9d0730abf}
+      \field{sortinit}{G}
+      \field{sortinithash}{1c854ef9177a91bf894e66485bdbd3ed}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Session}
+      \field{year}{-}
+    \endentry
+    \entry{5}{online}{}
+      \name{author}{1}{}{%
+        {{hash=39e92651dd33198826f3f0041df5669c}{%
+           family={Harrell},
+           family_i={H\bibinitperiod},
+           given={Jeff},
+           given_i={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{39e92651dd33198826f3f0041df5669c}
+      \strng{fullhash}{39e92651dd33198826f3f0041df5669c}
+      \field{sortinit}{H}
+      \field{sortinithash}{82012198d5dfa657b8c4a168793268a6}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Node.js at PayPal}
+      \field{year}{-}
+      \verb{url}
+      \verb https://www.paypal-engineering.com/2013/11/22/node-js-at-paypal/
+      \endverb
+    \endentry
+    \entry{11}{online}{}
+      \name{author}{1}{}{%
+        {{hash=0ecd11c1d7a287401d148a23bbd7a2f8}{%
+           family={JSON},
+           family_i={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{0ecd11c1d7a287401d148a23bbd7a2f8}
+      \strng{fullhash}{0ecd11c1d7a287401d148a23bbd7a2f8}
+      \field{sortinit}{J}
+      \field{sortinithash}{ec3950a647c092421b9fcca6d819504a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{JSON}
+      \field{year}{-}
+      \verb{url}
+      \verb https://en.wikipedia.org/wiki/JSON%20;%20http://www.copterlabs.com/json-what-it-is-how-it-works-how-to-use-it/
+      \endverb
+    \endentry
+    \entry{4}{online}{}
+      \name{author}{1}{}{%
+        {{hash=ac9b0313452eb19846b4b4d9d891fd26}{%
+           family={Mielach},
+           family_i={M\bibinitperiod},
+           given={David},
+           given_i={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{ac9b0313452eb19846b4b4d9d891fd26}
+      \strng{fullhash}{ac9b0313452eb19846b4b4d9d891fd26}
+      \field{sortinit}{M}
+      \field{sortinithash}{2684bec41e9697b92699b46491061da2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Can't Resist That Gum? You're Not Alone}
+      \field{year}{-}
+      \verb{url}
+      \verb http://www.businessnewsdaily.com/2370-impulse-purcahse-survey.html
+      \endverb
+    \endentry
+    \entry{10}{online}{}
+      \name{author}{1}{}{%
+        {{hash=cadcdedb567abae643e15dcf0974e503}{%
+           family={Mongoose},
+           family_i={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{cadcdedb567abae643e15dcf0974e503}
+      \strng{fullhash}{cadcdedb567abae643e15dcf0974e503}
+      \field{sortinit}{M}
+      \field{sortinithash}{2684bec41e9697b92699b46491061da2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Mongoose}
+      \field{year}{-}
+      \verb{url}
+      \verb http://mongoosejs.com/docs/api.html
+      \endverb
+    \endentry
+    \entry{3}{online}{}
+      \name{author}{1}{}{%
+        {{hash=86aef5a36d3021c5299fcf3dc7b45766}{%
+           family={Rudolph},
+           family_i={R\bibinitperiod},
+           given={Stacey},
+           given_i={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{86aef5a36d3021c5299fcf3dc7b45766}
+      \strng{fullhash}{86aef5a36d3021c5299fcf3dc7b45766}
+      \field{sortinit}{R}
+      \field{sortinithash}{c7387613477035a752d935acfc3e3ea2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{The Future of Online Retail Shopping is Bright—Statistics and Trends}
+      \field{year}{February 18,2016}
+      \verb{url}
+      \verb http://www.business2community.com/infographics/future-online-retail-shopping-bright-statistics-trends-01458175#8EsZoJP4E27AGvdq.97
+      \endverb
+    \endentry
+    \entry{13}{online}{}
+      \name{author}{1}{}{%
+        {{hash=772e90e7c05d64f84bd271d5c3a55516}{%
+           family={TKIRDA},
+           family_i={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{772e90e7c05d64f84bd271d5c3a55516}
+      \strng{fullhash}{772e90e7c05d64f84bd271d5c3a55516}
+      \field{sortinit}{T}
+      \field{sortinithash}{423d138a005a533b47e6475e39378bf2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{autocomplete}
+      \field{year}{-}
+      \verb{url}
+      \verb https://github.com/devbridge/jQuery-Autocomplete
+      \endverb
+    \endentry
+    \entry{8}{online}{}
+      \name{author}{1}{}{%
+        {{hash=bf111e3622a72a3b5dc784b5903983ca}{%
+           family={Wiki},
+           family_i={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{bf111e3622a72a3b5dc784b5903983ca}
+      \strng{fullhash}{bf111e3622a72a3b5dc784b5903983ca}
+      \field{sortinit}{W}
+      \field{sortinithash}{99e3ba1b3f78bb6f073e7fa7ac11636b}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Github}
+      \field{year}{-}
+      \verb{url}
+      \verb https://en.wikipedia.org/wiki/GitHub
+      \endverb
+    \endentry
+    \entry{6}{online}{}
+      \name{author}{1}{}{%
+        {{hash=bf111e3622a72a3b5dc784b5903983ca}{%
+           family={Wiki},
+           family_i={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{bf111e3622a72a3b5dc784b5903983ca}
+      \strng{fullhash}{bf111e3622a72a3b5dc784b5903983ca}
+      \field{sortinit}{W}
+      \field{sortinithash}{99e3ba1b3f78bb6f073e7fa7ac11636b}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Komodo_Edit}
+      \field{year}{-}
+      \verb{url}
+      \verb https://en.wikipedia.org/wiki/Komodo_Edit
+      \endverb
+    \endentry
+    \entry{2}{online}{}
+      \name{author}{1}{}{%
+        {{hash=bf111e3622a72a3b5dc784b5903983ca}{%
+           family={Wiki},
+           family_i={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{bf111e3622a72a3b5dc784b5903983ca}
+      \strng{fullhash}{bf111e3622a72a3b5dc784b5903983ca}
+      \field{sortinit}{W}
+      \field{sortinithash}{99e3ba1b3f78bb6f073e7fa7ac11636b}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{MongoDB}
+      \field{year}{-}
+      \verb{url}
+      \verb https://en.wikipedia.org/wiki/MongoDB
+      \endverb
+    \endentry
+    \entry{1}{online}{}
+      \name{author}{1}{}{%
+        {{hash=bf111e3622a72a3b5dc784b5903983ca}{%
+           family={Wiki},
+           family_i={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{bf111e3622a72a3b5dc784b5903983ca}
+      \strng{fullhash}{bf111e3622a72a3b5dc784b5903983ca}
+      \field{sortinit}{W}
+      \field{sortinithash}{99e3ba1b3f78bb6f073e7fa7ac11636b}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Node.js}
+      \field{year}{-}
+      \verb{url}
+      \verb https://en.wikipedia.org/wiki/Node.js
+      \endverb
+    \endentry
+    \entry{15}{online}{}
+      \name{author}{1}{}{%
+        {{hash=e87161685f75392db08036b2d0479b5b}{%
+           family={Yates},
+           family_i={Y\bibinitperiod},
+           given={Eames},
+           given_i={E\bibinitperiod}}}%
+      }
+      \strng{namehash}{e87161685f75392db08036b2d0479b5b}
+      \strng{fullhash}{e87161685f75392db08036b2d0479b5b}
+      \field{sortinit}{Y}
+      \field{sortinithash}{3cbc1e3d286284cedb5e5218a3248f94}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{The biggest security mistakes people make when buying things online}
+      \field{year}{2015}
+      \verb{url}
+      \verb http://uk.businessinsider.com/online-shopping-security-risks-internet-malware-adam-levin-2015-11?r=US&IR=T
+      \endverb
+    \endentry
+  \endsortlist
+  \missing{rapid prototype model}
+\endrefsection
+\endinput
+
