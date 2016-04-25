@@ -4,6 +4,7 @@ __ Final Year Design __
 
 ## Project title: Final Year Design
  By Haoyu Wang 
+ Student Number: G00330443
  ---------------------------
 ### Introduction
 This Project is sale Second-hand items.
