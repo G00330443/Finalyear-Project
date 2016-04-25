@@ -90,11 +90,11 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {5.2.2}Powerful Institutions are used Node.js}{20}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.3}Architecture Review}{20}
+\contentsline {section}{\numberline {5.3}Architecture Review(uml)}{20}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.3.1}system Architecture}{20}
+\contentsline {subsection}{\numberline {5.3.1}system Architecture(uml)}{20}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.4}System Functions Review}{21}
+\contentsline {section}{\numberline {5.4}System Functions Review(uml)}{21}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {5.5}Security System}{24}
 \defcounter {refsection}{0}\relax 

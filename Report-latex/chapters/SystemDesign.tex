@@ -41,8 +41,8 @@ There have a competition in PayPal engineers, one team with five engineers worki
 2.Twitter queue\\
 Imagine companies such as Twitter, it must receive tweets and written to the database. In fact, almost every second thousands tweet reached, the database cannot be processed in time to write the huge number of message in peak hours. Node.js has become an important part of the problem solution. As you can see, Node can handle tens of thousands of tweet. It can write them to a memory queuing mechanism (such as mecached) quickly and easily, a separate process will written those tweet to the database. Node's role here is to quickly collect tweet, and this information is passed to the process and the other for writing. Imagine another design (regular PHP server will attempt to process its own writes to the database itself): Each tweet will lead to a short delay when writing to the database because the database call blocking passage. Since the database delay, machine could only handle 2000 incoming tweet every second. 1 million per second tweet need 500 servers. Instead, Node can handle each connection without blocking the passage, it is possible to capture as many tweets. A tweet can handle 50,000 machines in just 20 of Node server.
 \\
-\section{Architecture Review} 
-\subsection{system Architecture} 
+\section{Architecture Review(uml)} 
+\subsection{system Architecture(uml)} 
 I used a minimal and flexible Framework to make my website is Express.js, and there also have some functions it need have and show those below:\\
 \\
 (1) Route maps.\\
@@ -72,7 +72,7 @@ see graph \ref{fig:2 cubed graph} below:
 	\label{fig:2 cubed graph}
 \end{figure}
 \\
-\section{System Functions Review}
+\section{System Functions Review(uml)}
 According to the functional requirements of the system, online shopping system is divided into the front-end management and back-end management. Front-end management, including browsing, query items, order merchandise, shopping carts, user information maintenance functions. Back-end management includes order management, items management, and user management module.\\
 \\
 Front-end is described as follows:\\
