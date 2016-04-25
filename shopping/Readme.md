@@ -18,12 +18,16 @@ Based on those points, this website I use a flexible and small frame named Expre
 
 ### Graphs of website:
 * UML
+System Design
 >![image](https://github.com/G00330443/Finalyear-Project/blob/master/Report-latex/images/27.PNG)
 
+System functions Review
 >![image](https://github.com/G00330443/Finalyear-Project/blob/master/Report-latex/images/28.PNG)
 
+user management
 >![image](https://github.com/G00330443/Finalyear-Project/blob/master/Report-latex/images/29.PNG)
 
+Normal user shopping steps
 >![image](https://github.com/G00330443/Finalyear-Project/blob/master/Report-latex/images/30.PNG)
 
 * mainpage
