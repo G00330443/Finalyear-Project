@@ -17,6 +17,14 @@ And there also have a different situation like me an international student who n
 Based on those points, this website I use a flexible and small frame named Express.js that can make Node.js easy and improve application running efficiency in the same time. Express.js is a frame in Node.js that be developed to solve website problem and based on the existing framework for analyzing different platforms to extract feature points of the frame. These include routing and forwarding function point mapping, property injection, Cookie achieve , Session realization. 
 
 ### Graphs of website:
+* UML
+>![image](https://github.com/G00330443/Finalyear-Project/blob/master/Report-latex/images/27.PNG)
+
+>![image](https://github.com/G00330443/Finalyear-Project/blob/master/Report-latex/images/28.PNG)
+
+>![image](https://github.com/G00330443/Finalyear-Project/blob/master/Report-latex/images/29.PNG)
+
+>![image](https://github.com/G00330443/Finalyear-Project/blob/master/Report-latex/images/30.PNG)
 
 * mainpage
 >![image](https://github.com/G00330443/Finalyear-Project/blob/master/Report-latex/images/50.PNG)
